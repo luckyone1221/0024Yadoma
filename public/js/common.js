@@ -312,6 +312,7 @@ function eventHandler() {
 			$('.pop-up-cont-js > ul > li > a').removeClass('active');
 			$('.inner-popup-js').removeClass('active');
 			$('.pop-up-cont-js > ul').removeClass('active');
+			$('body').removeClass('blured');
 			document.body.removeEventListener('click', topMnuMissclickHandler);
 		}
 	}
@@ -326,9 +327,10 @@ function eventHandler() {
 
 		var innerPopUp = this.parentElement.querySelector('.inner-popup-js');
 		$(this).addClass('active');
-		$(innerPopUp).addClass('active'); //
+		$(innerPopUp).addClass('active'); //other
 
 		$('.pop-up-cont-js > ul').addClass('active');
+		$('body').addClass('blured');
 		document.body.addEventListener('click', topMnuMissclickHandler);
 	}); //end luckyone js
 }

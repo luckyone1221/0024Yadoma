@@ -42,13 +42,25 @@ mixin top-nav()
 					+popUpItem('Новинки')
 						| 1
 					+popUpItem('Кухня')
-						| 2
+						+b.part-5
+							+e.container.container
+								+e.row.row
+									+e.img-col.col-auto
+										+e.A.img(href='#')
+											img(loading="lazy" src='img/@2x/kitchen-img.jpg' alt="")
+										+e.img-descr
+											+e.i-d-txt Свежие природные тона
+											+e.A.watch-link(href="#") Смотреть
+									+e.content-col.col
+										+e.content-row.row
+											+contentRowItem('Актуально', 'Новинки', 'Природные оттенки', 'Бренды')
+											+contentRowItem('Хранение', 'Хлебницы', 'Ёмкости для хранения', 'Ёмкости для хранения', 'Папки для рецептов')
+											+contentRowItem('Доски', 'Хлебные доски')
+											+contentRowItem('Ножи', 'Хлебные ножи')
 					+popUpItem('Столовая')
-						| 3
 					+popUpItem('Декор')
-						| 4
 					+popUpItem('Система YaDoma')
-						+b.yadoma-c
+						+b.yadoma-c.d-none
 							+e.container
 								+e.H3.title Кухня
 								+e.top-items-cont
@@ -69,6 +81,14 @@ mixin top-nav()
 									+botItem(3, 'Welcome')
 										| Подносы, сервировочные доски
 	// end top-nav
+mixin contentRowItem(title,...items)
+	+e.sub-col.col-lg-4.col-xl-3
+		+e.title=title
+		+e.UL.list
+			each item in items
+				li
+					a(href="#")=item
+
 mixin botItem(imgNum, title, txt)
 	+e.bot-col.col-sm-6.col-md-4.col-xl-3
 		+e.bot-item

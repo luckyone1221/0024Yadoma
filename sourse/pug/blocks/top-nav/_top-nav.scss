@@ -1,5 +1,8 @@
 .top-nav {
 	font-weight: 400;
+	position: relative;
+	background-color: $body-bg;
+	z-index: 10;
 
 	&__top-strip{
 		background-color: $body-color2;
@@ -25,6 +28,10 @@
 		justify-content: flex-end;
 
 		color: $body-bg;
+		&:hover{
+			color: $white;
+			text-shadow: 0 0 1px rgba($white, .6);
+		}
 		font-weight: 300;
 		line-height: 1;
 	}
@@ -38,7 +45,10 @@
 		align-items: stretch;
 
 		&__item{
-			margin-right: rem(32);
+			margin-right: rem(20);
+			@include media-breakpoint-up(xxl){
+				margin-right: rem(32);
+			}
 			&:last-child{
 				margin-right: 0;
 			}
@@ -190,7 +200,6 @@
 				}
 			}
 
-
 			&.active > li > a{
 				color: rgba($body-color, .5);
 				&:hover, &.active{
@@ -204,7 +213,7 @@
 		position: absolute;
 		background-color: $body-bg;
 		box-shadow: inset 0 0 0 1px red;
-		top: 100%;
+		top: calc(100% + 1px);
 		left: 0;
 		width: 100%;
 		height: auto;
@@ -362,7 +371,6 @@
 
 	/* Track */
 	&::-webkit-scrollbar-track {
-		//box-shadow: inset 0 0 5px grey;
 		border-radius: 10px;
 	}
 
@@ -376,4 +384,84 @@
 	&::-webkit-scrollbar-thumb:hover {
 		background: darken($scroll-gray, 5);
 	}
+}
+
+//.part-5
+.part-5{
+	padding: rem(48px) 0 rem(94px) 0;
+	&__row{
+		@include roww(48px);
+	}
+	&__img-col{
+		width: 240px;
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (39/24) * 100%;
+
+		margin-bottom: rem(8);
+	}
+	&__img-descr{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__i-d-txt{
+		color: $body-color;
+		font-weight: 300;
+		line-height: 1;
+	}
+	&__watch-link{
+		font-weight: 300;
+		line-height: 1;
+		text-align: right;
+
+		text-decoration: underline;
+		color: $body-color;
+		&:hover{
+			text-decoration: none;
+			color: $body-color2;
+		}
+
+		margin-left: rem(10px);
+	}
+	//content-col
+	&__content-col{
+
+	}
+	&__content-row{
+
+	}
+	&__sub-col{
+		margin-bottom: rem(48);
+	}
+	&__title{
+		display: block;
+		color: $body-color2;
+		font-family: $mono;
+		font-size: $h5-font-size;
+		margin-bottom: rem(16);
+	}
+	&__list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li{
+			a{
+				display: block;
+				color: $body-color;
+				&:hover{
+					color: $body-color2;
+					text-decoration: underline;
+				}
+				font-weight: 300;
+				text-align: left;
+			}
+
+			margin-bottom: rem(8);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__{}
 }
