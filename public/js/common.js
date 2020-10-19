@@ -304,6 +304,9 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+	//inner-pop-js
+	//end luckyone js
 }
 
 ;

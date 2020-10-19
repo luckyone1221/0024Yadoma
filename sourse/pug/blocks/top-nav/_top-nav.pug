@@ -36,4 +36,20 @@ mixin top-nav()
 					+e.A.cart-btn(href='#')
 						+icon('cart')
 						span (0)
+		+e.pop-up-menu
+			+e.pop-up-cont.container
+				ul
+					+popUpItem('Новинки')
+					+popUpItem('Кухня')
+					+popUpItem('Столовая')
+					+popUpItem('Декор')
+					+popUpItem('Система YaDoma')
+
+
 	// end top-nav
+
+mixin popUpItem(titleTxt)
+	li
+		a(href="#")=titleTxt
+		+e.inner-pop.inner-popup-js
+			block

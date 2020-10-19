@@ -129,7 +129,88 @@
 		}
 	}
 
+	//.pop-up-menu
+	&__pop-up-menu{
+		position: relative;
+		border-bottom: 1px solid rgba($border-gray, .3);
+		padding: 15px;
+	}
+
+	&__pop-up-cont{
+
+		& > ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& > li{
+
+				& > a{
+					display: block;
+					cursor: pointer;
+					font-size: rem(12px);
+					line-height: (19/12);
+					text-transform: uppercase;
+					margin-right: rem(25);
+
+					color: $body-color;
+					&:hover{
+						color: $black;
+					}
+				}
+			}
+
+
+			//last
+			& > li:last-child{
+				//position: relative;
+				margin-right: 0;
+				display: inline-flex;
+				align-items: center;
+				a{
+					margin-right: 0;
+				}
+				&:after{
+					content: '';
+					width: 15px;
+					height: 14px;
+
+					background-image: url(../img/svg/wheat.svg);
+					background-repeat: no-repeat;
+					background-position: 100% 50%;
+					background-size: contain;
+
+				}
+			}
+
+			////hover
+			//& > li:hover{
+			//	.top-nav__inner-pop{
+			//		transform: scaleY(1);
+			//	}
+			//}
+
+		}
+	}
+	&__inner-pop{
+		position: absolute;
+		background-color: red;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		@include mt();
+		transform-origin: top;
+		//display: none;
+	}
 	&__{}
 	&__{}
+	&__{}
+	&__{}
+
+
 }
 
