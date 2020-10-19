@@ -385,7 +385,8 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular,
+$font-family-monospace: $mono,
+SFMono-Regular,
 Menlo,
 Monaco,
 Consolas,
@@ -409,7 +410,7 @@ $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 
-$font-weight-base: $font-weight-normal !default;
+$font-weight-base: $font-weight-light !default;
 
 $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;

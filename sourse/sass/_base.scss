@@ -29,6 +29,11 @@ html {
 	// @include font-size(1rem);
 }
 
+h1,.h1,h2,.h2,h3,.h3 {
+	@extend .mono;
+	font-weight: 400;
+}
+
 
 .section {
 	@include bgs; 
@@ -386,4 +391,28 @@ img.img-bg,
 
 iframe {
 	border: none;
+}
+
+ol.breadcrumb {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+
+	.breadcrumb-item {
+		&:not(:last-child) {
+			&::after {
+				content: '—';
+				margin-left: 1px;
+				margin-right: 5px;
+			}
+			a:hover {
+				opacity: .7;
+			}
+		}
+
+		&.active {
+			pointer-events: none;
+		}
+	}
 }
