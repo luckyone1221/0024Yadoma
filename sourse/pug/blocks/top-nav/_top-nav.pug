@@ -21,7 +21,19 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			+mnu()
-					
+		+e.top-strip
+			+e.top-container.container
+				+e.menu
+					+mnu()
+				+e.A.tell(href="tel:+79213412020") +7 (921) 341 20 20
+		+e.logo-strip
+			+e.logo-container.container
+				+e.A.logo(href="/")
+					img(src='img/svg/logo.svg' alt="")
+				+e.search-cart
+					+e.A.search-btn(href='#')
+						+icon('search')
+					+e.A.cart-btn(href='#')
+						+icon('cart')
+						span (0)
 	// end top-nav

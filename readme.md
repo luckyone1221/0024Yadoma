@@ -1,1 +1,1 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
+<!-- https://github.com/luckyone1221/0024Yadoma -->
