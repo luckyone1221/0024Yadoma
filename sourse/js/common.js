@@ -213,7 +213,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(".scroll-link").click(function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
@@ -304,10 +304,37 @@ function eventHandler() {
 	});
 	// modal window
 
-
 	//luckyone js
 
-	//inner-pop-js
+	//lower header menu js
+	function topMnuMissclickHandler() {
+		if (!event.target.closest('.inner-popup-js')){
+			$('.pop-up-cont-js > ul > li > a').removeClass('active');
+			$('.inner-popup-js').removeClass('active');
+			$('.pop-up-cont-js > ul').removeClass('active');
+			document.body.removeEventListener('click', topMnuMissclickHandler);
+		}
+	}
+
+	$('.pop-up-cont-js > ul > li > a').click(function () {
+		document.body.removeEventListener('click', topMnuMissclickHandler);
+		event.preventDefault();
+		event.stopPropagation();
+
+		//remove from others
+		$('.inner-popup-js').removeClass('active');
+		$('.pop-up-cont-js > ul > li > a').removeClass('active');
+
+		//add to this
+		let innerPopUp = this.parentElement.querySelector('.inner-popup-js');
+		$(this).addClass('active');
+		$(innerPopUp).addClass('active');
+
+		//
+		$('.pop-up-cont-js > ul').addClass('active');
+
+		document.body.addEventListener('click', topMnuMissclickHandler);
+	});
 
 	//end luckyone js
 

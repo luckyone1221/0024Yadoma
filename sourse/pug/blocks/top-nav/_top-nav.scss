@@ -1,7 +1,9 @@
 .top-nav {
+	font-weight: 400;
 
 	&__top-strip{
 		background-color: $body-color2;
+		//height: 30px;
 	}
 	&__top-container{
 		position: relative;
@@ -58,10 +60,11 @@
 	}
 	//
 	&__logo-strip{
+		//height: 70px;
 		border-bottom: 1px solid rgba($border-gray, .3);
 	}
 	&__logo-container{
-		padding: rem(5) 0;
+		padding: rem(4) 0;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -131,13 +134,13 @@
 
 	//.pop-up-menu
 	&__pop-up-menu{
+		//height: 50px;
 		position: relative;
 		border-bottom: 1px solid rgba($border-gray, .3);
 		padding: 15px;
 	}
 
 	&__pop-up-cont{
-
 		& > ul{
 			list-style: none;
 			margin: 0;
@@ -161,6 +164,7 @@
 						color: $black;
 					}
 				}
+
 			}
 
 
@@ -186,30 +190,190 @@
 				}
 			}
 
-			////hover
-			//& > li:hover{
-			//	.top-nav__inner-pop{
-			//		transform: scaleY(1);
-			//	}
-			//}
+
+			&.active > li > a{
+				color: rgba($body-color, .5);
+				&:hover, &.active{
+					color: rgba($body-color, 1);
+				}
+			}
 
 		}
 	}
 	&__inner-pop{
 		position: absolute;
-		background-color: red;
+		background-color: $body-bg;
+		box-shadow: inset 0 0 0 1px red;
 		top: 100%;
 		left: 0;
 		width: 100%;
-		height: 100px;
+		height: auto;
 		@include mt();
 		transform-origin: top;
+		overflow-x: auto;
+
+		//transform: scaleY(0);
+		&.active{
+			transform: scaleY(1);
+		}
 	}
 	&__{}
 	&__{}
 	&__{}
 	&__{}
-
-
 }
 
+.yadoma-c{
+	padding: rem(80px) 15px;
+	&__container{
+		max-width: rem(980px);
+		margin: 0 auto;
+	}
+	&__title{
+		font-family: $mono;
+		line-height: 1;
+		margin-bottom: rem(15);
+	}
+
+	&__top-items-cont{
+		margin-bottom: rem(48);
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: calc(100% - 68px);
+			height: 1px;
+			background-color: $primary;
+		}
+	}
+	&__top-items{
+		display: flex;
+		align-items: stretch;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		height: 325px;
+		overflow-y: auto;
+		@extend .customs-scroll;
+	}
+	&__item{
+		width: rem(160px);
+		padding-bottom: rem(48);
+
+		margin-right: rem(40);
+		&:nth-child(5n){
+			margin-right: 0;
+		}
+	}
+	&__img-inner{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: (10/16) * 100%;
+		margin-bottom: rem(16);
+
+		background-color: $black;
+		overflow: hidden;
+		&:hover{
+			img{
+				transform: scale(1.1);
+				opacity: .8;
+			}
+		}
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__i-title{
+		color: $body-color2;
+		font-family: $mono;
+		font-size: $h5-font-size;
+		margin-bottom: rem(16);
+	}
+	&__list{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li{
+			a{
+				display: block;
+				color: $body-color;
+				&:hover{
+					color: $black;
+					text-decoration: underline;
+				}
+				font-weight: 300;
+				line-height: 1;
+			}
+			margin-bottom: rem(12);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	//bot-items
+	&__bot-row{
+		padding-bottom: rem(60);
+	}
+	&__bot-col{
+		margin-bottom: rem(30);
+	}
+	&__bot-item{
+		a{
+			display: block;
+
+			color: $body-color;
+			&:hover{
+				color: $body-color2;
+			}
+		}
+	}
+	&__bot-img{
+		width: 160px;
+		span{
+			display: block;
+		}
+	}
+	&__bot-txt{
+		color: $body-color;
+		font-weight: 300;
+		line-height: 1.1;
+	}
+
+	&__{}
+	&__{}
+}
+
+.customs-scroll{
+	/* width */
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		//box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $scroll-gray;
+		border-radius: 0;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: darken($scroll-gray, 5);
+	}
+}

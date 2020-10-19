@@ -37,14 +37,64 @@ mixin top-nav()
 						+icon('cart')
 						span (0)
 		+e.pop-up-menu
-			+e.pop-up-cont.container
+			+e.pop-up-cont.container.pop-up-cont-js
 				ul
 					+popUpItem('Новинки')
+						| 1
 					+popUpItem('Кухня')
+						| 2
 					+popUpItem('Столовая')
+						| 3
 					+popUpItem('Декор')
+						| 4
 					+popUpItem('Система YaDoma')
+						+b.yadoma-c
+							+e.container
+								+e.H3.title Кухня
+								+e.top-items-cont
+									+e.top-items
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+										+yadomaCTopItem()
+								+e.H3.title Столовая
+								+e.bot-row.row
+									+botItem(1, 'Зона воды')
+										| Стаканы и бокалы для воды
+									+botItem(2, 'Куверт')
+										| Тарелки подстановочные
+									+botItem(3, 'Welcome')
+										| Подносы, сервировочные доски
 	// end top-nav
+mixin botItem(imgNum, title, txt)
+	+e.bot-col.col-sm-6.col-md-4.col-xl-3
+		+e.bot-item
+			+e.bot-img(href="#")
+				+e.A.img-inner(href="#")
+					img(loading="lazy" src=`img/@2x/bot-item-${imgNum}.jpg` alt="")
+			+e.A.i-title(href="#")=title
+			+e.A.bot-txt(href="#")
+				block
+
+mixin yadomaCTopItem()
+	+e.item
+		+e.A.img-inner(href="#")
+			img(loading="lazy" src="img/@2x/bread-img.jpg" alt='')
+		+e.i-title Хлебная зона
+		+e.UL.list
+			li
+				a(href="#") Хлебницы
+			li
+				a(href="#") Хлебные доски
+			li
+				a(href="#") Хлебные ножи
+			li
+				a(href="#") Хлебные корзины
+			li
+				a(href="#") Салфетки
 
 mixin popUpItem(titleTxt)
 	li
