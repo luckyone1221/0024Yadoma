@@ -2,5 +2,21 @@ mixin sFilter(data)
 	// start sFilter
 	+b.sFilter.section#sFilter&attributes(attributes)
 		+e.block
+			+e.title Цвет
 			+in-c('checkbox','Природный белый')
+			+in-c('checkbox','Кирпичный')
+		+e.block
+			+e.title Бренд
+			+in-c('checkbox','YADOMA')
+			+in-c('checkbox','Bulthaup')
+			+in-c('checkbox','Emma Danish')
+		+e.block
+			+e.title Материал
+			+in-c('checkbox','Керамика, белый клён')
+			+in-c('checkbox','Красная глина, сосна')
+			+in-c('checkbox','Белая глина, сосна')
+			+in-c('checkbox','Сталь, бук')
+		+e.block
+			+e.title Размер
+			+in-c('checkbox','25*33*19 см')
 	// end sFilter

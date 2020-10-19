@@ -1,11 +1,51 @@
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
-		+b.section-title.text-center
-			h2 sCatalog
-			
+		+b.section-title
+			h1 Хлебницы
+		+breadcrumb('Кухня','Хранение на кухне','Хлебницы')
+		+e.H5.smallWidth Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и&nbsp;предлагаем вам лучшее
+		.row.justify-content-between
+			.col-auto
+				+e.result Нашлось по запросу: 5
+			.col-auto
+				+input('По возрастанию','select')
 		.row
+			.col-sm-6.col-lg-4
+				+catalogItem('1.png')
+					+e.UL.tags
+						li: a(href="#") Хлебная зона
+						li: a(href="#") Welcome
+					+e.title Bulthaup
+					+e.name Хлебница-контейнер /
+						span BAHIA
+					+e.priceWrap
+						+e.oldPrice 60 000 RUB
+						+e.price 42 999 RUB
+			.col-sm-6.col-lg-4
+				+catalogItem('2.png')
+			.col-sm-6.col-lg-4
+				+catalogItem('3.png')
+			.col-sm-6.col-lg-4
+				+catalogItem('4')
 	// end sCatalog
 
-mixin catalogItem(i,sale,basket)
+mixin catalogItem(i,basket,sale)
 	+b.catalogItem&attributes(attributes)
+		+e.imgWrap(href="#")
+			+pic(`catalogItem-${i}`,'','')
+			if sale
+				+e.sale= sale
+		+e.body
+			block
+			if basket
+				+e.btnWrap
+					+e.minus(type="submit")
+					+e.btn
+						+icon('basket')
+						span Добавлено 1
+					+e.plus(type="submit")
+			else
+				+e.btnWrap(type="submit")
+					+icon('basket')
+					span В корзину
