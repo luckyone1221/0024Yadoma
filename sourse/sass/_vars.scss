@@ -1,5 +1,5 @@
 $em-base: 14px;
-$small: rem(14);
+$small: rem(12px);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -415,12 +415,12 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
+$h1-font-size: rem(48px) !default;
+$h2-font-size: rem(36px) !default;
+$h3-font-size: rem(24px) !default;
 $h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h5-font-size: rem(18px) !default;
+$h6-font-size: rem(16px) !default;
 
 $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
@@ -1203,7 +1203,7 @@ $breadcrumb-margin-bottom: 1rem !default;
 $breadcrumb-bg: $gray-200 !default;
 $breadcrumb-divider-color: $gray-600 !default;
 $breadcrumb-active-color: $gray-600 !default;
-$breadcrumb-divider: quote("/") !default;
+$breadcrumb-divider: quote("-") !default;
 $breadcrumb-border-radius: $border-radius !default;
 
 // Carousel
