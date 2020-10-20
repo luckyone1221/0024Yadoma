@@ -56,7 +56,7 @@
 		<header class="header" id="header">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
-				<div class="top-nav__top-strip">
+				<div class="top-nav__top-strip d-none d-lg-block">
 					<div class="top-nav__top-container container">
 						<div class="top-nav__menu">
 							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 				<div class="top-nav__logo-strip">
-					<div class="top-nav__search-strip">
+					<div class="top-nav__search-strip search-strip-js">
 						<div class="form-wrap">
 							<form>
 								<input type="hidden" name="example-input-field"/>
@@ -93,15 +93,18 @@
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название, артикул или категорию" name="search"/>
 								</div>
 								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn" type="submit">
+								<label class="form-wrap__btn">
+									<button type="submit"></button>
 									<svg class="icon icon-search ">
 										<use xlink:href="img/svg/sprite.svg#search"></use>
 									</svg><span>Искать</span>
-								</button>
+								</label>
 							</form>
 						</div>
 					</div>
-					<div class="top-nav__logo-container container"><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
+					<div class="top-nav__logo-container container">
+						<div class="top-nav__burger-btn burger-btn-js d-lg-none d-flex"><span></span>
+						</div><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
 						<div class="top-nav__search-cart"><a class="top-nav__search-btn search-btn-js" href="#">
 							<svg class="icon icon-search ">
 								<use xlink:href="img/svg/sprite.svg#search"></use>
@@ -115,7 +118,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="top-nav__pop-up-menu">
+				<div class="top-nav__pop-up-menu pop-up-menu-js"><a class="top-nav__mob-tell d-lg-none" href="tel+79213412020">+7 (921) 341 20 20</a>
 					<div class="top-nav__pop-up-cont container pop-up-cont-js">
 						<ul>
 							<li><a href="#">Новинки</a>
@@ -136,18 +139,18 @@
 												<div class="part-5__content-col col">
 													<div class="part-5__content-row row">
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Актуально
+															<div class="part-5__title sub-col-title-js">Актуально
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Новинки</a></li>
 																<li><a href="#">Природные оттенки</a></li>
 																<li><a href="#">Бренды</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Хранение
+															<div class="part-5__title sub-col-title-js">Хранение
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Хлебницы</a></li>
 																<li><a href="#">Ёмкости для хранения</a></li>
 																<li><a href="#">Ёмкости для хранения</a></li>
@@ -155,16 +158,16 @@
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Доски
+															<div class="part-5__title sub-col-title-js">Доски
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Хлебные доски</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Ножи
+															<div class="part-5__title sub-col-title-js">Ножи
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Хлебные ножи</a></li>
 															</ul>
 														</div>
@@ -189,18 +192,18 @@
 												<div class="part-5__content-col col">
 													<div class="part-5__content-row row">
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Актуально
+															<div class="part-5__title sub-col-title-js">Актуально
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Новинки</a></li>
 																<li><a href="#">Природные оттенки</a></li>
 																<li><a href="#">Бренды</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Столовая посуда
+															<div class="part-5__title sub-col-title-js">Столовая посуда
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Тарелки</a></li>
 																<li><a href="#">Тарелки подстановочные</a></li>
 																<li><a href="#">Чаши, салатники, миски</a></li>
@@ -208,18 +211,18 @@
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Стекло
+															<div class="part-5__title sub-col-title-js">Стекло
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Стаканы и бокалы для воды</a></li>
 																<li><a href="#">Бокалы для вина</a></li>
 																<li><a href="#">Бокалы для игристого</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Для подачи
+															<div class="part-5__title sub-col-title-js">Для подачи
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Подносы, сервировочные доски</a></li>
 																<li><a href="#">Кувшины, графины</a></li>
 																<li><a href="#">Этажерки</a></li>
@@ -227,25 +230,25 @@
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Столовые приборы
+															<div class="part-5__title sub-col-title-js">Столовые приборы
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Вилки</a></li>
 																<li><a href="#">Ложки</a></li>
 																<li><a href="#">Ножи</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Столовый текстиль
+															<div class="part-5__title sub-col-title-js">Столовый текстиль
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Салфетки</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Столовый текстиль
+															<div class="part-5__title sub-col-title-js">Столовый текстиль
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Салфетки</a></li>
 															</ul>
 														</div>
@@ -270,26 +273,26 @@
 												<div class="part-5__content-col col">
 													<div class="part-5__content-row row">
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Актуально
+															<div class="part-5__title sub-col-title-js">Актуально
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Новинки</a></li>
 																<li><a href="#">Природные оттенки</a></li>
 																<li><a href="#">Бренды</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Свечи
+															<div class="part-5__title sub-col-title-js">Свечи
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Столовые свечи</a></li>
 																<li><a href="#">Декоративные свечи</a></li>
 															</ul>
 														</div>
 														<div class="part-5__sub-col col-lg-4 col-xl-3">
-															<div class="part-5__title">Вазы
+															<div class="part-5__title sub-col-title-js">Вазы
 															</div>
-															<ul class="part-5__list">
+															<ul class="part-5__list sub-col-list-js">
 																<li><a href="#">Декоративные вазы</a></li>
 															</ul>
 														</div>
@@ -391,21 +394,41 @@
 											</h3>
 											<div class="yadoma-c__bot-row row">
 												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
-													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bot-item-1.jpg" alt=""/></a></a><a class="yadoma-c__i-title" href="#">Зона воды</a><a class="yadoma-c__bot-txt" href="#">Стаканы и бокалы для воды</a>
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-1.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Зона воды</a><a class="yadoma-c__bot-txt" href="#">Стаканы и бокалы для воды</a>
 													</div>
 												</div>
 												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
-													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bot-item-2.jpg" alt=""/></a></a><a class="yadoma-c__i-title" href="#">Куверт</a><a class="yadoma-c__bot-txt" href="#">Тарелки подстановочные</a>
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-2.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Куверт</a><a class="yadoma-c__bot-txt" href="#">Тарелки подстановочные</a>
 													</div>
 												</div>
 												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
-													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bot-item-3.jpg" alt=""/></a></a><a class="yadoma-c__i-title" href="#">Welcome</a><a class="yadoma-c__bot-txt" href="#">Подносы, сервировочные доски</a>
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-3.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Welcome</a><a class="yadoma-c__bot-txt" href="#">Подносы, сервировочные доски</a>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="top-nav__mob-menu d-lg-none">
+						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оплата</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обмен и возврат</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Сотрудничество</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Instagram</a>
 							</li>
 						</ul>
 					</div>

@@ -14,26 +14,28 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.top-strip
+		+e.top-strip.d-none.d-lg-block
 			+e.top-container.container
 				+e.menu
 					+mnu()
 				+e.A.tell(href="tel:+79213412020") +7 (921) 341 20 20
 		+e.logo-strip
-			+e.search-strip
+			+e.search-strip.search-strip-js
 				+form-wrap
 					+input('Введите название, артикул или категорию', 'text', undefined, 'search')
-					+e.BUTTON.btn(type="submit")
+					+e.LABEL.btn
+						button(type="submit")
 						+icon('search')
 						span Искать
 			+e.logo-container.container
+				+e.burger-btn.burger-btn-js.d-lg-none.d-flex
+					span
 				+e.A.logo(href="/")
 					img(src='img/svg/logo.svg' alt="")
 				+e.search-cart
@@ -43,7 +45,8 @@ mixin top-nav()
 					+e.A.cart-btn(href='#')
 						+icon('cart')
 						span (0)
-		+e.pop-up-menu
+		+e.pop-up-menu.pop-up-menu-js
+			+e.A.mob-tell.d-lg-none(href='tel+79213412020') +7 (921) 341 20 20
 			+e.pop-up-cont.container.pop-up-cont-js
 				ul
 					+popUpItem('Новинки')
@@ -119,11 +122,13 @@ mixin top-nav()
 										| Тарелки подстановочные
 									+botItem(3, 'Welcome')
 										| Подносы, сервировочные доски
+			+e.mob-menu.d-lg-none
+				+mnu()
 	// end top-nav
 mixin contentRowItem(title,...items)
 	+e.sub-col.col-lg-4.col-xl-3
-		+e.title=title
-		+e.UL.list
+		+e.title.sub-col-title-js=title
+		+e.UL.list.sub-col-list-js
 			each item in items
 				li
 					a(href="#")=item
@@ -131,8 +136,8 @@ mixin contentRowItem(title,...items)
 mixin botItem(imgNum, title, txt)
 	+e.bot-col.col-sm-6.col-md-4.col-xl-3
 		+e.bot-item
-			+e.bot-img(href="#")
-				+e.A.img-inner(href="#")
+			+e.A.bot-img(href="#")
+				+e.img-inner
 					img(loading="lazy" src=`img/@2x/bot-item-${imgNum}.jpg` alt="")
 			+e.A.i-title(href="#")=title
 			+e.A.bot-txt(href="#")
