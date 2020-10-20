@@ -81,10 +81,33 @@
 					</div>
 				</div>
 				<div class="top-nav__logo-strip">
+					<div class="top-nav__search-strip">
+						<div class="form-wrap">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название, артикул или категорию" name="search"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="form-wrap__btn" type="submit">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg><span>Искать</span>
+								</button>
+							</form>
+						</div>
+					</div>
 					<div class="top-nav__logo-container container"><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
-						<div class="top-nav__search-cart"><a class="top-nav__search-btn" href="#">
+						<div class="top-nav__search-cart"><a class="top-nav__search-btn search-btn-js" href="#">
 							<svg class="icon icon-search ">
 								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+							<svg class="icon icon-cross ">
+								<use xlink:href="img/svg/sprite.svg#cross"></use>
 							</svg></a><a class="top-nav__cart-btn" href="#">
 							<svg class="icon icon-cart ">
 								<use xlink:href="img/svg/sprite.svg#cart"></use>
@@ -154,15 +177,132 @@
 							</li>
 							<li><a href="#">Столовая</a>
 								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="part-5">
+										<div class="part-5__container container">
+											<div class="part-5__row row">
+												<div class="part-5__img-col col-auto"><a class="part-5__img" href="#"><img loading="lazy" src="img/@2x/dining-room-img.jpg" alt=""/></a>
+													<div class="part-5__img-descr">
+														<div class="part-5__i-d-txt">Свежие природные тона
+														</div><a class="part-5__watch-link" href="#">Смотреть</a>
+													</div>
+												</div>
+												<div class="part-5__content-col col">
+													<div class="part-5__content-row row">
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Актуально
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Новинки</a></li>
+																<li><a href="#">Природные оттенки</a></li>
+																<li><a href="#">Бренды</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Столовая посуда
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Тарелки</a></li>
+																<li><a href="#">Тарелки подстановочные</a></li>
+																<li><a href="#">Чаши, салатники, миски</a></li>
+																<li><a href="#">Этажерки</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Стекло
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Стаканы и бокалы для воды</a></li>
+																<li><a href="#">Бокалы для вина</a></li>
+																<li><a href="#">Бокалы для игристого</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Для подачи
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Подносы, сервировочные доски</a></li>
+																<li><a href="#">Кувшины, графины</a></li>
+																<li><a href="#">Этажерки</a></li>
+																<li><a href="#">Хлебные корзины</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Столовые приборы
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Вилки</a></li>
+																<li><a href="#">Ложки</a></li>
+																<li><a href="#">Ножи</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Столовый текстиль
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Салфетки</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Столовый текстиль
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Салфетки</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</li>
 							<li><a href="#">Декор</a>
 								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="part-5">
+										<div class="part-5__container container">
+											<div class="part-5__row row">
+												<div class="part-5__img-col col-auto"><a class="part-5__img" href="#"><img loading="lazy" src="img/@2x/flowers-img.jpg" alt=""/></a>
+													<div class="part-5__img-descr">
+														<div class="part-5__i-d-txt">Коллекция FALL-2020
+														</div><a class="part-5__watch-link" href="#">Смотреть</a>
+													</div>
+												</div>
+												<div class="part-5__content-col col">
+													<div class="part-5__content-row row">
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Актуально
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Новинки</a></li>
+																<li><a href="#">Природные оттенки</a></li>
+																<li><a href="#">Бренды</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Свечи
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Столовые свечи</a></li>
+																<li><a href="#">Декоративные свечи</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title">Вазы
+															</div>
+															<ul class="part-5__list">
+																<li><a href="#">Декоративные вазы</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</li>
 							<li><a href="#">Система YaDoma</a>
 								<div class="top-nav__inner-pop inner-popup-js">
-									<div class="yadoma-c d-none">
+									<div class="yadoma-c">
 										<div class="yadoma-c__container">
 											<h3 class="yadoma-c__title">Кухня
 											</h3>

@@ -337,6 +337,11 @@ function eventHandler() {
 
 		document.body.addEventListener('click', topMnuMissclickHandler);
 	});
+	//.search-btn-js
+	$('.search-btn-js').click(function (){
+		$(this).toggleClass('active');
+	});
+
 
 	//end luckyone js
 

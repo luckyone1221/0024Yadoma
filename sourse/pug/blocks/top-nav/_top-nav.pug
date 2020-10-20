@@ -27,12 +27,19 @@ mixin top-nav()
 					+mnu()
 				+e.A.tell(href="tel:+79213412020") +7 (921) 341 20 20
 		+e.logo-strip
+			+e.search-strip
+				+form-wrap
+					+input('Введите название, артикул или категорию', 'text', undefined, 'search')
+					+e.BUTTON.btn(type="submit")
+						+icon('search')
+						span Искать
 			+e.logo-container.container
 				+e.A.logo(href="/")
 					img(src='img/svg/logo.svg' alt="")
 				+e.search-cart
-					+e.A.search-btn(href='#')
+					+e.A.search-btn.search-btn-js(href='#')
 						+icon('search')
+						+icon('cross')
 					+e.A.cart-btn(href='#')
 						+icon('cart')
 						span (0)
@@ -58,9 +65,41 @@ mixin top-nav()
 											+contentRowItem('Доски', 'Хлебные доски')
 											+contentRowItem('Ножи', 'Хлебные ножи')
 					+popUpItem('Столовая')
+						+b.part-5
+							+e.container.container
+								+e.row.row
+									+e.img-col.col-auto
+										+e.A.img(href='#')
+											img(loading="lazy" src='img/@2x/dining-room-img.jpg' alt="")
+										+e.img-descr
+											+e.i-d-txt Свежие природные тона
+											+e.A.watch-link(href="#") Смотреть
+									+e.content-col.col
+										+e.content-row.row
+											+contentRowItem('Актуально', 'Новинки', 'Природные оттенки', 'Бренды')
+											+contentRowItem('Столовая посуда', 'Тарелки', 'Тарелки подстановочные', 'Чаши, салатники, миски', 'Этажерки')
+											+contentRowItem('Стекло', 'Стаканы и бокалы для воды', 'Бокалы для вина', 'Бокалы для игристого')
+											+contentRowItem('Для подачи', 'Подносы, сервировочные доски', 'Кувшины, графины', 'Этажерки', 'Хлебные корзины')
+											+contentRowItem('Столовые приборы', 'Вилки', 'Ложки', 'Ножи')
+											+contentRowItem('Столовый текстиль', 'Салфетки')
+											+contentRowItem('Столовый текстиль', 'Салфетки')
 					+popUpItem('Декор')
+						+b.part-5
+							+e.container.container
+								+e.row.row
+									+e.img-col.col-auto
+										+e.A.img(href='#')
+											img(loading="lazy" src='img/@2x/flowers-img.jpg' alt="")
+										+e.img-descr
+											+e.i-d-txt Коллекция FALL-2020
+											+e.A.watch-link(href="#") Смотреть
+									+e.content-col.col
+										+e.content-row.row
+											+contentRowItem('Актуально', 'Новинки', 'Природные оттенки', 'Бренды')
+											+contentRowItem('Свечи', 'Столовые свечи', 'Декоративные свечи')
+											+contentRowItem('Вазы', 'Декоративные вазы')
 					+popUpItem('Система YaDoma')
-						+b.yadoma-c.d-none
+						+b.yadoma-c
 							+e.container
 								+e.H3.title Кухня
 								+e.top-items-cont
