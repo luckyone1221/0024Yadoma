@@ -332,6 +332,10 @@ function eventHandler() {
 		$('.pop-up-cont-js > ul').addClass('active');
 		$('body').addClass('blured');
 		document.body.addEventListener('click', topMnuMissclickHandler);
+	}); //.search-btn-js
+
+	$('.search-btn-js').click(function () {
+		$(this).toggleClass('active');
 	}); //end luckyone js
 }
 
