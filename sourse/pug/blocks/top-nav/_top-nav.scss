@@ -221,7 +221,7 @@
 		transform-origin: top;
 		overflow-x: auto;
 
-		//transform: scaleY(0);
+		transform: scaleY(0);
 		&.active{
 			transform: scaleY(1);
 		}

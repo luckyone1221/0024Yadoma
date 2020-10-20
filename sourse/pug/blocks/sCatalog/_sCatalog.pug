@@ -12,7 +12,7 @@ mixin sCatalog(data)
 				+input('По возрастанию','select')
 		.row
 			.col-sm-6.col-lg-4
-				+catalogItem('1.png')
+				+catalogItem('1.png','','- 45%')
 					+e.UL.tags
 						li: a(href="#") Хлебная зона
 						li: a(href="#") Welcome
@@ -23,11 +23,44 @@ mixin sCatalog(data)
 						+e.oldPrice 60 000 RUB
 						+e.price 42 999 RUB
 			.col-sm-6.col-lg-4
-				+catalogItem('2.png')
+				+catalogItem('2.png','basket')
+					+e.UL.tags
+						li: a(href="#") Хлебная зона
+						li: a(href="#") Welcome
+					+e.title Yadoma
+					+e.name Хлебница-контейнер /
+						span Bread Collection
+					+e.priceWrap
+						+e.price 16 000 RUB
 			.col-sm-6.col-lg-4
-				+catalogItem('3.png')
+				+catalogItem('3.png','basket')
+					+e.UL.tags
+						li: a(href="#") Хлебная зона
+					+e.title Emma
+					+e.name Хлебница /
+						span Emma Danish
+					+e.priceWrap
+						+e.price 16 000 RUB
 			.col-sm-6.col-lg-4
-				+catalogItem('4')
+				+catalogItem('4','','- 45%')
+					+e.UL.tags
+						li: a(href="#") Хлебная зона
+						li: a(href="#") Welcome
+					+e.title Emma
+					+e.name Хлебница /
+						span Emma Stelton
+					+e.priceWrap
+						+e.price 10 090 RUB
+			.col-sm-6.col-lg-4
+				+catalogItem('5','','- 45%')
+					+e.UL.tags
+						li: a(href="#") Хлебная зона
+						li: a(href="#") Welcome
+					+e.title Yamazaki
+					+e.name Хлебница /
+						span Tower
+					+e.priceWrap
+						+e.price 8 630 RUB
 	// end sCatalog
 
 mixin catalogItem(i,basket,sale)
