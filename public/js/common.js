@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '01-s-440.png';
+	screenName = '01-1440.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -406,6 +406,25 @@ function eventHandler() {
 		$(this).toggleClass('active');
 		$('.search-strip-js').toggleClass('active');
 		document.body.addEventListener('click', searchPopUpMissClick);
+	}); //
+
+	var headerSlider = new Swiper('.header-slider-js', {
+		loop: true,
+		spaceBetween: 10,
+		//
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		//
+		navigation: {
+			nextEl: '.header-next--js',
+			prevEl: '.header-prev--js'
+		},
+		pagination: {
+			el: '.header-pugin--js',
+			clickable: true
+		}
 	}); //end luckyone js
 }
 

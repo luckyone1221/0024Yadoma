@@ -14,7 +14,7 @@ $rfs-breakpoint: 1200px !default;
 $white: #fff !default;
 $border-gray: #737C7B;
 $scroll-gray: #C4C4C4;
-
+$light-bg: #F8F5F0;
 $light-white: #f2ede7;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -306,7 +306,7 @@ $grid-breakpoints: (xs: 0,
 $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1370px,
+  xl: 1330px,
   xxl: 1470px) !default;
 // scss-docs-end container-max-widths
 

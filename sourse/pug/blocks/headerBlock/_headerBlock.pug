@@ -1,10 +1,30 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+		.container.container-fluid
+			+e.row.row
+				.col-lg-6
+					//-+e.A.img-link(href="#")
+					+pic('header-block-baner-img.jpg')(class='headerBlock__img')
+				+e.slider-col.col-lg-6
+					+e.slider
+						.swiper-container.header-slider-js
+							.swiper-wrapper
+								+headerBlockSlide(1)
+								+headerBlockSlide(1)
+								+headerBlockSlide(1)
+							+b.header-pugin--js
+						+b.header-prev--js
+							+icon('chevron-left')
+						+b.header-next--js
+							+icon('chevron-right')
 	// end headerBlock
+
+mixin headerBlockSlide(imgNum)
+	.swiper-slide
+		+e.A.slide-content(href="#")
+			+e.slide-img
+				img.swiper-lazy(src='#' data-src=`img/@2x/header-slide-${imgNum}.jpg` alt="")
+			+e.slide-descr
+				+e.txt Коллекция BAHIA от Degrenne
+				+e.watch-txt Смотреть
