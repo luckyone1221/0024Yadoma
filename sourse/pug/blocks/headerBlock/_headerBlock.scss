@@ -10,7 +10,11 @@
 	&__img{
 		min-height: 100%;
 		@extend .accept-ratio-frame-nh;
-		padding-top: (60/72) * 100%;
+
+		padding-top: (262/327) * 100%;
+		@include media-breakpoint-up(lg){
+			padding-top: (60/72) * 100%;
+		}
 	}
 	&__slider-col{
 		background-color: $light-bg;
@@ -21,8 +25,12 @@
 		height: 100%;
 		margin: 0 auto;
 
-		width: 330px;
-		padding: rem(50px) 0 rem(68px);
+		padding: rem(40px) 0 rem(25px);
+		width: 182px;
+		@include media-breakpoint-up(sm){
+			padding: rem(50px) 0 rem(40px);
+			width: 330px;
+		}
 		@include media-breakpoint-up(xl){
 			width: 400px;
 			padding: rem(60px) 0;
@@ -43,7 +51,8 @@
 		.header-pugin{
 			position: absolute;
 			left: 0;
-			@include media-breakpoint-up(lg){
+			top: 182px;
+			@include media-breakpoint-up(sm){
 				top: 330px;
 			}
 			@include media-breakpoint-up(xl){
@@ -108,10 +117,22 @@
 		}
 
 		.header-prev{
-			right: calc(100% + 20px)
+			right: calc(100% + 20px);
+			@include media-breakpoint-up(sm){
+				right: calc(100% - 35px);
+			}
+			@include media-breakpoint-up(xxl){
+				right: calc(100% + 20px);
+			}
 		}
 		.header-next{
-			left: calc(100% + 20px)
+			left: calc(100% + 20px);
+			@include media-breakpoint-up(sm){
+				left: calc(100% - 35px);
+			}
+			@include media-breakpoint-up(xxl){
+				left: calc(100% + 20px);
+			}
 		}
 		//
 	}
@@ -132,27 +153,32 @@
 	//slide-descr
 	&__slide-descr{
 		padding-top: rem(8);
-		//position: absolute;
-		//left: 0;
-		//top: 100%;
-		//width: 100%;
-		//background-color: violet;
 
-		//display: none!important;
-		display: flex!important;
-		align-items: center;
-		justify-content: space-between;
+		text-align: center;
+		@include media-breakpoint-up(sm){
+			display: flex!important;
+			align-items: center;
+			justify-content: space-between;
+			text-align: left;
+		}
 	}
 	&__txt{
 		color: $body-color;
 		font-size: rem(14);
 		line-height: (15.4/14);
+
+		margin-bottom: rem(8px);
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+		}
 	}
 	&__watch-txt{
 		font-size: rem(14);
 		line-height: (15.4/14);
-		text-align: right;
 
+		@include media-breakpoint-up(sm){
+			margin-right: 10px;
+		}
 		@include mt();
 		color: $body-color;
 		text-decoration: underline;
