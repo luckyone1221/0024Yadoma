@@ -1,8 +1,13 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(32)};
+	--sPT: #{rem(17)};
 	--sPB: #{rem(24)};
 	--sTPB: #{0};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(32)};
+		--sPB: #{rem(24)};
+		--sTPB: #{0};
+	}
 
 	&__row{
 		@include roww(0px);
@@ -69,8 +74,12 @@
 
 			padding: 16px 10px 8px 10px;
 			.swiper-pagination-bullet{
-				width: 10px;
-				height: 10px;
+				width: 5px;
+				height: 5px;
+				@include media-breakpoint-up(sm){
+					width: 10px;
+					height: 10px;
+				}
 				border-radius: 50%;
 				border: 1px solid $primary;
 				background-color: transparent;
@@ -112,8 +121,6 @@
 					stroke: $body-color2;
 				}
 			}
-
-
 		}
 
 		.header-prev{
