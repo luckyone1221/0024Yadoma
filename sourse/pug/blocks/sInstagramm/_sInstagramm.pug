@@ -1,0 +1,24 @@
+mixin sInstagramm(data)
+	// start sInstagramm
+	+b.SECTION.sInstagramm.section#sInstagramm&attributes(attributes)
+		+e.container.container
+			+e.row
+				+e.title-col
+					+b.section-title
+						h2 Мы в Instagram
+						p Ещё больше новинок и изящных фото в нашем Instagram
+						a(href="#") Подписывайтесь
+				+e.slider-col
+					+e.slider
+						.swiper-container.instag-slider-js
+							.swiper-wrapper
+								+instagrammItem(1)
+								+instagrammItem(2)
+								+instagrammItem(3)
+								+instagrammItem(4)
+	// end sInstagramm
+
+mixin instagrammItem(imgNum)
+	.swiper-slide
+		+e.A.img(href="#")
+			img.swiper-lazy(src='#' data-src=`img/@2x/istagramm-slide-${imgNum}.jpg` alt="")

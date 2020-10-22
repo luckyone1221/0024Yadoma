@@ -1,43 +1,233 @@
 .footer {
-		
+  background-color: $light-bg;
+  padding: 0 0 65px 0;
+  @include media-breakpoint-up(sm){
+    padding: 63px 0 30px 0;
+  }
+  @include media-breakpoint-up(xl){
+    padding: 65px 0 30px 0;
+  }
 
+  &__row{
+    @include media-breakpoint-down(sm){
+      @include roww(48px);
+    }
+    @include media-breakpoint-up(lg){
+      max-width: 87%;
+      margin-left: 4%;
+    }
+    @include media-breakpoint-up(xl){
+      max-width: 70%;
+      margin-left: 14%;
+    }
+    @include media-breakpoint-up(xxl){
+      max-width: 89%;
+      margin-left: 4.5%;
+    }
+  }
+  &__col{
+    @include media-breakpoint-down(sm){
+      padding: 0;
+    }
+    @include media-breakpoint-up(sm){
+      margin-bottom: rem(35px);
+    }
+    @include media-breakpoint-up(lg){
+      margin-bottom: rem(46px);
+    }
+  }
+  &__item{
+    @include media-breakpoint-up(sm){
+      margin-bottom: rem(35);
+      &:last-child{
+        margin-bottom: rem(0);
+      }
+    }
+    @include media-breakpoint-up(lg){
+      margin-bottom: rem(45);
+      &:last-child{
+        margin-bottom: rem(45);
+      }
+    }
+    @include media-breakpoint-up(xl){
+      margin-bottom: rem(48);
+    }
+    &--soc{
+      a{
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__title{
+    color: $body-color2;
+    font-size: rem(16);
+    line-height: (17.6/16);
 
-// 
-@include media-breakpoint-up(xl) {}
+    position: relative;
+    @extend .before-chevron-frame;
+    padding: rem(30px) rem(24px);
+    @include media-breakpoint-up(sm){
+      padding: 0;
+      &:before{
+        content: none;
+      }
+    }
 
-@include media-breakpoint-up(lg) {}
+    &.active:before{
+      transform: rotateX(180deg);
+    }
 
-@include media-breakpoint-up(md) {}
+    border-bottom: 1px solid rgba($primary, .5);
+    @include media-breakpoint-up(sm){
+      border-bottom: 0;
+      margin-bottom: rem(20);
+      pointer-events: none;
+    }
+    @include media-breakpoint-up(lg){
+      margin-bottom: rem(30);
+    }
+  }
+  &__list{
+    display: none;
+    &.active{
+      display: block;
+    }
+    @include media-breakpoint-up(sm){
+      display: block!important;
+    }
 
-@include media-breakpoint-up(sm) {}
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+      @include media-breakpoint-up(sm){
+        margin-bottom: rem(12);
+      }
+    }
+    a{
+      display: block;
+      border-bottom: 1px solid rgba($primary, .5);
+      padding: 20px 24px;
+      @include media-breakpoint-up(sm){
+        display: inline-block;
+        border: none;
+        padding: 0;
+      }
 
-@include media-breakpoint-up(xs) {}
+      color: $body-color;
+      text-decoration: none;
+      &:hover{
+        color: $body-color2;
+        text-decoration: underline;
+      }
 
+      font-size: rem(14);
+      line-height: (15.4/14);
+    }
+  }
+  //subscribe
+  &__subscribe{
+    padding: 50px 24px 48px 24px;
+    @include media-breakpoint-up(sm){
+      padding: 0;
+    }
+    .form-wrap{
 
-// 
-@include media-breakpoint-between(md, xl) {}
+      @include media-breakpoint-up(lg){
+        margin-right: -48px;
+      }
+      @include media-breakpoint-up(xl){
+        margin-right: -29px;
+      }
+      form{
+        display: flex;
+        align-items: flex-end;
+      }
+      &__input-wrap{
+        flex-grow: 1;
+        position: relative;
+      }
+      &__title{
+        display: block;
+        color: $body-color2;
+        font-size: rem(16);
+        line-height: (16/17.6);
+        margin-bottom: rem(15);
+      }
+      &__input{
+        max-height: 50px;
+        height: 50px;
+        //height: auto;
+        min-height: 0;
 
+        padding: 13.5px 24px;
+      }
+      //(label)
+      &__btn{
+        @extend .btn;
+        @extend .btn-primary;
+        button{
+          display: none;
+        }
 
-// 
-@include media-breakpoint-only(xs) {}
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
 
-@include media-breakpoint-only(sm) {}
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-@include media-breakpoint-only(md) {}
+        .icon{
+          @include mt();
+          color: transparent;
+          stroke: $body-bg;
+          stroke-width: 1px;
+          font-size: 16px;
+        }
+        &:hover{
+          .icon{
+            stroke: $white;
+            stroke-width: 2px;
+          }
+        }
 
-@include media-breakpoint-only(lg) {}
+      }
+    }
+  }
+  //
+  &__policy{
+    margin-bottom: rem(65);
+    @include media-breakpoint-up(xl){
+      margin-bottom: rem(58px);
+    }
+    a{
+      display: inline-block;
+      color: $body-color;
+      &:hover{
+        color: $body-color2;
+      }
+      font-size: rem(12.4);
+      line-height: (13.2/12);
+    }
+  }
+  &__footer-logo{
+    text-align: center;
+    a{
+      display: inline-block;
+      height: 40px;
 
-@include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+      img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  &__{}
+  &__{}
 }

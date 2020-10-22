@@ -1,0 +1,163 @@
+// start .sBrends
+.sBrends {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(45px)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(52)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(45px)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(48px)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(45px)};
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(40px)};
+		--sTPB: #{rem(45px)};
+		--sPB: #{rem(95)};
+	}
+
+	&__main-row{
+		@include media-breakpoint-up(lg){
+			display: flex;
+
+			max-width: 854px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 0 105px;
+			max-width: 100%;
+			margin: 0;
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 0px;
+		}
+	}
+	&__img-col{
+		flex-shrink: 0;
+
+		@include media-breakpoint-up(sm){
+			max-width: 327px;
+		}
+		margin: 0 0 rem(32) 0;
+		@include media-breakpoint-up(lg){
+			max-width: 100%;
+			width: 257px;
+			margin: 0 rem(36px) 0 0;
+		}
+		@include media-breakpoint-up(xl){
+			width: 264px;
+			margin-right: rem(57);
+		}
+		@include media-breakpoint-up(xxl){
+			width: 384px;
+			margin-right: rem(116);
+		}
+	}
+	&__img{
+		display: block;
+		position: relative;
+		height: 0;
+		width: 100%;
+
+		padding-top: 51%;
+		@include media-breakpoint-up(sm){
+			padding-top: 56%;
+		}
+		@include media-breakpoint-up(xl){
+			padding-top: (200/384) * 100%;
+		}
+	}
+	&__img-inner{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 70%;
+			max-height: 70%;
+		}
+	}
+	&__txt-col{
+		@include media-breakpoint-up(lg){
+			padding-top: 10px;
+		}
+		@include media-breakpoint-up(xl){
+			padding-top: 0;
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+		}
+	}
+	&__title{
+		flex-shrink: 0;
+		margin-bottom: rem(22);
+
+		font-size: rem(36);
+		@include media-breakpoint-up(md){
+			font-size: rem(47);
+		}
+		@include media-breakpoint-up(xl){
+			width: 444px;
+			margin-bottom: 0;
+			margin-right: rem(61px);
+			font-size: rem(47);
+		}
+		@include media-breakpoint-up(xxl){
+			width: 632px;
+			margin-right: rem(57px);
+			font-size: rem(57);
+		}
+		font-family: $mono;
+		font-weight: 400;
+		line-height: (62.7/57);
+		text-transform: uppercase;
+	}
+	&__descr{
+		@include media-breakpoint-up(sm){
+			max-width: 409px;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-bottom: 10px;
+		}
+
+		p{
+			color: $body-color;
+			font-size: rem(16);
+
+			line-height: 1.5;
+			margin-bottom: rem(33);
+			@include media-breakpoint-up(sm){
+				line-height: (22.4/16);
+				margin-bottom: rem(16);
+			}
+		}
+		a{
+			@extend .underline-link-frame;
+			&:after{
+				left: 0;
+				transform: none;
+			}
+
+		}
+	}
+} // end.sBrends

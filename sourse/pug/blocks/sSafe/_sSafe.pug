@@ -1,0 +1,22 @@
+mixin sSafe(data)
+	// start sSafe
+	+b.sSafe.section#sSafe&attributes(attributes)
+		+e.content
+			+e.container.container
+				+e.row.row
+					+safeItem('col-sm-6 col-lg-4','Безопасная оплата')
+						| Visa, American Express, Mastercard
+					+safeItem('col-sm-6 col-lg-4','Доставка')
+						| Доставка на дом по вашему графику
+					+safeItem('offset-sm-3 offset-lg-0 col-sm-6 col-lg-4','Обслуживание клиентов')
+						| ПН-ПТ: 9.00-18.00
+						br
+						| +7 (921) 341 20 20 / hello@yadoma.com
+	// end sSafe
+
+mixin safeItem(colClasses, title)
+	+e.col(class=colClasses)&attributes(attributes)
+		+e.col-content
+			+e.A.title(href='#')=title
+			+e.txt
+				block

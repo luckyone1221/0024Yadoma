@@ -1,0 +1,88 @@
+// start .sAdvantage
+.sAdvantage {
+	--sTPB: #{0};
+
+	--sPT: #{rem(40)};
+	--sPB: #{rem(24)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(30px)};
+		--sPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(63px)};
+		--sPB: #{rem(40)};
+	}
+	
+	&__content{
+		border-top: 1px solid rgba($border-gray, .3);
+		border-bottom: 1px solid rgba($border-gray, .3);
+
+		padding: 50px 0 31px 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(68px) 0;
+		}
+	}
+	&__container{
+
+	}
+
+	&__row{
+		margin-left: auto;
+		margin-right: auto;
+
+		max-width: 680px;
+		@include media-breakpoint-up(lg){
+			max-width: 680px;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 850px;
+		}
+		@include media-breakpoint-up(xxl){
+			max-width: 1164px;
+		}
+	}
+	&__col{
+		margin-bottom: 53px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+		}
+	}
+	&__col-content{
+		max-width: 210px;
+		@include media-breakpoint-up(sm){
+			max-width: 200px;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 210px;
+		}
+
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+
+		img{
+			width: auto;
+			height:auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		margin-bottom: rem(15);
+	}
+	&__title{
+		color: $body-color2;
+		font-size: rem(18);
+		line-height: (19.8/18);
+		margin-bottom: rem(15);
+	}
+	&__txt{
+		font-size: rem(14);
+		line-height: (16.8/14);
+	}
+	&__{}
+} // end.sAdvantage

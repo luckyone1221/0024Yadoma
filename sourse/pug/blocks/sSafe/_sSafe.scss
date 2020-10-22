@@ -1,0 +1,86 @@
+// start .sSafe
+.sSafe {
+	--sTPB: #{0};
+	--sPB: #{0};
+
+	--sPT: #{rem(40)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(89px)};
+	}
+
+	&__content{
+		border-top: 1px solid rgba($border-gray, .3);
+		border-bottom: 1px solid rgba($border-gray, .3);
+
+		padding: 65px 0 31px 0;
+		@include media-breakpoint-up(lg){
+			padding: 64px 0 63px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(63px) 0 rem(62px);
+		}
+	}
+	&__container{
+
+	}
+	&__row{
+		margin-left: auto;
+		margin-right: auto;
+
+
+		@include media-breakpoint-up(lg){
+			max-width: 95%;
+			margin-left: auto;
+			margin-right: 0;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 92%;
+			margin-left: auto;
+			margin-right: -15px;
+		}
+		@include media-breakpoint-up(xxl){
+			max-width: 100%;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+	&__col{
+		margin-bottom: rem(46px);
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+		}
+	}
+	&__col-content{
+		text-align: center;
+		max-width: 220px;
+
+		margin: 0 auto;
+		@include media-breakpoint-up(lg){
+			margin: 0;
+		}
+		@include media-breakpoint-up(xxl){
+			margin: 0 auto;
+		}
+	}
+	&__title{
+		display: block;
+		color: $body-color2;
+		text-decoration: underline;
+		&:hover{
+			color: $body-color;
+			text-decoration: none;
+		}
+
+		font-size: rem(14);
+		line-height: (15.4/14);
+
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(20);
+		}
+	}
+	&__txt{
+		font-size: rem(12);
+	}
+
+} // end.sSafe

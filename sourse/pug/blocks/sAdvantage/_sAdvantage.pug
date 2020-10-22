@@ -1,0 +1,19 @@
+mixin sAdvantage(data)
+	// start sAdvantage
+	+b.sAdvantage.section#sAdvantage&attributes(attributes)
+		+e.content
+			+e.container.container
+				+e.row.row
+					+advantageItem(1, 'Возврат', 'Бесплатный возврат по России')
+					+advantageItem(2, 'Доставка', 'Бесплатная доставка по России')
+					+advantageItem(4, 'Упаковка', 'Каждый товар упакован в индивидуальную упаковку, сочетающуюся с товаром')(class='d-lg-none')
+					+advantageItem(3, 'Система', 'Все товары отсортированы в соответствии с системой YADOMA')
+	// end sAdvantage
+
+mixin advantageItem(imgNum, title, txt)
+	+e.col.col-sm-6.col-lg-4&attributes(attributes)
+		+e.col-content
+			+e.img
+				img(loading="lazy" src=`img/svg/advantage-item-${imgNum}.svg` alt="")
+			+e.title=title
+			+e.txt=txt

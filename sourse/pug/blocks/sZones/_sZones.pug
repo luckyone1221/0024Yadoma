@@ -1,0 +1,18 @@
+mixin sZones(data)
+	// start sZones
+	+b.SECTION.sZones.section#sZones&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Система YADOMA
+			+e.row
+				+zonesItem(1, 'Зона воды')
+				+zonesItem(2, 'Хлебная зона')
+				+zonesItem(3, 'Зона декора')
+	// end sZones
+
+mixin zonesItem(imgNum, txt)
+	+e.col
+		+e.A.item(href='#')
+			+e.img
+				img(loading="lazy" src=`img/@2x/zone${imgNum}.png` alt="")
+			+e.txt=txt

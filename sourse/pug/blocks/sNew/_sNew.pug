@@ -1,0 +1,46 @@
+mixin sNew(data)
+	// start sNew
+	+b.SECTION.sNew.section#sNew&attributes(attributes)
+		+e.container.container
+			+e.row
+				+e.title-col
+					+b.section-title
+						h2 Новинки
+						p Управляйте своим пространством с нашими новинками
+						a(href="#") Все новинки
+				+e.slider-col
+					+e.slider
+						.swiper-container.new-slider-js
+							.swiper-wrapper
+								+newSlide(1, 'DEGRENNE', '3 670 RUB')
+									span
+										| Круглая тарелка для презентации
+										br
+										| блюд, 30 см
+									span BAHIA
+								+newSlide(2, 'YADOMA', '19 000 RUB')
+									span Хлебница из красной глины
+									br
+									span Bread Collection
+								+newSlide(3, 'Gourmet', '2 200 RUB')
+									span Мини-боул Gourmet
+									span ROC
+								+newSlide(4, 'WUSTHOF', '16 990 RUB')
+									span
+										| Хлебный нож из нержавеющей
+										br
+										| стали
+									span Ikon Classic
+							+b.new-next--js.d-none.d-md-flex
+								+icon('chevron-right')
+	// end sNew
+
+mixin newSlide(imgNum, nameTxt, priceTxt)
+	.swiper-slide
+		+e.A.slide-content(href="#")
+			+e.slide-img
+				img.swiper-lazy(src="#" data-src=`img/@2x/new-slide-${imgNum}.jpg` alt="")
+			+e.name=nameTxt
+			+e.descr
+				block
+			+e.price=priceTxt

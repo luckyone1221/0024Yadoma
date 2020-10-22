@@ -1,0 +1,76 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			+breadcrumb('Кухня', 'Хранение на кухне', 'Хлебницы')(class='d-none d-lg-block')
+			+e.main-row.row
+				+e.slider-col.col-lg-6
+					+e.slider
+						.swiper-container.prod-slider-js
+							.swiper-wrapper
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+								+prodCardSlide(4)
+					+e.thumb
+						.swiper-container.prod-thumb-js
+							.swiper-wrapper
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+								+prodCardThumb(4)
+				+e.descr-col.col-lg-6
+					+e.H1.prod-name Хлебница
+					+e.brend-links
+						a(href='#') YADOMA
+						a(href="#") Bread Coolection
+					+e.article-txt
+						span Артикул:
+						span 04852
+					+e.short-desc Фирменная хлебница от бренда YADOMA из натуральных и экологичных материалов
+					+e.tags
+						a(href="#") Хлебная зона
+						a(href='#') Welcome
+					+e.price 15 000 RUB
+					+e.A.cart-btn(href="#")
+						+icon('cart')
+						span Добавить в корзину
+					+e.dd-container
+						+prodCardDDItem('Доставка')
+							+e.dd-default
+								|Мы осуществляем бесплатную доставку по России. Доставляем заказы по всему миру (стоимость доставки уточняйте у менеджеров). Вы также можете забрать свой товар сами, если находитесь в Санкт-Петербурге.
+								a(href='#') Подробнее
+						+prodCardDDItem('Возврат')
+							+e.dd-default
+								|Если товар не подошёл вам, то вы можете вернуть его в течение 14 дней с момента покупки.
+								a(href='#') Подробнее
+						+prodCardDDItem('Характеристики')
+							+e.chars-table
+								+prodCardDDCharItem('Артикул', '189240')
+								+prodCardDDCharItem('Материал', 'белая глина, красный клён')
+								+prodCardDDCharItem('Размер', '33*19*25 см')
+								+prodCardDDCharItem('Цвет', 'молочный белый')
+	// end sProdCard
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.slide-link(href=`img/@2x/prod-item-${imgNum}.jpg` data-fancybox="prodImgs")
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg`)
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg`)
+
+
+mixin prodCardDDItem(titleTxt)
+	+e.dd-item
+		+e.title
+			+icon('chevron-down')
+			span=titleTxt
+		+e.dd-content.dd-content-js
+			block
+
+mixin prodCardDDCharItem(key, val)
+	+e.char-item
+		span=key
+		span=val

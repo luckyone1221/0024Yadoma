@@ -19,7 +19,7 @@ html {
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	opacity: 0.7;
+	//opacity: 0.7;
 }
 
  
@@ -417,29 +417,63 @@ iframe {
 	border: none;
 }
 
-ol.breadcrumb {
-	list-style: none;
-	padding-left: 0;
-	display: flex;
-	align-items: center;
+//breadcrumbs
+.breadcrumb-cont{
+	padding: rem(10) 0;
+	@include media-breakpoint-up(sm){
+		padding: rem(20) 0;
+	}
+	@include media-breakpoint-up(lg){
+		padding: rem(37px) 0 rem(16) 0;
+	}
+	.swiper-container{
 
-	.breadcrumb-item {
-		&:not(:last-child) {
-			&::after {
-				content: '—';
-				margin-left: 1px;
-				margin-right: 5px;
-			}
-			a:hover {
-				opacity: .7;
+	}
+	//ol
+	.swiper-wrapper{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	//li
+	.swiper-slide{
+		width: auto;
+		height: 30px;
+
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+
+		&:hover{
+			&:before{
+				color: rgba($body-color, .7);
 			}
 		}
+		&:not(:first-child):before{
+			content: '—';
+			color: $body-color;
+			font-size: rem(12);
+			margin: 0 rem(3);
+		}
 
-		&.active {
-			pointer-events: none;
+		a{
+			@include mt();
+
+			color: $body-color;
+			&:hover{
+				color: $body-color2;
+			}
+
+			line-height: 1;
+		}
+		span{
+			font-weight: 300;
+			font-size: rem(12.3);
 		}
 	}
+
 }
+//end breadcrumbs
 
 //accept ratio frame
 .accept-ratio-frame{
@@ -493,4 +527,73 @@ ol.breadcrumb {
 		padding-left: 24px;
 		padding-right: 24px;
 	}
+}
+
+//prev, next frame
+.preve-next-frame{
+	box-shadow: none!important;
+	outline: none!important;
+	border: none!important;
+
+	width: 30px;
+	height: 30px;
+	//background-color: red;
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-90%);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.icon{
+		@include mt();
+		font-size: rem(17);
+		color: transparent;
+		stroke: $body-color;
+	}
+
+	&:hover{
+		.icon{
+			transform: scale(1.1);
+			stroke: $body-color2;
+		}
+	}
+}
+
+//underline-link-frame
+.underline-link-frame{
+	display: inline-flex;
+	text-decoration: none!important;
+	padding-bottom: 6px;
+
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		@include mt();
+		width: 35px;
+		height: 1px;
+		background-color: currentColor;
+
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(md){
+			left: 0;
+			transform: none;
+		}
+		bottom: 0;
+	}
+
+	color: $body-color;
+	&:hover{
+		color: $body-color2;
+		&:after{
+			width: 100%;
+		}
+	}
+
+	font-size: $h6-font-size;
+	text-align: left;
 }

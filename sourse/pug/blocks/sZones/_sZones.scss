@@ -1,0 +1,134 @@
+// start .sZones
+.sZones {
+	--sPT: #{rem(52)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(45px)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(36px)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(45px)};
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-down(md){
+				font-size: $h2-font-size;
+			}
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&__row{
+		@include media-breakpoint-up(lg){
+			max-width: 89.5%;
+			margin: 0 auto;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: 100%;
+			margin: 0;
+		}
+
+		display: grid;
+		@include media-breakpoint-up(md){
+			grid-template-columns: repeat(2,1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		grid-column-gap: 24px;
+		grid-row-gap: 24px;
+		@include media-breakpoint-up(md){
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+		}
+		@include media-breakpoint-up(xxl){
+			grid-column-gap: 40px;
+			grid-row-gap: 40px;
+		}
+	}
+	&__col{
+		&:nth-child(3){
+			@include media-breakpoint-up(md){
+				grid-column-start: 2;
+				grid-column-end: 3;
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+		}
+	}
+
+	&__item{
+		display: block;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+
+		padding-top: (250/327) * 100%;
+		@include media-breakpoint-up(md){
+			padding-top: (264/418) * 100%;
+		}
+		@include media-breakpoint-up(xl){
+			padding-top: 50.3%;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-top: (37/70) * 100%;
+		}
+
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+			.sZones__txt{
+				color: $white;
+				background-color: rgba($black, .5);
+			}
+		}
+
+		span{
+			display: block;
+		}
+	}
+	&__img{
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			@include mt();
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__txt{
+		@include mt();
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, .3);
+
+		display: flex!important;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		color: $body-bg;
+		font-size: rem(24);
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sZones

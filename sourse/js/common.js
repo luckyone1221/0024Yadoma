@@ -234,17 +234,17 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	//JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
+	//JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '01-375.png';
+	screenName = '03.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -262,11 +262,11 @@ function eventHandler() {
 	}
 
 	window.addEventListener('resize', () => {
-		whenResize();
+		//whenResize();
 
 	}, { passive: true });
 
-	whenResize();
+	//whenResize();
 
 
 	let defaultSl = {
@@ -388,13 +388,11 @@ function eventHandler() {
 
 	//mob sub sub
 	$('.sub-col-title-js').click(function (){
-		if (window.matchMedia("(max-width: 1020px)").matches) {
-			$(this).toggleClass('active');
+		$(this).toggleClass('active');
 
-			$(this.parentElement).find('.sub-col-list-js').slideToggle(function (){
-				$(this).toggleClass('active');
-			});
-		}
+		$(this.parentElement).find('.sub-col-list-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
 	});
 
 
@@ -416,7 +414,7 @@ function eventHandler() {
 		document.body.addEventListener('click', searchPopUpMissClick);
 	});
 
-	//
+	//headerSlider
 	let headerSlider = new Swiper('.header-slider-js', {
 		loop: true,
 		spaceBetween: 10,
@@ -436,6 +434,107 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	//newSlider
+	let newSlider = new Swiper('.new-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+		breakpoints: {
+			0: {
+				spaceBetween: 24,
+			},
+			768: {
+				spaceBetween: 15,
+			},
+			1550: {
+				spaceBetween: 30,
+			},
+
+		},
+
+		//
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+		//
+		navigation: {
+			nextEl: '.new-next--js',
+			//prevEl: '.header-prev--js',
+		},
+	});
+	//instagramSlider
+	let instagramSlider = new Swiper('.instag-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 18,
+			},
+			768: {
+				spaceBetween: 20,
+			},
+			1368: {
+				spaceBetween: 50,
+			},
+		},
+
+		//
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+	});
+	//footer js
+	$('.foot-title-js').click(function (){
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.foot-list-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+	//breadcrumbs
+	let breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true,
+	});
+	//prod card sliders
+	let prodCardThumb = new Swiper('.prod-thumb-js', {
+		slidesPerView: 'auto',
+		//
+		breakpoints: {
+			1: {
+				direction: 'horizontal',
+				spaceBetween: 10,
+			},
+			1020: {
+				direction: 'vertical',
+				spaceBetween: 20,
+			},
+		},
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+
+	});
+	let prodCardSlider = new Swiper('.prod-slider-js', {
+		spaceBetween: 20,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
+		},
+		loop: true,
+	});
+	//
 
 	//end luckyone js
 

@@ -1,4 +1,39 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.row.row
+				+e.col.col-sm-6.col-lg-3
+					+footerItem('Помощь')
+						li
+							a(href="mailto:hello@yadoma.com") hello@yadoma.com
+						li
+							a(href="tel+79213412020") +7 (921) 341 20 20
+				+e.col.col-sm-6.col-lg-3
+					+footerItem('Информация', 'Доставка', 'Возврат', 'Контакты')
+				+e.col.col-sm-6.col-lg-3
+					+footerItem('YADOMA','О нас', 'Бренды', 'Вакансии', 'Сотрудничество')
+				+e.col.col-sm-6.col-lg-3
+					+footerItem('Соцсети', 'Instagram', 'WhatsApp')(class="footer__item--soc")
+					+e.subscribe
+						+form-wrap
+							+input('email', 'email', 'Подписаться на новости')
+							+e.LABEL.btn
+								button(type="submit")
+								+icon('chevron-right')
+				+e.policy.col-12
+					a(href="#") Политика конфиденциальности
+			+e.footer-logo
+				a(href="/")
+					img(loading='lazy' src=`img/svg/footer-logo.svg` alt="")
+
+
+mixin footerItem(titleTxt, ...items)
+	+e.item&attributes(attributes)
+		+e.title.foot-title-js=titleTxt
+		+e.UL.list.foot-list-js
+			if block
+				block
+			else
+				each item in items
+					li
+						a(href="#")=item

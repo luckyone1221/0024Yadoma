@@ -1,0 +1,19 @@
+mixin sColections(data)
+	// start sColections
+	+b.SECTION.sColections.section#sColections&attributes(attributes)
+		+b.section-title.text-center
+			h2 Новые коллекции
+		+e.row.row
+			+collectionItem(1, 'Уникальная керамика')
+			+collectionItem(2, 'Современная классика')
+	// end sColections
+
+mixin collectionItem(imgNum, title)
+	+e.col.col-md-6
+		+e.item
+			+e.content
+				+e.A.img(href="#")
+					img(loading="lazy" src=`img/@2x/collection-${imgNum}.jpg` alt="")
+				+e.txt.text-center
+					+e.title=title
+					+e.A.link(href="#") Смотреть

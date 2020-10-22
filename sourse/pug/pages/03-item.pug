@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+include ../blocks/sZones/_sZones.pug
+include ../blocks/sBrends/_sBrends.pug
+include ../blocks/sColections/_sColections.pug
+include ../blocks/sInstagramm/_sInstagramm.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sProdCard/_sProdCard.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-item'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sProdCard()
+	//+headerBlock()
+	//+sNew()
+	//+sAdvantage()
+	//+sZones()
+	//+sBrends()
+	//+sColections()
+	//+sInstagramm()
+	+sSafe()
+	+footer()
+
+
+	

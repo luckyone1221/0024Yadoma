@@ -767,19 +767,18 @@
 	&__title{
 		position: relative;
 		@extend .before-chevron-frame;
-
-		@include media-breakpoint-down(lg){
-			display: block;
-			padding: 17px 30px;
-			border-bottom: 1px solid $border-gray;
-
-			&.active{
-				&:before{
-					transform: rotateX(180deg);
-				}
+		&.active{
+			&:before{
+				transform: rotateX(180deg);
 			}
 		}
+
+		padding: 17px 30px;
+		border-bottom: 1px solid $border-gray;
 		@include media-breakpoint-up(lg){
+			pointer-events: none;
+			border-bottom: none;
+			padding: 0;
 			&:before{
 				content: none;
 			}

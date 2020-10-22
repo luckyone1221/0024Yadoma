@@ -41,7 +41,7 @@
 			padding: rem(60px) 0;
 		}
 		@include media-breakpoint-up(xxl){
-			padding: rem(100px) 0;
+			padding: rem(100px) 0 rem(75px) 0;
 		}
 		.swiper-container{
 
@@ -56,6 +56,7 @@
 		.header-pugin{
 			position: absolute;
 			left: 0;
+			bottom: unset;
 			top: 182px;
 			@include media-breakpoint-up(sm){
 				top: 330px;
@@ -72,7 +73,10 @@
 			justify-content: center;
 			align-items: center;
 
-			padding: 16px 10px 8px 10px;
+			padding: 16px 10px 0px 10px;
+			@include media-breakpoint-up(sm){
+				padding: 16px 10px 8px 10px;
+			}
 			.swiper-pagination-bullet{
 				width: 5px;
 				height: 5px;
@@ -83,7 +87,11 @@
 				border-radius: 50%;
 				border: 1px solid $primary;
 				background-color: transparent;
-				margin: 0 8px 8px 8px;
+
+				margin: 0 4px 4px 4px;
+				@include media-breakpoint-up(sm){
+					margin: 0 8px 8px 8px;
+				}
 				&-active{
 					background-color: $primary;
 				}
@@ -92,35 +100,7 @@
 		//prev, next
 		.header-prev,
 		.header-next{
-			box-shadow: none!important;
-			outline: none!important;
-			border: none!important;
-
-			width: 30px;
-			height: 30px;
-			//background-color: red;
-			position: absolute;
-			z-index: 3;
-			top: 50%;
-			transform: translateY(-90%);
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			.icon{
-				@include mt();
-				font-size: rem(17);
-				color: transparent;
-				stroke: $body-color;
-			}
-
-			&:hover{
-				.icon{
-					transform: scale(1.1);
-					stroke: $body-color2;
-				}
-			}
+			@extend .preve-next-frame;
 		}
 
 		.header-prev{
