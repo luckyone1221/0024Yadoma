@@ -106,7 +106,7 @@ var JSCCommon = {
 			document.addEventListener('mouseup', function (event) {
 				var container = event.target.closest(".menu-mobile--js.active"); // (1)
 
-				if (!container) {
+				if (!container && $('.menu-mobile--js').is('active')) {
 					_this2.closeMenu();
 				}
 			}, {
@@ -122,6 +122,53 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
+	toggleFilter: function toggleFilter() {
+		var _this3 = this;
+
+		var btnToggleFilter = document.querySelectorAll(".toggle-filter--js");
+		var filterMobile = document.querySelector(".filter-wrap-js");
+
+		if (btnToggleFilter) {
+			btnToggleFilter.forEach(function (el) {
+				el.addEventListener('click', function () {
+					console.log(_this3);
+					btnToggleFilter.forEach(function (el) {
+						return el.classList.toggle("on");
+					});
+					filterMobile.classList.toggle("active");
+					document.body.classList.toggle("fixed");
+					document.querySelector('html').classList.toggle("fixed");
+					return false;
+				});
+			});
+		}
+	},
+	// closeFilter() {
+	// 	if (this.filterMobile) {
+	// 		this.btnToggleFilter.forEach(element => {
+	// 			element.classList.remove("on");
+	// 		});
+	// 		this.filterMobile.classList.remove("active");
+	// 		document.body.classList.remove("fixed");
+	// 		document.querySelector('html').classList.remove("fixed");
+	// 	}
+	// },
+	// filterMenu() {
+	// 	if (this.menuMobileLink) {
+	// 		this.toggleMenu();
+	// 		document.addEventListener('mouseup', (event) => {
+	// 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
+	// 			if (!container) {
+	// 				this.closeMenu();
+	// 			}
+	// 		}, { passive: true });
+	// 		window.addEventListener('resize', () => {
+	// 			if (window.matchMedia("(min-width: 992px)").matches) {
+	// 				JSCCommon.closeFilter();
+	// 			}
+	// 		}, { passive: true });
+	// 	}
+	// },
 	// табы  .
 	tabscostume: function tabscostume(tab) {
 		var tabs = {
@@ -251,12 +298,15 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow(); //JSCCommon.animateScroll();
+
+	JSCCommon.toggleFilter(); // JSCCommon.closeFilter();
+	// JSCCommon.filterMenu();
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '03.png';
+	screenName = '01-375.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

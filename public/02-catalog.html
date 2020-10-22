@@ -504,16 +504,18 @@
 					<div class="col">
 						<div class="section-title">
 							<h1>Хлебницы</h1>
-							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
-											<meta itemprop="position" content="1"/></a></li>
-									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
-											<meta itemprop="position" content="2"/></a></li>
-									<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
-											<meta itemprop="position" content="3"/></a></li>
-								</ol>
-							</nav>
+							<div class="breadcrumb-cont">
+								<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
+									<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+										<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
+												<meta itemprop="position" content="1"/></a></li>
+										<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
+												<meta itemprop="position" content="2"/></a></li>
+										<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
+												<meta itemprop="position" content="3"/></a></li>
+									</ol>
+								</nav>
+							</div>
 						</div>
 						<div class="sCatalog__smallWidth">
 							<h5>Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и предлагаем вам лучшее</h5>
@@ -739,7 +741,78 @@
 		<!-- end sCatalog-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
-				<h2>footer</h2>
+				<div class="footer__row row">
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">Помощь
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="mailto:hello@yadoma.com">hello@yadoma.com</a></li>
+								<li><a href="tel+79213412020">+7 (921) 341 20 20</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">Информация
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Возврат</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">YADOMA
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Бренды</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item footer__item footer__item--soc">
+							<div class="footer__title foot-title-js">Соцсети
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">Instagram</a></li>
+								<li><a href="#">WhatsApp</a></li>
+							</ul>
+						</div>
+						<div class="footer__subscribe">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__title">Подписаться на новости</span><input class="form-wrap__input form-control" type="email" placeholder="email" name="email"/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<label class="form-wrap__btn">
+										<button type="submit"></button>
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</label>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="footer__policy col-12"><a href="#">Политика конфиденциальности</a>
+					</div>
+				</div>
+				<div class="footer__footer-logo"><a href="/"><img loading="lazy" src="img/svg/footer-logo.svg" alt=""/></a>
+				</div>
 			</div>
 		</footer>
 		<!--  start modals-->
