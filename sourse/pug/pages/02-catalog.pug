@@ -5,6 +5,8 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sFilter/_sFilter.pug
+include ../blocks/sSafe/_sSafe.pug
+
 
 block variables
 	- let  mainPage= null
@@ -16,6 +18,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	+sCatalog
+	+sSafe()
 	+footer()
 
 
