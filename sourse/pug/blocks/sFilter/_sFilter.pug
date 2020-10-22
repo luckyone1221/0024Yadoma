@@ -1,22 +1,33 @@
 mixin sFilter(data)
 	// start sFilter
-	+b.sFilter.section#sFilter&attributes(attributes)
+	+b.sFilter.filter-wrap-js#sFilter&attributes(attributes)
+		+e.topLine.d-lg-none
+			.h6 Фильтры
+			.toggle-filter--js
 		+e.block
 			+e.title Цвет
-			+in-c('checkbox','Природный белый')
+			+e.discharge.d-none.d-lg-block(type="submit") Сбросить всё
+			+in-c('checkbox','Природный белый')(checked)
 			+in-c('checkbox','Кирпичный')
 		+e.block
 			+e.title Бренд
-			+in-c('checkbox','YADOMA')
+			+e.discharge.d-none.d-lg-block(type="submit") Сбросить всё
+			+in-c('checkbox','YADOMA')(checked)
 			+in-c('checkbox','Bulthaup')
 			+in-c('checkbox','Emma Danish')
 		+e.block
 			+e.title Материал
-			+in-c('checkbox','Керамика, белый клён')
+			+e.discharge.d-none.d-lg-block(type="submit") Сбросить всё
+			+in-c('checkbox','Керамика, белый клён')(checked)
 			+in-c('checkbox','Красная глина, сосна')
 			+in-c('checkbox','Белая глина, сосна')
 			+in-c('checkbox','Сталь, бук')
 		+e.block
 			+e.title Размер
-			+in-c('checkbox','25*33*19 см')
+			+e.discharge.d-none.d-lg-block(type="submit") Сбросить всё
+			+in-c('checkbox','25*33*19 см')(checked)
+		+e.buttons.d-lg-none
+			+e.btn.btn.btn-outline-primary(type="submit") Сбросить
+			+e.btn.btn.btn-primary(type="submit") Применить
+
 	// end sFilter

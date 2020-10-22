@@ -1,13 +1,65 @@
 // start .sCatalog
 .sCatalog {
-	--sTPB: #{rem(10)};
+	--sPT: #{rem(26)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(76)};
+	}
+	--sTPB: #{rem(15)};
 
 	h5 {
 		font-weight: 300;
 	}
 
+	&__smallWidth {
+		max-width: 550px;
+		
+		h5 {
+			line-height: 155%;
+			letter-spacing: rem(0.3);
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(38);
+			}
+		}
+	}
 
 
+	&__row {
+		@include roww(97px)
+	}
+
+	&__result {
+		padding-top: rem(5);
+		font-size: $small;
+		@include media-breakpoint-up(md) {
+			font-size: $h6-font-size;
+		}
+	}
+
+	&__filterCol {
+		@include media-breakpoint-up(lg) {
+			max-width: 26%;
+		}
+	}
+
+	&__sortRow {
+		margin-bottom: rem(37);
+	}
+
+	h1 {
+		margin-bottom: 0;
+		line-height: 1.15;
+	}
+
+	&__filterModal {
+		display: flex;
+		align-items: center;
+		font-size: $small;
+		margin-bottom: rem(15);
+		.icon {
+			margin-right: rem(8);
+		}
+	}
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) { }
@@ -18,8 +70,8 @@
 .catalogItem {
 	display: flex;
 	flex-direction: column;
-	height: calc(100% - #{rem(80)});
-	margin-bottom: rem(80);
+	height: calc(100% - #{rem(79)});
+	margin-bottom: rem(79);
 
 	&__body {
 		display: flex;
@@ -29,20 +81,166 @@
 
 	&__imgWrap {
 		background: #fff;
-		min-height: 474px;
-		@include block(324,474);
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+		// min-height: 474px;
+		@include block(324,472);
+		margin-bottom: rem(16);
 
 		img {
-			@include a-cent;
+			max-width: 100%;
+			max-height: 100%;
+			@include a-cent(x);
+			bottom: 0;
+			// object-fit: cover;
 		}
-
 	}
 
+	&__sale {
+		position: absolute;
+		right: 10%;
+		top: 6%;
+		font-size: $h5-font-size;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-bottom: .3rem;
+	}
+
+	&__name {
+		letter-spacing: rem(0.2);
+		margin-bottom: .6rem;
+		span {
+			display: inline-block;
+			color: rgba($color: $primary, $alpha: 0.5);
+		}
+	}
+
+	//обертка для цен
+	&__priceWrap {
+		margin-top: auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: rem(10);
+	}
+
+	&__price {
+		@extend .h6;
+	}
+
+	&__oldPrice {
+		@extend .h6;
+		text-decoration: line-through;
+		color: rgba($color: $primary, $alpha: 0.5);
+		margin-right: rem(8);
+	}
 
 	&__btnWrap {
-		margin-top: auto;
+		// margin-top: auto;
+		display: inline-flex;
+		justify-content: space-between;
+
+		align-items: center;
+		border: 1px solid $primary;
+		border-radius: $border-radius;
+		overflow: hidden;
+		background: transparent;
+		max-width: rem(274);
+
+		&--sm {
+			max-width: 179px;
+		}
+	}
+	
+	//кнопка, если есть +- это не кнопка
+	&__btn {
+		margin-left: auto;
+		margin-right: auto;
+		display: inline-flex;
+		align-items: center;
+		min-height: rem(33);
+		@include media-breakpoint-up(sm) {
+			min-height: rem(48);
+		}
+
+		.icon {
+			font-size: rem(15);
+			margin-right: rem(9);
+		}
+	}
+
+	&__minus, &__plus {
+		position: relative;
+		border: solid 1px $primary;
+		margin: -1px;
+		width: rem(37px);
+		height: rem(37px);
+		@include media-breakpoint-up(sm) {
+			width: rem(50px);
+			height: rem(50px);
+		}
+		background: transparent;
+
+		&::before, &::after{
+			content: '';
+			@include a-cent;
+			width: 11px;
+			height: 1px;
+			background-color: $primary;
+		}
+	}
+
+	&__plus::after {
+		transform: rotate(90deg);
+	}
+
+	.tagsBlock {
+		margin-bottom: 0;
+	}
+}
+
+	//список с тегами
+.tagsBlock {
+	margin-left: -3px;
+	margin-right: -3px;
+	margin-bottom: rem(20);
+		
+	a, &__tag {
+		margin-bottom: .8rem;
+		margin-left: 3px;
+		margin-right: 3px;
+		font-size: $small;
+		padding: rem(5px) rem(10px);
+		border: solid 1px $primary;
+		border-radius: $border-radius;
+		display: inline-flex;
+		justify-content: space-between;
+		&:hover {
+			opacity: .6;
+		}
+	}
+
+	&__tag {
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__remove {
+		position: relative;
+		margin-left: rem(8);
+		background: transparent;
+		border: none;
+		&::before, &::after{
+			content: '';
+			@include a-cent;
+			width: 11px;
+			height: 1px;
+			background-color: $primary;
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
 	}
 }

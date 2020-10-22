@@ -1,18 +1,102 @@
 // start .sFilter
 .sFilter {
-	--sPT: #{rem(80)};
 
 	&__block {
-		padding-bottom: rem(35);
-		margin-bottom: rem(45);
-		border-bottom: solid 1px rgba($color: $body-color2, $alpha: 0.3);
+		padding-bottom: rem(28);
+		margin-bottom: rem(40);
+		&:not(:last-child) {
+			border-bottom: solid 1px rgba($color: $body-color2, $alpha: 0.3);
+		}
+		@include media-breakpoint-down(lg) {
+			margin-left: rem(24);
+			margin-right: rem(24);
+		}
 	}
 
 	&__title {
 		@extend .h5;
 		font-weight: 300;
+		margin-bottom: rem(13);
 	}
 
+	&__discharge {
+		border: none;
+		background-color: transparent;
+		text-decoration: underline;
+		padding-left: 0;
+		margin-bottom: rem(16);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__topLine {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(17) rem(25);
+		margin-bottom: rem(20);
+		border-bottom: solid 1px rgba($color:#737C7B, $alpha: 0.3);
+		.h6 {
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		overflow-x: hidden;
+		width: 100vw;
+		min-height: 100vh;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		transform: translateX(-120%);
+		@include mt;
+		background-color: $body-bg;
+
+		&.active {
+			transform: translate(0);
+		}
+	}
+
+	.toggle-filter--js {
+		width: 25px;
+		height: 25px;
+		position: relative;
+		&::after, &::before {
+			content: '';
+			@include a-cent;
+			width: 25px;
+			height: 1px;
+			transform: rotate(45deg);
+			background-color: $primary;
+		}
+	
+		&::before {
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__buttons {
+		margin-top: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-left: -9px;
+		margin-right: -9px;
+		padding-left: rem(24);
+		padding-right: rem(24);
+		padding-bottom: rem(30);
+	}
+
+	&__btn {
+		width: 100%;
+		margin-left: 9px;
+		margin-right: 9px;
+	}
 
 
 	@include media-breakpoint-up(sm) {}
@@ -20,3 +104,4 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sFilter
+
