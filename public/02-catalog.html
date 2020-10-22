@@ -435,82 +435,96 @@
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
 		</header>
 		<!-- end header-->
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<!-- start sFilter-->
-					<div class="sFilter section" id="sFilter">
-						<div class="sFilter__block">
-							<div class="sFilter__title">Цвет
+		<!-- start sCatalog-->
+		<section class="sCatalog section" id="sCatalog">
+			<div class="container">
+				<div class="sCatalog__row row">
+					<div class="sCatalog__filterCol col-lg">
+						<!-- start sFilter-->
+						<div class="sFilter filter-wrap-js" id="sFilter">
+							<div class="sFilter__topLine d-lg-none">
+								<div class="h6">Фильтры</div>
+								<div class="toggle-filter--js"></div>
 							</div>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Природный белый</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Кирпичный</span>
-							</label>
-						</div>
-						<div class="sFilter__block">
-							<div class="sFilter__title">Бренд
+							<div class="sFilter__block">
+								<div class="sFilter__title">Цвет
+								</div>
+								<button class="sFilter__discharge d-none d-lg-block" type="submit">Сбросить всё
+								</button>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Природный белый</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Кирпичный</span>
+								</label>
 							</div>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">YADOMA</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Bulthaup</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Emma Danish</span>
-							</label>
-						</div>
-						<div class="sFilter__block">
-							<div class="sFilter__title">Материал
+							<div class="sFilter__block">
+								<div class="sFilter__title">Бренд
+								</div>
+								<button class="sFilter__discharge d-none d-lg-block" type="submit">Сбросить всё
+								</button>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">YADOMA</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Bulthaup</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Emma Danish</span>
+								</label>
 							</div>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Керамика, белый клён</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Красная глина, сосна</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Белая глина, сосна</span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Сталь, бук</span>
-							</label>
-						</div>
-						<div class="sFilter__block">
-							<div class="sFilter__title">Размер
+							<div class="sFilter__block">
+								<div class="sFilter__title">Материал
+								</div>
+								<button class="sFilter__discharge d-none d-lg-block" type="submit">Сбросить всё
+								</button>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Керамика, белый клён</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Красная глина, сосна</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Белая глина, сосна</span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Сталь, бук</span>
+								</label>
 							</div>
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">25*33*19 см</span>
-							</label>
+							<div class="sFilter__block">
+								<div class="sFilter__title">Размер
+								</div>
+								<button class="sFilter__discharge d-none d-lg-block" type="submit">Сбросить всё
+								</button>
+								<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">25*33*19 см</span>
+								</label>
+							</div>
+							<div class="sFilter__buttons d-lg-none">
+								<button class="sFilter__btn btn btn-outline-primary" type="submit">Сбросить
+								</button>
+								<button class="sFilter__btn btn btn-primary" type="submit">Применить
+								</button>
+							</div>
 						</div>
+						<!-- end sFilter-->
 					</div>
-					<!-- end sFilter-->
-				</div>
-				<div class="col">
-					<!-- start sCatalog-->
-					<section class="sCatalog section" id="sCatalog">
+					<div class="col">
 						<div class="section-title">
 							<h1>Хлебницы</h1>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
+											<meta itemprop="position" content="1"/></a></li>
+									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
+											<meta itemprop="position" content="2"/></a></li>
+									<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
+											<meta itemprop="position" content="3"/></a></li>
+								</ol>
+							</nav>
 						</div>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
-										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
-										<meta itemprop="position" content="2"/></a></li>
-								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
-										<meta itemprop="position" content="3"/></a></li>
-							</ol>
-						</nav>
-						<h5 class="sCatalog__smallWidth">Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и&nbsp;предлагаем вам лучшее
-						</h5>
-						<div class="row justify-content-between">
-							<div class="col-auto">
+						<div class="sCatalog__smallWidth">
+							<h5>Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и предлагаем вам лучшее</h5>
+						</div>
+						<div class="sCatalog__filterModal d-lg-none toggle-filter toggle-filter--js">
+							<svg class="icon icon-filters ">
+								<use xlink:href="img/svg/sprite.svg#filters"></use>
+							</svg>Фильтры
+						</div>
+						<div class="sCatalog__sortRow row justify-content-between align-items-center">
+							<div class="col">
 								<div class="sCatalog__result">Нашлось по запросу: 5
 								</div>
 							</div>
@@ -527,8 +541,42 @@
 								<!-- +e.input-wrap-->
 							</div>
 						</div>
+						<div class="tagsBlock">
+							<div class="tagsBlock__tag">Природный белый
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">YADOMA
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Bulthaup
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Emma Danish
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Керамика, белый клён
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Красная глина, сосна
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Белая глина, сосна
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+							<div class="tagsBlock__tag">Сталь, бук
+								<button class="tagsBlock__remove" type="submit">
+								</button>
+							</div>
+						</div>
 						<div class="row">
-							<div class="col-sm-6 col-lg-4">
+							<div class="col-6 col-md-4 col-lg-6 col-xl-4">
 								<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
 									<!-- picture-->
 									<picture> 
@@ -537,10 +585,8 @@
 									</picture>
 									<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
 									<div class="catalogItem__body">
-										<ul class="catalogItem__tags">
-											<li><a href="#">Хлебная зона</a></li>
-											<li><a href="#">Welcome</a></li>
-										</ul>
+										<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+										</div>
 										<div class="catalogItem__title">Bulthaup
 										</div>
 										<div class="catalogItem__name">Хлебница-контейнер /<span>BAHIA</span>
@@ -551,15 +597,15 @@
 											<div class="catalogItem__price">42 999 RUB
 											</div>
 										</div>
-										<button class="catalogItem__btnWrap" type="submit">
+										<button class="catalogItem__btnWrap catalogItem__btnWrap--sm" type="submit"><span class="catalogItem__btn">
 											<svg class="icon icon-basket ">
 												<use xlink:href="img/svg/sprite.svg#basket"></use>
-											</svg><span>В корзину</span>
+											</svg><span>В корзину</span></span>
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6 col-lg-4">
+							<div class="col-6 col-md-4 col-lg-6 col-xl-4">
 								<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
 									<!-- picture-->
 									<picture> 
@@ -568,10 +614,8 @@
 									</picture>
 									<!-- /picture--></a>
 									<div class="catalogItem__body">
-										<ul class="catalogItem__tags">
-											<li><a href="#">Хлебная зона</a></li>
-											<li><a href="#">Welcome</a></li>
-										</ul>
+										<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+										</div>
 										<div class="catalogItem__title">Yadoma
 										</div>
 										<div class="catalogItem__name">Хлебница-контейнер /<span>Bread Collection</span>
@@ -586,7 +630,10 @@
 											<div class="catalogItem__btn">
 												<svg class="icon icon-basket ">
 													<use xlink:href="img/svg/sprite.svg#basket"></use>
-												</svg><span>Добавлено 1</span>
+												</svg>
+												<div class="catalogItem__added"> 
+													<div class="d-none d-sm-inline">Добавлено </div>1
+												</div>
 											</div>
 											<button class="catalogItem__plus" type="submit">
 											</button>
@@ -594,7 +641,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6 col-lg-4">
+							<div class="col-6 col-md-4 col-lg-6 col-xl-4">
 								<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
 									<!-- picture-->
 									<picture> 
@@ -603,9 +650,8 @@
 									</picture>
 									<!-- /picture--></a>
 									<div class="catalogItem__body">
-										<ul class="catalogItem__tags">
-											<li><a href="#">Хлебная зона</a></li>
-										</ul>
+										<div class="tagsBlock"><a href="#">Хлебная зона</a>
+										</div>
 										<div class="catalogItem__title">Emma
 										</div>
 										<div class="catalogItem__name">Хлебница /<span>Emma Danish</span>
@@ -620,7 +666,10 @@
 											<div class="catalogItem__btn">
 												<svg class="icon icon-basket ">
 													<use xlink:href="img/svg/sprite.svg#basket"></use>
-												</svg><span>Добавлено 1</span>
+												</svg>
+												<div class="catalogItem__added"> 
+													<div class="d-none d-sm-inline">Добавлено </div>1
+												</div>
 											</div>
 											<button class="catalogItem__plus" type="submit">
 											</button>
@@ -628,7 +677,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6 col-lg-4">
+							<div class="col-6 col-md-4 col-lg-6 col-xl-4">
 								<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
 									<!-- picture-->
 									<picture> 
@@ -637,10 +686,8 @@
 									</picture>
 									<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
 									<div class="catalogItem__body">
-										<ul class="catalogItem__tags">
-											<li><a href="#">Хлебная зона</a></li>
-											<li><a href="#">Welcome</a></li>
-										</ul>
+										<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+										</div>
 										<div class="catalogItem__title">Emma
 										</div>
 										<div class="catalogItem__name">Хлебница /<span>Emma Stelton</span>
@@ -649,15 +696,15 @@
 											<div class="catalogItem__price">10 090 RUB
 											</div>
 										</div>
-										<button class="catalogItem__btnWrap" type="submit">
+										<button class="catalogItem__btnWrap catalogItem__btnWrap--sm" type="submit"><span class="catalogItem__btn">
 											<svg class="icon icon-basket ">
 												<use xlink:href="img/svg/sprite.svg#basket"></use>
-											</svg><span>В корзину</span>
+											</svg><span>В корзину</span></span>
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6 col-lg-4">
+							<div class="col-6 col-md-4 col-lg-6 col-xl-4">
 								<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
 									<!-- picture-->
 									<picture> 
@@ -666,10 +713,8 @@
 									</picture>
 									<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
 									<div class="catalogItem__body">
-										<ul class="catalogItem__tags">
-											<li><a href="#">Хлебная зона</a></li>
-											<li><a href="#">Welcome</a></li>
-										</ul>
+										<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+										</div>
 										<div class="catalogItem__title">Yamazaki
 										</div>
 										<div class="catalogItem__name">Хлебница /<span>Tower</span>
@@ -678,20 +723,20 @@
 											<div class="catalogItem__price">8 630 RUB
 											</div>
 										</div>
-										<button class="catalogItem__btnWrap" type="submit">
+										<button class="catalogItem__btnWrap catalogItem__btnWrap--sm" type="submit"><span class="catalogItem__btn">
 											<svg class="icon icon-basket ">
 												<use xlink:href="img/svg/sprite.svg#basket"></use>
-											</svg><span>В корзину</span>
+											</svg><span>В корзину</span></span>
 										</button>
 									</div>
 								</div>
 							</div>
 						</div>
-					</section>
-					<!-- end sCatalog-->
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<!-- end sCatalog-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<h2>footer</h2>

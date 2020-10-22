@@ -1,66 +1,93 @@
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
-		+b.section-title
-			h1 Хлебницы
-		+breadcrumb('Кухня','Хранение на кухне','Хлебницы')
-		+e.H5.smallWidth Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и&nbsp;предлагаем вам лучшее
-		.row.justify-content-between
-			.col-auto
-				+e.result Нашлось по запросу: 5
-			.col-auto
-				+input('По возрастанию','select')
-		.row
-			.col-sm-6.col-lg-4
-				+catalogItem('1.png','','- 45%')
-					+e.UL.tags
-						li: a(href="#") Хлебная зона
-						li: a(href="#") Welcome
-					+e.title Bulthaup
-					+e.name Хлебница-контейнер /
-						span BAHIA
-					+e.priceWrap
-						+e.oldPrice 60 000 RUB
-						+e.price 42 999 RUB
-			.col-sm-6.col-lg-4
-				+catalogItem('2.png','basket')
-					+e.UL.tags
-						li: a(href="#") Хлебная зона
-						li: a(href="#") Welcome
-					+e.title Yadoma
-					+e.name Хлебница-контейнер /
-						span Bread Collection
-					+e.priceWrap
-						+e.price 16 000 RUB
-			.col-sm-6.col-lg-4
-				+catalogItem('3.png','basket')
-					+e.UL.tags
-						li: a(href="#") Хлебная зона
-					+e.title Emma
-					+e.name Хлебница /
-						span Emma Danish
-					+e.priceWrap
-						+e.price 16 000 RUB
-			.col-sm-6.col-lg-4
-				+catalogItem('4','','- 45%')
-					+e.UL.tags
-						li: a(href="#") Хлебная зона
-						li: a(href="#") Welcome
-					+e.title Emma
-					+e.name Хлебница /
-						span Emma Stelton
-					+e.priceWrap
-						+e.price 10 090 RUB
-			.col-sm-6.col-lg-4
-				+catalogItem('5','','- 45%')
-					+e.UL.tags
-						li: a(href="#") Хлебная зона
-						li: a(href="#") Welcome
-					+e.title Yamazaki
-					+e.name Хлебница /
-						span Tower
-					+e.priceWrap
-						+e.price 8 630 RUB
+		.container
+			+e.row.row
+				+e.filterCol.col-lg
+					+sFilter
+				.col
+					+b.section-title
+						h1 Хлебницы
+						+breadcrumb('Кухня','Хранение на кухне','Хлебницы')
+					+e.smallWidth
+						h5 Глиняная хлебница с&nbsp;крышкой из&nbsp;красного клёна от&nbsp;бренда YADOMA. Каждый наш продукт изготовлен по&nbsp;индивидуальной технологии, мы&nbsp;учитываем все особенности изделия и предлагаем вам лучшее
+					+e.filterModal.d-lg-none.toggle-filter--js
+						+icon('filters')
+						| Фильтры
+					+e.sortRow.row.justify-content-between.align-items-center
+						.col
+							+e.result Нашлось по запросу: 5
+						.col-auto
+							+input('По возрастанию','select')
+					+b.tagsBlock
+						+e.tag Природный белый
+							+e.remove(type="submit")
+						+e.tag YADOMA
+							+e.remove(type="submit")
+						+e.tag Bulthaup
+							+e.remove(type="submit")
+						+e.tag Emma Danish
+							+e.remove(type="submit")
+						+e.tag Керамика, белый клён
+							+e.remove(type="submit")
+						+e.tag Красная глина, сосна
+							+e.remove(type="submit")
+						+e.tag Белая глина, сосна
+							+e.remove(type="submit")
+						+e.tag Сталь, бук
+							+e.remove(type="submit")
+
+					.row
+						.col-6.col-md-4.col-lg-6.col-xl-4
+							+catalogItem('1.png','','- 45%')
+								+b.tagsBlock
+									a(href="#") Хлебная зона
+									a(href="#") Welcome
+								+e.title Bulthaup
+								+e.name Хлебница-контейнер /
+									span BAHIA
+								+e.priceWrap
+									+e.oldPrice 60 000 RUB
+									+e.price 42 999 RUB
+						.col-6.col-md-4.col-lg-6.col-xl-4
+							+catalogItem('2.png','basket')
+								+b.tagsBlock
+									a(href="#") Хлебная зона
+									a(href="#") Welcome
+								+e.title Yadoma
+								+e.name Хлебница-контейнер /
+									span Bread Collection
+								+e.priceWrap
+									+e.price 16 000 RUB
+						.col-6.col-md-4.col-lg-6.col-xl-4
+							+catalogItem('3.png','basket')
+								+b.tagsBlock
+									a(href="#") Хлебная зона
+								+e.title Emma
+								+e.name Хлебница /
+									span Emma Danish
+								+e.priceWrap
+									+e.price 16 000 RUB
+						.col-6.col-md-4.col-lg-6.col-xl-4
+							+catalogItem('4','','- 45%')
+								+b.tagsBlock
+									a(href="#") Хлебная зона
+									a(href="#") Welcome
+								+e.title Emma
+								+e.name Хлебница /
+									span Emma Stelton
+								+e.priceWrap
+									+e.price 10 090 RUB
+						.col-6.col-md-4.col-lg-6.col-xl-4
+							+catalogItem('5','','- 45%')
+								+b.tagsBlock
+									a(href="#") Хлебная зона
+									a(href="#") Welcome
+								+e.title Yamazaki
+								+e.name Хлебница /
+									span Tower
+								+e.priceWrap
+									+e.price 8 630 RUB
 	// end sCatalog
 
 mixin catalogItem(i,basket,sale)
@@ -76,9 +103,12 @@ mixin catalogItem(i,basket,sale)
 					+e.minus(type="submit")
 					+e.btn
 						+icon('basket')
-						span Добавлено 1
+						+e.added 
+							.d-none.d-sm-inline Добавлено 
+							|1
 					+e.plus(type="submit")
 			else
-				+e.btnWrap(type="submit")
-					+icon('basket')
-					span В корзину
+				+e.btnWrap--sm(type="submit")
+					+e.SPAN.btn
+						+icon('basket')
+						span В корзину
