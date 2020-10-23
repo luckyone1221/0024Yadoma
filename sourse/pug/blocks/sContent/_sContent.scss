@@ -100,7 +100,7 @@
 
 		&.active {
 			.sContent__itemTitle .icon {
-				transform: rotate(90deg);
+				transform: rotate(-90deg);
 			}
 		}
 	}
@@ -129,7 +129,7 @@
 
 		.icon {
 			stroke: $primary;
-			transform: rotate(-90deg);
+			transform: rotate(90deg);
 			color: transparent;
 			font-size: rem(16);
 			@include mt;
