@@ -9,3 +9,6 @@
 1. <https://luckyone1221.github.io/0024Yadoma/public/07-return.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/08-contacts.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/09-vacancies.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/11-DEGRENNE.html>
