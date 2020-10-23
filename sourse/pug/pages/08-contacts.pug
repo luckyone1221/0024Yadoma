@@ -1,0 +1,50 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '08-contacts'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Контакты
+			
+		+e.row.row
+			.col-lg-auto.order-lg-last.mb-4
+				h3 Нужна помощь?
+				+e.contact Позвоните нам по телефону #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+				+e.contact или напишите на почту #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+			+e.col.col-lg
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Клиентам
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p Санкт-Петербург, Красногвардейская пл., 3Е, этаж Е4, 102<br>Design District DAA
+						+e.link(href="tel:+79213412020") +7 (921) 341 20 20 
+						+e.link(href="mailto:hello@yadoma.com") hello@yadoma.com
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Юридическая информация
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p Фактический адрес: 193230, Санкт-Петербург, ул. Крыленко, д. 7
+						+e.contact Электронная почта: #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+						+e.contact Телефон: #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+						p Реквизиты:
+						p ИП Антонова Елена Николаевна<br>ИНН 780605035513 / ОГРНИП 320784700103912<br>Юридический адрес: 193230, Санкт-Петербург, ул. Крыленко, д. 7<br>Тел./факс: +7 (921) 341 20 20
+
+
+	+sSafe()
+	+footer()
+
+
+	

@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '07-return'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Возврат
+			
+		+e.row.row
+			.col-lg-auto.order-lg-last.mb-4
+				h3 Нужна помощь?
+				+e.contact Позвоните нам по телефону #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+				+e.contact или напишите на почту #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+			+e.col.col-lg
+				h6 Продукция, предлагаемая YADOMA&nbsp;&mdash; посуда, стекло, фарфор, кухонные аксессуары&nbsp;&mdash; это, в&nbsp;первую очередь, высочайшее качество. Тем не&nbsp;менее, мы&nbsp;гарантируем обмен или возврат приобретенных у&nbsp;нас товаров. Здесь вы&nbsp;узнаете о&nbsp;правилах обмена и&nbsp;возврата.
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Правила обмена и возврата
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p Соблюдайте основные правила ухода за&nbsp;товаром. При нарушении товарного вида приобретенной продукции интернет-магазин вправе отказать в&nbsp;возврате.
+						p Обмен и&nbsp;возврат товара надлежащего качества производится в&nbsp;течение 7&nbsp;календарных дней.
+						p В&nbsp;случае если вы&nbsp;приняли товар от&nbsp;курьерской службы, а&nbsp;затем решили оформить возврат, вызов курьера и&nbsp;оплата расходов транспортной компании выполняется за&nbsp;счет покупателя.
+						p Обмен и&nbsp;возврат товара надлежащего качества производится, если указанный товар не&nbsp;был в&nbsp;употреблении и&nbsp;сохранены его потребительские свойства, в&nbsp;том числе и&nbsp;товарный вид (упаковка, ярлыки, этикетки и&nbsp;оригинальная упаковка).
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Возврату не подлежат товары
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						ul
+							li текстильные изделия;
+							li декоративные свечи из воска и парафина.
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Бланк возврата
+						+icon('chevron-right')
+					+e.body.accardion-inner-js.pb-3
+						+e.link(href="#") Скачать бланк
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Контакты для возврата
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p Для обмена и&nbsp;возврата товара необходимо обратиться в&nbsp;Отдел по&nbsp;обслуживанию клиентов.
+						+e.contact.pb-3 Позвонить по телефону: #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+						+e.contact.pb-3 Или отправить запрос на возврат по почте #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+						p Рабочие дни: с 11:00 до 19:00 (ПН-ПТ)
+	+sSafe()
+	+footer()
+
+
+	

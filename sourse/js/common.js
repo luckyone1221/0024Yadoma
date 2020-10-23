@@ -292,7 +292,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '03-1024.png';
+	screenName = '01-375.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -597,7 +597,16 @@ function eventHandler() {
 
 	//end luckyone js
 
-	
+	// Aleksandr js start
+
+	$('.accardion-toggle-js').on('click', function(){
+		$(this).parent().toggleClass('active');
+		$(this).parent().find('.accardion-inner-js').slideToggle().toggleClass('active');
+	})
+
+	// end Aleksandr js
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

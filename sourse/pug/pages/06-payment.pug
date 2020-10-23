@@ -1,0 +1,70 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '06-payment'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Оплата
+			
+		+e.row.row
+			.col-lg-auto.order-lg-last.mb-4
+				h3 Нужна помощь с оплатой?
+				+e.contact Позвоните нам по телефону #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+				+e.contact или напишите на почту #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+			+e.col.col-lg
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Способы оплаты
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p.pb-2 Оплачивать товары в интернет-магазине вы можете следующими способами:
+						ul
+							li
+								strong наличные 
+								span.d-block Произвести оплату наличными можно при заказе товара в нашем шоу-руме по адресу: Санкт-Петербург, Красногвардейская пл., 3Е, этаж Е4, 102<br>Design District DAA
+						ul
+							li
+								strong банковские карты
+								span.d-block Оплатить товар при помощи банковской карты можно двумя способами:
+								ul
+									li онлайн в любое время суток;
+									li при заказе товара в&nbsp;нашем шоу-руме. Не&nbsp;во&nbsp;всех регионах возможен данный вариант оплаты. Обратите на&nbsp;это внимание при оформлении доставки.
+							p Оплата происходит с&nbsp;использованием Банковских кредитных карт следующих платежных систем*:
+						+e.imgBlock
+							img(src="img/svg/mir.svg", alt="")
+							img(src="img/svg/visa.svg", alt="")
+							img(src="img/svg/masterCard.svg", alt="")
+						strong *Процесс передачи данных
+						p Пожалуйста, приготовьте Вашу пластиковую карту заранее. Соединение с&nbsp;платежным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищенном режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa или MasterCard Secure Code для проведения платежа также может потребоваться ввод специального пароля. Способы и&nbsp;возможность получения паролей для совершения интернет-платежей Вы&nbsp;можете уточнить в&nbsp;банке, выпустившем карту. Введенная информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платежных систем Visa и&nbsp;MasterCard.
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Возврат оплаты в&nbsp;случае отказа клиентом от&nbsp;товара/услуги
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						p После оформления возврата товара(-ов) в&nbsp;течение 3&ndash;14 рабочих дней происходит возврат денежных средств на&nbsp;банковскую карту покупателя.
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Аннулирование заказа
+						+icon('chevron-right')
+					+e.body.accardion-inner-js.pb-3
+						p При аннулировании позиций из&nbsp;оплаченного заказа (или при аннулировании заказа целиком) Вы&nbsp;можете заказать другой товар на&nbsp;эту сумму, либо вернуть всю сумму на&nbsp;карту предварительно написав письмо на&nbsp;почту #[a(href="mailto:hello@yadoma.com") hello@yadoma.com] или позвонив по&nbsp;телефону: #[a(href="tel:79213412020") +7 921 341 20 20]*.
+						p Актуальную информацию по&nbsp;заказу можно уточнить, отправив письмо с&nbsp;номером заказа на&nbsp;почту: #[a(href="mailto:hello@yadoma.com") hello@yadoma.com] или позвонив по&nbsp;телефону: #[a(href="tel:79213412020") +7 921 341 20 20]*
+						p Важно! Частные покупатели для получения заказа должны предъявить паспорт владельца карты, если оплата произведена по&nbsp;банковской карте.
+						+e.small *Будьте внимательны, в&nbsp;целях повышения контроля качества, все звонки могут быть записаны.
+
+	+sSafe()
+	+footer()
+
+
+	

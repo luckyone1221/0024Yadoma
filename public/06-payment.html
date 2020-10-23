@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>06-payment</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body>
+		<!-- start header-->
+		<header class="header" id="header">
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="top-nav__top-strip d-none d-lg-block">
+					<div class="top-nav__top-container container">
+						<div class="top-nav__menu">
+							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оплата</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обмен и возврат</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Сотрудничество</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+								</li>
+								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Instagram</a>
+								</li>
+							</ul>
+						</div><a class="top-nav__tell" href="tel:+79213412020">+7 (921) 341 20 20</a>
+					</div>
+				</div>
+				<div class="top-nav__logo-strip">
+					<div class="top-nav__search-strip search-strip-js">
+						<div class="form-wrap">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название, артикул или категорию" name="search"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<label class="form-wrap__btn">
+									<button type="submit"></button>
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg><span>Искать</span>
+								</label>
+							</form>
+						</div>
+					</div>
+					<div class="top-nav__logo-container container">
+						<div class="top-nav__burger-btn burger-btn-js d-lg-none d-flex"><span></span>
+						</div><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
+						<div class="top-nav__search-cart"><a class="top-nav__search-btn search-btn-js" href="#">
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
+							<svg class="icon icon-cross ">
+								<use xlink:href="img/svg/sprite.svg#cross"></use>
+							</svg></a><a class="top-nav__cart-btn" href="#">
+							<svg class="icon icon-cart ">
+								<use xlink:href="img/svg/sprite.svg#cart"></use>
+							</svg><span>(0)</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="top-nav__pop-up-menu pop-up-menu-js"><a class="top-nav__mob-tell d-lg-none" href="tel+79213412020">+7 (921) 341 20 20</a>
+					<div class="top-nav__pop-up-cont container pop-up-cont-js">
+						<ul>
+							<li><a href="#">Новинки</a>
+								<div class="top-nav__inner-pop inner-popup-js">1
+								</div>
+							</li>
+							<li><a href="#">Кухня</a>
+								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="part-5">
+										<div class="part-5__container container">
+											<div class="part-5__row row">
+												<div class="part-5__img-col col-auto"><a class="part-5__img" href="#"><img loading="lazy" src="img/@2x/kitchen-img.jpg" alt=""/></a>
+													<div class="part-5__img-descr">
+														<div class="part-5__i-d-txt">Свежие природные тона
+														</div><a class="part-5__watch-link" href="#">Смотреть</a>
+													</div>
+												</div>
+												<div class="part-5__content-col col">
+													<div class="part-5__content-row row">
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Актуально
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Новинки</a></li>
+																<li><a href="#">Природные оттенки</a></li>
+																<li><a href="#">Бренды</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Хранение
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Хлебницы</a></li>
+																<li><a href="#">Ёмкости для хранения</a></li>
+																<li><a href="#">Ёмкости для хранения</a></li>
+																<li><a href="#">Папки для рецептов</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Доски
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Хлебные доски</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Ножи
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Хлебные ножи</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Столовая</a>
+								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="part-5">
+										<div class="part-5__container container">
+											<div class="part-5__row row">
+												<div class="part-5__img-col col-auto"><a class="part-5__img" href="#"><img loading="lazy" src="img/@2x/dining-room-img.jpg" alt=""/></a>
+													<div class="part-5__img-descr">
+														<div class="part-5__i-d-txt">Свежие природные тона
+														</div><a class="part-5__watch-link" href="#">Смотреть</a>
+													</div>
+												</div>
+												<div class="part-5__content-col col">
+													<div class="part-5__content-row row">
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Актуально
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Новинки</a></li>
+																<li><a href="#">Природные оттенки</a></li>
+																<li><a href="#">Бренды</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Столовая посуда
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Тарелки</a></li>
+																<li><a href="#">Тарелки подстановочные</a></li>
+																<li><a href="#">Чаши, салатники, миски</a></li>
+																<li><a href="#">Этажерки</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Стекло
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Стаканы и бокалы для воды</a></li>
+																<li><a href="#">Бокалы для вина</a></li>
+																<li><a href="#">Бокалы для игристого</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Для подачи
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Подносы, сервировочные доски</a></li>
+																<li><a href="#">Кувшины, графины</a></li>
+																<li><a href="#">Этажерки</a></li>
+																<li><a href="#">Хлебные корзины</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Столовые приборы
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Вилки</a></li>
+																<li><a href="#">Ложки</a></li>
+																<li><a href="#">Ножи</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Столовый текстиль
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Салфетки</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Столовый текстиль
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Салфетки</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Декор</a>
+								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="part-5">
+										<div class="part-5__container container">
+											<div class="part-5__row row">
+												<div class="part-5__img-col col-auto"><a class="part-5__img" href="#"><img loading="lazy" src="img/@2x/flowers-img.jpg" alt=""/></a>
+													<div class="part-5__img-descr">
+														<div class="part-5__i-d-txt">Коллекция FALL-2020
+														</div><a class="part-5__watch-link" href="#">Смотреть</a>
+													</div>
+												</div>
+												<div class="part-5__content-col col">
+													<div class="part-5__content-row row">
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Актуально
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Новинки</a></li>
+																<li><a href="#">Природные оттенки</a></li>
+																<li><a href="#">Бренды</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Свечи
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Столовые свечи</a></li>
+																<li><a href="#">Декоративные свечи</a></li>
+															</ul>
+														</div>
+														<div class="part-5__sub-col col-lg-4 col-xl-3">
+															<div class="part-5__title sub-col-title-js">Вазы
+															</div>
+															<ul class="part-5__list sub-col-list-js">
+																<li><a href="#">Декоративные вазы</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">Система YaDoma</a>
+								<div class="top-nav__inner-pop inner-popup-js">
+									<div class="yadoma-c">
+										<div class="yadoma-c__container">
+											<h3 class="yadoma-c__title">Кухня
+											</h3>
+											<div class="yadoma-c__top-items-cont">
+												<div class="yadoma-c__top-items">
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+													<div class="yadoma-c__item"><a class="yadoma-c__img-inner" href="#"><img loading="lazy" src="img/@2x/bread-img.jpg" alt=""/></a>
+														<div class="yadoma-c__i-title">Хлебная зона
+														</div>
+														<ul class="yadoma-c__list">
+															<li><a href="#">Хлебницы</a></li>
+															<li><a href="#">Хлебные доски</a></li>
+															<li><a href="#">Хлебные ножи</a></li>
+															<li><a href="#">Хлебные корзины</a></li>
+															<li><a href="#">Салфетки</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<h3 class="yadoma-c__title">Столовая
+											</h3>
+											<div class="yadoma-c__bot-row row">
+												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-1.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Зона воды</a><a class="yadoma-c__bot-txt" href="#">Стаканы и бокалы для воды</a>
+													</div>
+												</div>
+												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-2.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Куверт</a><a class="yadoma-c__bot-txt" href="#">Тарелки подстановочные</a>
+													</div>
+												</div>
+												<div class="yadoma-c__bot-col col-sm-6 col-md-4 col-xl-3">
+													<div class="yadoma-c__bot-item"><a class="yadoma-c__bot-img" href="#"><span class="yadoma-c__img-inner"><img loading="lazy" src="img/@2x/bot-item-3.jpg" alt=""/></span></a><a class="yadoma-c__i-title" href="#">Welcome</a><a class="yadoma-c__bot-txt" href="#">Подносы, сервировочные доски</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="top-nav__mob-menu d-lg-none">
+						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Доставка</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Оплата</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обмен и возврат</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Сотрудничество</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Instagram</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end top-nav-->
+		</header>
+		<!-- end header-->
+		<!-- start sContent-->
+		<section class="sContent section" id="sContent">
+			<div class="container">
+				<div class="section-title text-center">
+					<h1>Оплата</h1>
+				</div>
+				<div class="sContent__row row">
+					<div class="col-lg-auto order-lg-last mb-4">
+						<h3>Нужна помощь с оплатой?</h3>
+						<div class="sContent__contact">Позвоните нам по телефону <a href="tel:+79213412020">+7 (921) 341 20 20</a>
+						</div>
+						<div class="sContent__contact">или напишите на почту <a href="mailto:hello@yadoma.com">hello@yadoma.com</a>
+						</div>
+					</div>
+					<div class="sContent__col col-lg">
+						<div class="sContent__item">
+							<div class="sContent__itemTitle accardion-toggle-js"><span>Способы оплаты</span>
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="sContent__body accardion-inner-js">
+								<p class="pb-2">Оплачивать товары в интернет-магазине вы можете следующими способами:</p>
+								<ul>
+									<li><strong>наличные </strong><span class="d-block">Произвести оплату наличными можно при заказе товара в нашем шоу-руме по адресу: Санкт-Петербург, Красногвардейская пл., 3Е, этаж Е4, 102<br>Design District DAA</span></li>
+								</ul>
+								<ul>
+									<li><strong>банковские карты</strong><span class="d-block">Оплатить товар при помощи банковской карты можно двумя способами:</span>
+										<ul>
+											<li>онлайн в любое время суток;</li>
+											<li>при заказе товара в&nbsp;нашем шоу-руме. Не&nbsp;во&nbsp;всех регионах возможен данный вариант оплаты. Обратите на&nbsp;это внимание при оформлении доставки.</li>
+										</ul>
+									</li>
+									<p>Оплата происходит с&nbsp;использованием Банковских кредитных карт следующих платежных систем*:</p>
+								</ul>
+								<div class="sContent__imgBlock"><img src="img/svg/mir.svg" alt=""><img src="img/svg/visa.svg" alt=""><img src="img/svg/masterCard.svg" alt="">
+								</div><strong>*Процесс передачи данных</strong>
+								<p>Пожалуйста, приготовьте Вашу пластиковую карту заранее. Соединение с&nbsp;платежным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищенном режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa или MasterCard Secure Code для проведения платежа также может потребоваться ввод специального пароля. Способы и&nbsp;возможность получения паролей для совершения интернет-платежей Вы&nbsp;можете уточнить в&nbsp;банке, выпустившем карту. Введенная информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платежных систем Visa и&nbsp;MasterCard.</p>
+							</div>
+						</div>
+						<div class="sContent__item">
+							<div class="sContent__itemTitle accardion-toggle-js"><span>Возврат оплаты в&nbsp;случае отказа клиентом от&nbsp;товара/услуги</span>
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="sContent__body accardion-inner-js">
+								<p>После оформления возврата товара(-ов) в&nbsp;течение 3&ndash;14 рабочих дней происходит возврат денежных средств на&nbsp;банковскую карту покупателя.</p>
+							</div>
+						</div>
+						<div class="sContent__item">
+							<div class="sContent__itemTitle accardion-toggle-js"><span>Аннулирование заказа</span>
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="sContent__body accardion-inner-js pb-3">
+								<p>При аннулировании позиций из&nbsp;оплаченного заказа (или при аннулировании заказа целиком) Вы&nbsp;можете заказать другой товар на&nbsp;эту сумму, либо вернуть всю сумму на&nbsp;карту предварительно написав письмо на&nbsp;почту <a href="mailto:hello@yadoma.com">hello@yadoma.com</a> или позвонив по&nbsp;телефону: <a href="tel:79213412020">+7 921 341 20 20</a>*.</p>
+								<p>Актуальную информацию по&nbsp;заказу можно уточнить, отправив письмо с&nbsp;номером заказа на&nbsp;почту: <a href="mailto:hello@yadoma.com">hello@yadoma.com</a> или позвонив по&nbsp;телефону: <a href="tel:79213412020">+7 921 341 20 20</a>*</p>
+								<p>Важно! Частные покупатели для получения заказа должны предъявить паспорт владельца карты, если оплата произведена по&nbsp;банковской карте.</p>
+								<div class="sContent__small">*Будьте внимательны, в&nbsp;целях повышения контроля качества, все звонки могут быть записаны.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sContent-->
+		<!-- start sSafe-->
+		<div class="sSafe section" id="sSafe">
+			<div class="sSafe__content">
+				<div class="sSafe__container container">
+					<div class="sSafe__row row">
+						<div class="sSafe__col col-sm-6 col-lg-4">
+							<div class="sSafe__col-content"><a class="sSafe__title" href="#">Безопасная оплата</a>
+								<div class="sSafe__txt">Visa, American Express, Mastercard
+								</div>
+							</div>
+						</div>
+						<div class="sSafe__col col-sm-6 col-lg-4">
+							<div class="sSafe__col-content"><a class="sSafe__title" href="#">Доставка</a>
+								<div class="sSafe__txt">Доставка на дом по вашему графику
+								</div>
+							</div>
+						</div>
+						<div class="sSafe__col offset-sm-3 offset-lg-0 col-sm-6 col-lg-4">
+							<div class="sSafe__col-content"><a class="sSafe__title" href="#">Обслуживание клиентов</a>
+								<div class="sSafe__txt">ПН-ПТ: 9.00-18.00<br/>+7 (921) 341 20 20 / hello@yadoma.com
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sSafe-->
+		<footer class="footer block-with-lazy">
+			<div class="container">
+				<div class="footer__row row">
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">Помощь
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="mailto:hello@yadoma.com">hello@yadoma.com</a></li>
+								<li><a href="tel+79213412020">+7 (921) 341 20 20</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">Информация
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Возврат</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item">
+							<div class="footer__title foot-title-js">YADOMA
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Бренды</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col col-sm-6 col-lg-3">
+						<div class="footer__item footer__item footer__item--soc">
+							<div class="footer__title foot-title-js">Соцсети
+							</div>
+							<ul class="footer__list foot-list-js">
+								<li><a href="#">Instagram</a></li>
+								<li><a href="#">WhatsApp</a></li>
+							</ul>
+						</div>
+						<div class="footer__subscribe">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__title">Подписаться на новости</span><input class="form-wrap__input form-control" type="email" placeholder="email" name="email"/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<label class="form-wrap__btn">
+										<button type="submit"></button>
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</label>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="footer__policy col-12"><a href="#">Политика конфиденциальности</a>
+					</div>
+				</div>
+				<div class="footer__footer-logo"><a href="/"><img loading="lazy" src="img/svg/footer-logo.svg" alt=""/></a>
+				</div>
+			</div>
+		</footer>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

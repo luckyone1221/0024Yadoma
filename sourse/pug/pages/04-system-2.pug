@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sBanner/_sBanner.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '04-system'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sBanner()
+	+sNew-bread
+	+sCatalog-system2
+	+sSafe()
+	+footer()
+
+
+	

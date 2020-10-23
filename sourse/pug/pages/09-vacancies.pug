@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '09-vacancies'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Вакансии
+			
+		+e.row.row
+			.col-lg-auto.order-lg-last.mb-4
+				h6 Присылайте свои вакансии на почту #[a(href="mailto:hr@yadoma.com") hr@yadoma.com] с указанием должности, на которую претендуете
+			+e.col.col-lg
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Видеооператор
+						+icon('chevron-right')
+					+e.body--sm.accardion-inner-js
+						h6.mb-4 Задачи
+						p Съёмка роликов для социальных сетей (Instagram, YouTube) согласно ТЗ и контент-плану
+						p Генерация идей и сценариев в рамках сторителлинга бренда
+						p Монтаж коротких роликов
+						br
+						br
+						h6.mb-4 Требования
+						p Наличие портфолио
+						p Наличие своей техники
+						p Умение работать с разным светом (в студии, в интерьере, на производстве)
+						p Знание тенденций в области визуальных продуктов (мода, дизайн, storytelling)
+						p Инициативность
+						p Ответственность и оперативность, сдача работы в срок
+						p Готовность к командировкам
+						br
+						br
+						h6.mb-4 Условия 
+						p Работа в разных локациях
+						p Гибкий график
+						p З/П по результатам собеседования
+						br
+						br
+						p Присылайте резюме, краткий рассказ о&nbsp;себе и&nbsp;ссылку на&nbsp;ваш профиль в&nbsp;Instagram на&nbsp;почту hr@yadoma.com. В&nbsp;теме письма укажите &laquo;Видеооператор&raquo;
+
+
+	+sSafe()
+	+footer()
+
+
+	

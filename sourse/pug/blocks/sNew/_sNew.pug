@@ -51,7 +51,37 @@ mixin newSlide(imgNum, nameTxt, priceTxt)
 		+e.A.slide-content(href="#")
 			+e.slide-img
 				img.swiper-lazy(src="#" data-src=`img/@2x/new-slide-${imgNum}.jpg` alt="")
-			+e.name=nameTxt
+			if nameTxt
+				+e.name=nameTxt
 			+e.descr
-				block
-			+e.price=priceTxt
+					block
+			if priceTxt
+				+e.price=priceTxt
+
+mixin sNew-bread(data)
+	// start sNew
+	+b.SECTION.sNew--bread.section#sNew&attributes(attributes)
+		+e.container.container
+			+e.row
+				+e.title-col
+					+b.section-title
+						h1 Хлебная зона
+						p Мы&nbsp;сортируем продукты лучшим образом для того, чтобы каждый мог найти что-то своё
+				+e.slider-col
+					+e.slider
+						.swiper-container.new-slider-js
+							.swiper-wrapper
+								+newSlide('04_1')
+									h6.fw-300 Хлебницы
+
+								+newSlide('04_2')
+									h6.fw-300 Хлебные доски
+
+								+newSlide('04_3')
+									h6.fw-300 Хлебные корзины
+
+								+newSlide('04_4')
+									h6.fw-300 Хлебные ножи
+
+							+b.new-next--js.d-none.d-md-flex
+								+icon('chevron-right')
