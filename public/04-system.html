@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>03-item</title>
+		<title>04-system</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -409,116 +409,54 @@
 			<!-- end top-nav-->
 		</header>
 		<!-- end header-->
-		<!-- start sProdCard-->
-		<section class="sProdCard section" id="sProdCard">
+		<!-- start sBanner-->
+		<div class="sBanner" id="sBanner">
 			<div class="container">
-				<div class="breadcrumb-cont d-none d-lg-block">
-					<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
-						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
-									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
-									<meta itemprop="position" content="2"/></a></li>
-							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
-									<meta itemprop="position" content="3"/></a></li>
-						</ol>
-					</nav>
+				<div class="sBanner__imgWrap">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source srcset="img/@2x/webp/banner04.webp" type="image/webp" media="(min-width:576px)"/>
+						<source srcset="img/@1x/webp/banner04.webp" type="image/webp"/>
+						<source srcset="img/@2x/banner04.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="img/@1x/banner04.jpg" type="image/jpg"/>
+						<noscript class="loading-lazy"><img class="object-fit-js" src="img/@2x/banner04.jpg" alt=""/></noscript>
+					</picture>
+					<!-- /picture-->
 				</div>
-				<div class="sProdCard__main-row row">
-					<div class="sProdCard__slider-col col-lg-6">
-						<div class="sProdCard__slider">
-							<div class="swiper-container prod-slider-js">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-1.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-2.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-3.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-4.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sProdCard__thumb">
-							<div class="swiper-container prod-thumb-js">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/>
-										</div>
-									</div>
-								</div>
-							</div>
+			</div>
+		</div>
+		<!-- end sBanner-->
+		<!-- start sNew-->
+		<section class="sNew sNew--bread section" id="sNew">
+			<div class="sNew__container container">
+				<div class="sNew__row">
+					<div class="sNew__title-col">
+						<div class="section-title">
+							<h1>Хлебная зона</h1>
+							<p>Мы&nbsp;сортируем продукты лучшим образом для того, чтобы каждый мог найти что-то своё</p>
 						</div>
 					</div>
-					<div class="sProdCard__descr-col col-lg-6">
-						<h1 class="sProdCard__prod-name">Хлебница
-						</h1>
-						<div class="sProdCard__brend-links"><a href="#">YADOMA</a><a href="#">Bread Coolection</a>
-						</div>
-						<div class="sProdCard__article-txt"><span>Артикул:</span><span>04852</span>
-						</div>
-						<div class="sProdCard__short-desc">Фирменная хлебница от бренда YADOMA из натуральных и экологичных материалов
-						</div>
-						<div class="sProdCard__tags"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
-						</div>
-						<div class="sProdCard__price">15 000 RUB
-						</div><a class="sProdCard__cart-btn" href="#">
-						<svg class="icon icon-cart ">
-							<use xlink:href="img/svg/sprite.svg#cart"></use>
-						</svg><span>Добавить в корзину</span></a>
-						<div class="sProdCard__dd-container">
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Доставка</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__dd-default">Мы осуществляем бесплатную доставку по России. Доставляем заказы по всему миру (стоимость доставки уточняйте у менеджеров). Вы также можете забрать свой товар сами, если находитесь в Санкт-Петербурге.<a href="#">Подробнее</a>
+					<div class="sNew__slider-col">
+						<div class="sNew__slider">
+							<div class="swiper-container new-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-04_1.jpg" alt=""/></span><span class="sNew__descr">
+										<h6 class="fw-300">Хлебницы</h6></span></a>
+									</div>
+									<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-04_2.jpg" alt=""/></span><span class="sNew__descr">
+										<h6 class="fw-300">Хлебные доски</h6></span></a>
+									</div>
+									<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-04_3.jpg" alt=""/></span><span class="sNew__descr">
+										<h6 class="fw-300">Хлебные корзины</h6></span></a>
+									</div>
+									<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-04_4.jpg" alt=""/></span><span class="sNew__descr">
+										<h6 class="fw-300">Хлебные ножи</h6></span></a>
 									</div>
 								</div>
-							</div>
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Возврат</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__dd-default">Если товар не подошёл вам, то вы можете вернуть его в течение 14 дней с момента покупки.<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Характеристики</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__chars-table">
-										<div class="sProdCard__char-item"><span>Артикул</span><span>189240</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Материал</span><span>белая глина, красный клён</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Размер</span><span>33*19*25 см</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Цвет</span><span>молочный белый</span>
-										</div>
-									</div>
+								<div class="new-next new-next--js d-none d-md-flex">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -526,7 +464,365 @@
 				</div>
 			</div>
 		</section>
-		<!-- end sProdCard-->
+		<!-- start sCatalog-->
+		<div class="sCatalog sCatalog--system section" id="sCatalog">
+			<div class="container">
+				<div class="sCatalog__roww row">
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-1.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-1.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">Bulthaup</a>
+								<div class="catalogItem__name">Хлебница-контейнер /<span>BAHIA</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__oldPrice">60 000 RUB
+									</div>
+									<div class="catalogItem__price">42 999 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-2.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-2.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">Yadoma</a>
+								<div class="catalogItem__name">Хлебница-контейнер /<span>Bread Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">16 000 RUB
+									</div>
+								</div>
+								<div>
+									<div class="catalogItem__btnWrap">
+										<button class="catalogItem__minus" type="submit">
+										</button>
+										<div class="catalogItem__btn">
+											<svg class="icon icon-basket ">
+												<use xlink:href="img/svg/sprite.svg#basket"></use>
+											</svg>
+											<div class="catalogItem__added"> <span class="d-none d-sm-inline">Добавлено </span>1
+											</div>
+										</div>
+										<button class="catalogItem__plus" type="submit">
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-3.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-3.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a>
+								</div><a class="catalogItem__title" href="#">Emma</a>
+								<div class="catalogItem__name">Хлебница /<span>Emma Danish</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">16 000 RUB
+									</div>
+								</div>
+								<div>
+									<div class="catalogItem__btnWrap">
+										<button class="catalogItem__minus" type="submit">
+										</button>
+										<div class="catalogItem__btn">
+											<svg class="icon icon-basket ">
+												<use xlink:href="img/svg/sprite.svg#basket"></use>
+											</svg>
+											<div class="catalogItem__added"> <span class="d-none d-sm-inline">Добавлено </span>1
+											</div>
+										</div>
+										<button class="catalogItem__plus" type="submit">
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-4.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-4.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">Emma</a>
+								<div class="catalogItem__name">Хлебница /<span>Emma Stelton</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">10 090 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-5.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-5.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--><span class="catalogItem__sale">- 45%</span></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">Yamazaki</a>
+								<div class="catalogItem__name">Хлебница /<span>Tower</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">8 630 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-6.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-6.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">stelton</a>
+								<div class="catalogItem__name">Доска разделочная для хлеба /<span>Classic Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">1 470 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-7.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-7.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">stelton</a>
+								<div class="catalogItem__name">Хлебная корзинка / <span>Classic Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">2 700 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-8.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-8.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Куверт</a>
+								</div><a class="catalogItem__title" href="#">Stelton</a>
+								<div class="catalogItem__name">Клош для масла / <span>Classic Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">3 170 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-9.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-9.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Куверт</a>
+								</div><a class="catalogItem__title" href="#">Крестецкая строчка</a>
+								<div class="catalogItem__name">Набор салфеток под приборы / <span>Белый лён</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">8 630 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-10.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-10.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a>
+								</div><a class="catalogItem__title" href="#">DEGRENNE</a>
+								<div class="catalogItem__name">Круглая хлебная корзинка / <span>DEGRENNE MAISON</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">1 470 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-11.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-11.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">WUSTHOF</a>
+								<div class="catalogItem__name">Хлебный нож из нержавеющей стали / <span>Classic Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">2 700 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 col-lg-4 col-xl-3">
+						<div class="catalogItem"><a class="catalogItem__imgWrap" href="#">
+							<!-- picture-->
+							<picture> 
+								<source srcset="img/@2x/webp/catalogItem-12.webp" type="image/webp"/>
+								<noscript class="loading-lazy"><img src="img/@2x/catalogItem-12.jpg" alt=""/></noscript>
+							</picture>
+							<!-- /picture--></a>
+							<div class="catalogItem__body">
+								<div class="tagsBlock"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
+								</div><a class="catalogItem__title" href="#">DEGRENNE</a>
+								<div class="catalogItem__name">Льняная салфетка / <span>Classic Collection</span>
+								</div>
+								<div class="catalogItem__priceWrap">
+									<div class="catalogItem__price">2 400 RUB
+									</div>
+								</div>
+								<div>
+									<button class="catalogItem__btnWrap" type="submit"><span class="catalogItem__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span>В корзину</span></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pagination-wrapper">
+					<ul class="page-numbers">
+								<li><span class="page-numbers current"> 1</span>
+								</li>
+								<li><a class="page-numbers" href="#">2</a>
+								</li>
+								<li><a class="page-numbers" href="#">3</a>
+								</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<!-- start sSafe-->
 		<div class="sSafe section" id="sSafe">
 			<div class="sSafe__content">

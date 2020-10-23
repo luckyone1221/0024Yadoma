@@ -183,4 +183,15 @@
 		line-height: (20.8/16);
 		text-transform: uppercase;
 	}
+
+	&--bread {
+		.section-title {
+			max-width: rem(200);
+
+		}
+
+		h1 {
+			@extend .h2;
+		}
+	}
 } // end.sNew

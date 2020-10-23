@@ -38,8 +38,8 @@ mixin sCatalog(data)
 							+e.remove(type="submit")
 
 					.row
-						.col-6.col-md-4.col-lg-6.col-xl-4
-							+catalogItem('1.png','','- 45%')
+						.col-6.col-md-6.col-lg-6.col-xl-4
+							+catalogItem('1','','- 45%')
 								+b.tagsBlock
 									a(href="#") Хлебная зона
 									a(href="#") Welcome
@@ -49,8 +49,8 @@ mixin sCatalog(data)
 								+e.priceWrap
 									+e.oldPrice 60 000 RUB
 									+e.price 42 999 RUB
-						.col-6.col-md-4.col-lg-6.col-xl-4
-							+catalogItem('2.png','basket')
+						.col-6.col-md-6.col-lg-6.col-xl-4
+							+catalogItem('2','basket')
 								+b.tagsBlock
 									a(href="#") Хлебная зона
 									a(href="#") Welcome
@@ -59,8 +59,8 @@ mixin sCatalog(data)
 									span Bread Collection
 								+e.priceWrap
 									+e.price 16 000 RUB
-						.col-6.col-md-4.col-lg-6.col-xl-4
-							+catalogItem('3.png','basket')
+						.col-6.col-md-6.col-lg-6.col-xl-4
+							+catalogItem('3','basket')
 								+b.tagsBlock
 									a(href="#") Хлебная зона
 								+e.title(href="#") Emma
@@ -68,7 +68,7 @@ mixin sCatalog(data)
 									span Emma Danish
 								+e.priceWrap
 									+e.price 16 000 RUB
-						.col-6.col-md-4.col-lg-6.col-xl-4
+						.col-6.col-md-6.col-lg-6.col-xl-4
 							+catalogItem('4','','- 45%')
 								+b.tagsBlock
 									a(href="#") Хлебная зона
@@ -78,7 +78,7 @@ mixin sCatalog(data)
 									span Emma Stelton
 								+e.priceWrap
 									+e.price 10 090 RUB
-						.col-6.col-md-4.col-lg-6.col-xl-4
+						.col-6.col-md-6.col-lg-6.col-xl-4
 							+catalogItem('5','','- 45%')
 								+b.tagsBlock
 									a(href="#") Хлебная зона
@@ -98,17 +98,280 @@ mixin catalogItem(i,basket,sale)
 				+e.sale= sale
 		+e.body
 			block
-			if basket
-				+e.btnWrap
-					+e.minus(type="submit")
-					+e.btn
-						+icon('basket')
-						+e.added 
-							.d-none.d-sm-inline Добавлено 
-							|1
-					+e.plus(type="submit")
-			else
-				+e.btnWrap--sm(type="submit")
-					+e.SPAN.btn
-						+icon('basket')
-						span В корзину
+			div
+				if basket
+					+e.btnWrap
+						+e.minus(type="submit")
+						+e.btn
+							+icon('basket')
+							+e.added 
+								span.d-none.d-sm-inline Добавлено 
+								|1
+						+e.plus(type="submit")
+				else
+					+e.btnWrap(type="submit")
+						+e.SPAN.btn
+							+icon('basket')
+							span В корзину
+
+
+mixin sCatalog-system1(data)
+	// start sCatalog
+	+b.sCatalog--system.section#sCatalog&attributes(attributes)
+		.container
+			+e.roww.row
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('1','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Bulthaup
+						+e.name Хлебница-контейнер /
+							span BAHIA
+						+e.priceWrap
+							+e.oldPrice 60 000 RUB
+							+e.price 42 999 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('2','basket')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Yadoma
+						+e.name Хлебница-контейнер /
+							span Bread Collection
+						+e.priceWrap
+							+e.price 16 000 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('3','basket')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+						+e.title(href="#") Emma
+						+e.name Хлебница /
+							span Emma Danish
+						+e.priceWrap
+							+e.price 16 000 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('4','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Emma
+						+e.name Хлебница /
+							span Emma Stelton
+						+e.priceWrap
+							+e.price 10 090 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('5','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Yamazaki
+						+e.name Хлебница /
+							span Tower
+						+e.priceWrap
+							+e.price 8 630 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('6')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") stelton
+						+e.name Доска разделочная для хлеба /
+							span Classic Collection
+						+e.priceWrap
+							+e.price 1 470 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('7')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") stelton
+						+e.name Хлебная корзинка / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 700 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('8')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Куверт
+						+e.title(href="#") Stelton
+						+e.name Клош для масла / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 3 170 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('9')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Куверт
+						+e.title(href="#") Крестецкая строчка
+						+e.name Набор салфеток под приборы / 
+							span Белый лён
+						+e.priceWrap
+							+e.price 8 630 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('10')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+						+e.title(href="#") DEGRENNE
+						+e.name Круглая хлебная корзинка / 
+							span DEGRENNE MAISON
+						+e.priceWrap
+							+e.price 1 470 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('11')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") WUSTHOF
+						+e.name Хлебный нож из нержавеющей стали / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 700 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('12')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") DEGRENNE
+						+e.name Льняная салфетка / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 400 RUB
+			+pugin()
+
+
+
+mixin sCatalog-system2(data)
+	// start sCatalog
+	+b.sCatalog--system.section#sCatalog&attributes(attributes)
+		.container
+			+e.roww.row
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('1','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Bulthaup
+						+e.name Хлебница-контейнер /
+							span BAHIA
+						+e.priceWrap
+							+e.oldPrice 60 000 RUB
+							+e.price 42 999 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('2','basket')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Yadoma
+						+e.name Хлебница-контейнер /
+							span Bread Collection
+						+e.priceWrap
+							+e.price 16 000 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('3','basket')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+						+e.title(href="#") Emma
+						+e.name Хлебница /
+							span Emma Danish
+						+e.priceWrap
+							+e.price 16 000 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('12')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") DEGRENNE
+						+e.name Льняная салфетка / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 400 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('5','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Yamazaki
+						+e.name Хлебница /
+							span Tower
+						+e.priceWrap
+							+e.price 8 630 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('6')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") stelton
+						+e.name Доска разделочная для хлеба /
+							span Classic Collection
+						+e.priceWrap
+							+e.price 1 470 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('7')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") stelton
+						+e.name Хлебная корзинка / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 700 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('8')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Куверт
+						+e.title(href="#") Stelton
+						+e.name Клош для масла / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 3 170 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('9')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Куверт
+						+e.title(href="#") Крестецкая строчка
+						+e.name Набор салфеток под приборы / 
+							span Белый лён
+						+e.priceWrap
+							+e.price 8 630 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('10')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+						+e.title(href="#") DEGRENNE
+						+e.name Круглая хлебная корзинка / 
+							span DEGRENNE MAISON
+						+e.priceWrap
+							+e.price 1 470 RUB
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('11')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") WUSTHOF
+						+e.name Хлебный нож из нержавеющей стали / 
+							span Classic Collection
+						+e.priceWrap
+							+e.price 2 700 RUB
+
+
+			.section-title
+				h3 Товара нет в наличии
+				h6 Оформите предзаказ с 50% предоплатой
+			+e.roww.row
+				.col-6.col-md-4.col-lg-4.col-xl-3
+					+catalogItem('4','','- 45%')
+						+b.tagsBlock
+							a(href="#") Хлебная зона
+							a(href="#") Welcome
+						+e.title(href="#") Emma
+						+e.name Хлебница /
+							span Emma Stelton
+						+e.priceWrap
+							+e.price 10 090 RUB
+
+

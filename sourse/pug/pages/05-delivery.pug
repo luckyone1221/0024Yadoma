@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '05-delivery'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Доставка
+			
+		+e.row.row
+			.col-lg.order-lg-last
+				h3 Нужна помощь с доставкой?
+				+e.contact Позвоните нам по телефону #[a(href="tel:+79213412020") +7 (921) 341 20 20]
+				+e.contact  или напишите на почту #[a(href="mailto:hello@yadoma.com") hello@yadoma.com]
+			.col-lg-7
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Способы доставки и самовывоз
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						strong Самовывоз со склада в Санкт-Петербурге
+						strong Самовывоз из пункта выдачи компании СДЭК
+						strong Курьерская доставка по указанному адресу
+						span Стоимость доставки зависит от выбранного способа и рассчитывается автоматически при оформлении заказа.
+				+e.item
+					+e.itemTitle.accardion-toggle-js
+						span Сроки доставки
+						+icon('chevron-right')
+					+e.body.accardion-inner-js
+						strong Санкт-Петербург:
+						p Возможна доставка и самовывоз из нашего шоу-рума по адресу: <br>Санкт-Петербург, Красногвардейская пл., 3Е, этаж Е4, 102 <br> Design District DAA
+						span Доставка производится:
+						ul
+							li на следующий рабочий день (при оформлении заказа до 16-00);
+							li доставка производится через один рабочий день (при оформлении заказа после 16-00).
+						strong Москва и МО:
+						p Доставка 2-3 рабочих дня.
+						strong Доставка по России:
+						p Отгрузка производится в&nbsp;течение 1-2 рабочих дней. Срок доставки заказа в&nbsp;Ваш город, зависит от&nbsp;курьерской службы доставки.
+						p Отгрузка осуществляется со склада в Санкт-Петербурге.
+	+sSafe()
+	+footer()
+
+
+	

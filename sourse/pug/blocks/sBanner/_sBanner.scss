@@ -1,0 +1,20 @@
+// start .sBanner
+.sBanner {
+	padding-top: rem(30);
+	padding-bottom: rem(28);
+	&__imgWrap {
+		position: relative;
+		min-height: 450px;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sBanner

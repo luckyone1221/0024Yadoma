@@ -4,23 +4,21 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sNew/_sNew.pug
-include ../blocks/sAdvantage/_sAdvantage.pug
-include ../blocks/sZones/_sZones.pug
-include ../blocks/sBrends/_sBrends.pug
-include ../blocks/sColections/_sColections.pug
-include ../blocks/sInstagramm/_sInstagramm.pug
+include ../blocks/sBanner/_sBanner.pug
 include ../blocks/sSafe/_sSafe.pug
-include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '03-item'
+	- let  title= '04-system'
 	title= title
 block pagecontent
 	+header()
 		+top-nav()
-	+sProdCard()
+	+sBanner()
+	+sNew-bread
+	+sCatalog-system1
 	+sSafe()
 	+footer()
 
