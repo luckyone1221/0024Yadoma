@@ -20,6 +20,10 @@
 		}
 	}
 
+	strong {
+		display: block;
+	}
+
 	h6 {
 		line-height: 150%;
 		margin-bottom: 3.7rem;
@@ -37,7 +41,16 @@
 	}
 
 	a {
+		font-weight: 300;
+		display: block;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	&__link {
 		text-decoration: underline;
+
 		&:hover {
 			text-decoration: none;
 		}
@@ -57,14 +70,6 @@
 		}
 	}
 
-	&__link {
-		font-weight: 300;
-		display: block;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
 
 	&__small {
 		font-size: $small;
@@ -145,6 +150,10 @@
 
 		&.active {
 			display: flex !important;
+		}
+
+		&--sm {
+			max-width: 390px;
 		}
 
 	}
