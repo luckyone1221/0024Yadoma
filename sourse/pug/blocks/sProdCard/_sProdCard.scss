@@ -270,7 +270,19 @@
 	}
 	//btn
 	&__btns-cont{
+		position: relative;
+		display: flex;
+		//align-items: stretch;
+		align-items: flex-start;
 		margin-bottom: rem(48);
+
+		&.active-controls{
+			.sProdCard__minus-btn,
+			.sProdCard__plus-btn{
+				transform: scaleX(1);
+			}
+		}
+
 	}
 	&__cart-btn{
 		@extend .btn;
@@ -293,7 +305,86 @@
 			font-size: rem(16);
 			line-height: 1.5;
 		}
+		border-radius: rem(4);
+
+		//--preorder
+		&--preorder{
+			background-color: transparent;
+			color: $body-color;
+			.icon{
+				@include mt();
+				color: $body-color;
+			}
+			&:hover{
+				background-color: $primary;
+				color: $body-bg;
+				.icon{
+					color: $body-bg;
+				}
+			}
+		}
 	}
+	//plus, minus
+	&__minus-btn,
+	&__plus-btn{
+		position: absolute;
+		top: 0;
+		@include mt();
+		transform: scaleX(0);
+
+		@extend .btn;
+		@extend .btn-primary;
+		border: none!important;
+
+		background-color: $border-gray;
+		&:hover{
+			background-color: darken($border-gray, 4);
+		}
+
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: rem(50px);
+		@include media-breakpoint-up(sm){
+			width: rem(62px);
+		}
+
+		height: rem(64px);
+
+		&:before, &:after{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: $body-bg;
+		}
+		&:before{
+			content: '';
+			width: 12px;
+			height: 1.2px;
+		}
+		&:after{
+			width: 1.2px;
+			height: 12px;
+		}
+
+	}
+	&__minus-btn{
+		transform-origin: left center;
+		border-radius: rem(4) 0 0 rem(4);
+		left: 0;
+	}
+	&__plus-btn{
+		right: 0;
+		transform-origin: right center;
+		border-radius: 0 rem(4) rem(4) 0;
+		&:after{
+			content: '';
+		}
+	}
+
 	//dd
 	&__dd-container{
 

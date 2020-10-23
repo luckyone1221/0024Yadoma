@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sNew/_sNew.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+include ../blocks/sZones/_sZones.pug
+include ../blocks/sBrends/_sBrends.pug
+include ../blocks/sColections/_sColections.pug
+include ../blocks/sInstagramm/_sInstagramm.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sItemsSlider/_sItemsSlider.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-item-02'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sProdCard()
+		+e.btns-cont.active-controls
+			+e.minus-btn(href="#")
+			+e.A.cart-btn(href="#")
+				+icon('cart')
+				span Добавлено 1
+			+e.plus-btn(href="#")
+	+sItemsSlider('Сочетается')
+	+sSafe()
+	+footer()
+
+
+	
