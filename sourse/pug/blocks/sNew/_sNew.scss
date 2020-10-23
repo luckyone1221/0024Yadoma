@@ -87,6 +87,30 @@
 		}
 	}
 	&__slider{
+		//
+		&.five-slided{
+			.swiper-container{
+				overflow: visible!important;
+				@include media-breakpoint-up(xxl){
+					overflow: hidden!important;
+					//position: relative;
+				}
+			}
+			.swiper-slide{
+				width: 195px;
+				@include media-breakpoint-up(lg){
+					width: 207px;
+				}
+				@include media-breakpoint-up(xl){
+					width: 262px;
+				}
+				@include media-breakpoint-up(xxl){
+					width: calc((100% / 5) - (30px * 4 / 5));
+				}
+			}
+		}
+		//
+
 		.swiper-container{
 			position: relative;
 

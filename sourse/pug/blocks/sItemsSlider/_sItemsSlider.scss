@@ -1,0 +1,22 @@
+// start .sItemsSlider
+.sItemsSlider {
+	position: relative;
+
+	--sPT: #{rem(17)};
+	--sPB: #{rem(40)};
+	--sTPB: #{rem(32)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(37)};
+		--sPB: #{rem(186px)};
+		--sTPB: #{rem(32)};
+	}
+
+	.section-title{
+		h2{
+			font-size: rem(24);
+			margin-bottom: 0;
+		}
+	}
+
+	&__{}
+} // end.sItemsSlider

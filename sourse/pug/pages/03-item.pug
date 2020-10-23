@@ -11,6 +11,7 @@ include ../blocks/sColections/_sColections.pug
 include ../blocks/sInstagramm/_sInstagramm.pug
 include ../blocks/sSafe/_sSafe.pug
 include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sItemsSlider/_sItemsSlider.pug
 
 block variables
 	- let  mainPage= null
@@ -21,13 +22,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	+sProdCard()
-	//+headerBlock()
-	//+sNew()
-	//+sAdvantage()
-	//+sZones()
-	//+sBrends()
-	//+sColections()
-	//+sInstagramm()
+	+sItemsSlider('Сочетается')
 	+sSafe()
 	+footer()
 

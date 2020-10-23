@@ -292,7 +292,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '01-375.png';
+	screenName = '03-1024.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -484,9 +484,10 @@ function eventHandler() {
 	});
 
 	//newSlider
+
 	let newSlider = new Swiper('.new-slider-js', {
 		slidesPerView: 'auto',
-		loop: true,
+		//loop: true,
 		breakpoints: {
 			0: {
 				spaceBetween: 24,
@@ -556,9 +557,13 @@ function eventHandler() {
 		breakpoints: {
 			1: {
 				direction: 'horizontal',
+				spaceBetween: 6,
+			},
+			1024: {
+				direction: 'vertical',
 				spaceBetween: 10,
 			},
-			1020: {
+			1368: {
 				direction: 'vertical',
 				spaceBetween: 20,
 			},
@@ -582,7 +587,13 @@ function eventHandler() {
 		},
 		loop: true,
 	});
-	//
+	//prod card dd
+	$('.dd-title-js').click(function (){
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
 
 	//end luckyone js
 
