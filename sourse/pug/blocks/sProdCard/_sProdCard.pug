@@ -1,7 +1,7 @@
 mixin sProdCard(data)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
-		.container
+		.container.container-03
 			+breadcrumb('Кухня', 'Хранение на кухне', 'Хлебницы')(class='d-none d-lg-block')
 			+e.main-row.row
 				+e.slider-col.col-lg-6
@@ -12,9 +12,17 @@ mixin sProdCard(data)
 								+prodCardSlide(2)
 								+prodCardSlide(3)
 								+prodCardSlide(4)
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+								+prodCardSlide(4)
 					+e.thumb
 						.swiper-container.prod-thumb-js
 							.swiper-wrapper
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+								+prodCardThumb(4)
 								+prodCardThumb(1)
 								+prodCardThumb(2)
 								+prodCardThumb(3)
@@ -32,17 +40,27 @@ mixin sProdCard(data)
 						a(href="#") Хлебная зона
 						a(href='#') Welcome
 					+e.price 15 000 RUB
-					+e.A.cart-btn(href="#")
-						+icon('cart')
-						span Добавить в корзину
+					//-
+					if block
+						block
+					else
+						+e.btns-cont
+							+e.minus-btn(href="#")
+							+e.A.cart-btn(href="#")
+								+icon('cart')
+								span Добавить в корзину
+							+e.plus-btn(href="#")
+					//-
 					+e.dd-container
 						+prodCardDDItem('Доставка')
 							+e.dd-default
-								|Мы осуществляем бесплатную доставку по России. Доставляем заказы по всему миру (стоимость доставки уточняйте у менеджеров). Вы также можете забрать свой товар сами, если находитесь в Санкт-Петербурге.
+								| Мы осуществляем бесплатную доставку по России. Доставляем заказы по всему миру (стоимость доставки уточняйте у менеджеров). Вы также можете забрать свой товар сами, если находитесь в Санкт-Петербурге.
+								|
 								a(href='#') Подробнее
 						+prodCardDDItem('Возврат')
 							+e.dd-default
-								|Если товар не подошёл вам, то вы можете вернуть его в течение 14 дней с момента покупки.
+								| Если товар не подошёл вам, то вы можете вернуть его в течение 14 дней с момента покупки.
+								|
 								a(href='#') Подробнее
 						+prodCardDDItem('Характеристики')
 							+e.chars-table
@@ -50,6 +68,19 @@ mixin sProdCard(data)
 								+prodCardDDCharItem('Материал', 'белая глина, красный клён')
 								+prodCardDDCharItem('Размер', '33*19*25 см')
 								+prodCardDDCharItem('Цвет', 'молочный белый')
+			+e.descr-row.row
+				+e.ld-col.col-lg-6
+					+e.ld-content Глиняная хлебница с крышкой из красного клёна от бренда YADOMA. Каждый наш продукт изготовлен по индивидуальной технологии, мы учитываем все особенности изделия и предлагаем вам лучшее
+				+e.rd-col.col-lg-6
+					+e.rd-content Фирменная хлебница YADOMA поможет оставаться хлебу свежим и полезным как можно дольше. Мы используем натуральные материалы, которые помогают хлебным изделиям «дышать». Глина регулирует уровень влажности и сохраняет нужные условия для хранения мучных изделий. Эргономичной крышкой удобно пользоваться как маленьким детям, так и взрослым мужчинам. Мы продумываем миллиард деталей, прежде чем предложить вам готовый продукт
+			//-
+			+e.video-row.row
+				+e.v-col.col-md-6
+					+e.v-img(href="#")
+						img(loading="lazy" src="img/@2x/prod-v-img.jpg" alt="")
+				+e.v-col.col-md-6
+					+e.video-link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+						+pic('prod-v-img2.jpg')(class='sProdCard__video-link-img')
 	// end sProdCard
 mixin prodCardSlide(imgNum)
 	.swiper-slide
@@ -61,10 +92,9 @@ mixin prodCardThumb(imgNum)
 		+e.thumb-img
 			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg`)
 
-
 mixin prodCardDDItem(titleTxt)
 	+e.dd-item
-		+e.title
+		+e.title.dd-title-js
 			+icon('chevron-down')
 			span=titleTxt
 		+e.dd-content.dd-content-js

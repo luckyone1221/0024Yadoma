@@ -1,0 +1,9 @@
+mixin sItemsSlider(titleTxt='titleTxt')
+	// start sItemsSlider
+	+b.SECTION.sItemsSlider.section#sItemsSlider&attributes(attributes)
+		.container.container-03
+			+b.section-title
+				h2=titleTxt
+			+b.sNew
+				+newSlider('d-none d-xxl-flex')(class='five-slided')
+	// end sItemsSlider

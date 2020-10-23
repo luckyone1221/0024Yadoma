@@ -424,13 +424,16 @@ iframe {
 
 //breadcrumbs
 .breadcrumb-cont{
-	padding: rem(10) 0;
-	@include media-breakpoint-up(sm){
-		padding: rem(20) 0;
+	&--has-p{
+		padding: rem(10) 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(20) 0;
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(37px) 0 rem(16) 0;
+		}
 	}
-	@include media-breakpoint-up(lg){
-		padding: rem(37px) 0 rem(16) 0;
-	}
+
 	.swiper-container{
 
 	}
@@ -602,6 +605,18 @@ iframe {
 
 	font-size: $h6-font-size;
 	text-align: left;
+}
+
+.container-03{
+	@include media-breakpoint-up(lg){
+		max-width: 884px;
+	}
+	@include media-breakpoint-up(xl){
+		max-width: 1168px;
+	}
+	@include media-breakpoint-up(xxl){
+		max-width: 1470px;
+	}
 }
 
 
