@@ -24,13 +24,16 @@
 		display: block;
 	}
 
-	h6 {
+	h6, .h6 {
 		line-height: 150%;
-		margin-bottom: 3.7rem;
+		margin-bottom: 1.7rem;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 3.7rem;
+		}
 		font-weight: 300;
 	}
 
-	h3 {
+	h3, .h3 {
 		margin-bottom: rem(14);
 	}
 
@@ -86,12 +89,15 @@
 	}
 
 
-	h1 {
+	h1, .h1 {
 		position: relative;
 		&::before {
 			content: '';
 			position: absolute;
-			bottom: -28px;
+			bottom: -16px;
+			@include media-breakpoint-up(md) {
+				bottom: -28px;
+			}
 			@include a-cent(x);
 			width: rem(35);
 			height: 1px;
@@ -183,6 +189,16 @@
 		margin-bottom: rem(8);
 	}
 
+	&__cardsRow {
+		@include roww(24px);
+	}
+
+	.mw-560 {
+		max-width: rem(560);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 
 
 
@@ -197,4 +213,24 @@
 
 .accardion-toggle-js {
 	cursor: pointer;
+}
+
+.lookbookItem {
+	display: block;
+	text-decoration: none !important;
+	height: calc(100% - 40px);
+	margin-bottom: rem(40);
+
+
+	&__imgWrap {
+		@extend .accept-ratio-frame;
+		background: #fff;
+		padding-top: (406/270) * 100%;
+		margin-bottom: rem(8);
+	}
+
+	&__text {
+		@extend .mono;
+		@extend .h6;
+	}
 }

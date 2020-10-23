@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sImg/_sImg.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '11-DEGRENNE'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 DEGRENNE x Q de bouteilles
+		.text-center
+			.h6.mw-560 Сегодня два бренда с&nbsp;смелостью и&nbsp;страстью объединяют усилия, чтобы представить полный спектр предметов, сделанных из&nbsp;переработанных бутылок: стаканы и&nbsp;чашки для яиц.
+
+	+sImg()
+
+	+sSafe()
+	+footer()
+
+
+	

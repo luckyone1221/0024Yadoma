@@ -1,0 +1,62 @@
+// start .sImg
+.sImg {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(100)};
+	}
+
+	&__imgWrap {
+		@extend .accept-ratio-frame;
+		background: #fff;
+		padding-top: 1 * 100%;
+	}
+
+	.row-46 {
+		@include media-breakpoint-up(lg) {
+			@include roww(46px);
+		}
+	}
+
+	.row {
+		@include media-breakpoint-down(sm) {
+			@include roww(15px);
+		}
+	}
+
+	&__item {
+		padding-bottom: rem(15);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(30);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(80);
+		}
+	}
+
+
+	&__single {
+		
+		.sImg__imgWrap {
+			padding-top: (530/960) * 100%;
+			@include media-breakpoint-up(lg) {
+				padding-top: (420/1140) * 100%;
+			}
+		}
+	}
+
+	&__singleSm {
+		.sImg__imgWrap {
+			padding-top: (530/960) * 100%;
+		}
+	}
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sImg

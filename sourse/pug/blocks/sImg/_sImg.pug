@@ -1,0 +1,26 @@
+mixin sImg(data)
+	// start sImg
+	+b.sImg.section#sImg&attributes(attributes)
+		.container
+			mixin img(i)
+				+e.imgWrap(href="#")
+					+pic(`img-${i}`,'','')
+			.row.row-46
+				.col-6.col-lg-6.sImg__item
+					+img(1)
+				.col-6.col-lg-6.sImg__item
+					+img(2)
+				+e.single.col-12.sImg__item
+					+img(3)
+			.row.justify-content-center
+				.col-6.col-lg-3.sImg__item
+					+img(4)
+				.col-6.col-lg-3.sImg__item
+					+img(5)
+				.col-6.col-lg-3.sImg__item
+					+img(6)
+				.col-6.col-lg-3.sImg__item
+					+img(7)
+				+e.singleSm.col-lg-8.sImg__item
+					+img(3)
+	// end sImg
