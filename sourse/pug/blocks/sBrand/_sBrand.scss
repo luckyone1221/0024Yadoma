@@ -1,12 +1,17 @@
 // start .sBrand
 .sBrand {
-	--sTPB: #{rem(50)};
-	--sPT: #{rem(48)};
+	--sTPB: #{rem(55)};
+	--sPT: #{rem(40)};
 	--sPB: #{rem(17)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(65)};
+		--sPT: #{rem(48)};
+		--sPB: #{rem(17)};
+	}
 	@include media-breakpoint-up(xl) {
+		--sTPB: #{rem(105)};
 		--sPT: #{rem(70)};
 		--sPB: #{rem(60)};
-		--sPB: #{rem(70)};
 
 	}
 
@@ -94,7 +99,6 @@
 		@include media-breakpoint-up(md) {
 			padding-bottom: rem(75);
 		}
-
 	}
 
 	h5 {
@@ -106,6 +110,8 @@
 	h3 {
 		margin-bottom: 2.4rem;
 		font-size: rem(24);
+		line-height: 1.5;
+
 
 		@include media-breakpoint-down(md) {
 			text-align: center;
@@ -154,4 +160,153 @@
 	@include media-breakpoint-between(md, xl) { }
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
+
+	//about page
+
+	&--about {
+		padding-bottom: 0;
+		.sBrand__row {
+			padding-bottom: calc(var(--sPB) * 1.6);
+		}
+
+		h3 {
+			@include media-breakpoint-down(md) {
+				text-align: left;
+			}
+		}
+
+		.sBrand__imgRow {
+			
+			@include media-breakpoint-down(md) {
+				padding-bottom: 0;
+			}
+		}
+
+		.sBrand__imgCol {
+			@include media-breakpoint-up(md) {
+				padding-bottom: rem(47);
+			}
+		}
+
+		.sBrand__imgCol--founder {
+			padding-bottom: rem(65);
+			@include media-breakpoint-up(md) {
+				padding-bottom: rem(120);
+			}
+		}
+
+		.sBrand__textWrap {
+			h3 {
+				font-family: $default-font;
+			}
+		}
+	}
+
+	h6 {
+		font-weight: 300;
+		line-height: 1.5;
+		margin-bottom: 2.3rem;
+	}
+
+
+	&__banner {
+		position: relative;
+		height: rem(600);
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(md) {
+			height: rem(450);
+			margin-bottom: rem(70);
+		}
+		@include media-breakpoint-up(xl) {
+			height: rem(600);
+			margin-bottom: rem(120);
+		}
+	}
+	
+	h2 {
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(80);
+		}
+	}
+
+
+
+	ul {
+		li {
+			position: relative;
+			list-style: none;
+			font-size: rem(16);
+			padding-left: rem(40);
+			padding-bottom: rem(30);
+			line-height: 1.4;
+			@include media-breakpoint-up(md) {
+				line-height: 1.5;
+				padding-bottom: rem(48);
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: rem(20);
+				height: rem(15);
+				position: absolute;
+				left: 0;
+				top: rem(7);
+				background-image: url('../img/svg/check-about.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+
+	&__listRow {
+		padding-bottom: calc(var(--sPB) * 1.43);
+		@include media-breakpoint-up(xl) {
+			@include roww(60px);
+			justify-content: center;
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-up(xl) {
+			max-width: 31%;
+		}
+	}
+
+
 } // end.sBrand
+
+.yadomaBlock {
+	padding-top: rem(150);
+	padding-bottom: rem(148);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(168);
+	}
+	background-color: $border-gray;
+	color: $body-bg;
+	text-align: center;
+
+	h3 {
+		margin-bottom: rem(30);
+		max-width: rem(550);
+		margin-left: auto;
+		margin-right: auto;
+		font-family: $default-font;
+		@include media-breakpoint-down(md) {
+			text-align: center;
+			margin-bottom: rem(20);
+			font-size: rem(20);
+		}
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font-size: 48px;
+		@include media-breakpoint-up(md) {
+			font-size: 64px;
+		}
+		@extend .mono;
+	}
+}
