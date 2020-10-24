@@ -1,10 +1,7 @@
 // start .sImg
 .sImg {
 	--sPT: #{rem(0)};
-	--sPB: #{rem(50)};
-	@include media-breakpoint-up(md) {
-		--sPB: #{rem(100)};
-	}
+	--sPB: #{rem(10)};
 
 	&__imgWrap {
 		@extend .accept-ratio-frame;

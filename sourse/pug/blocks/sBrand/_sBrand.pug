@@ -1,0 +1,68 @@
+mixin sBrand(data)
+	// start sBrand
+	+b.sBrand.section#sBrand&attributes(attributes)
+		.container
+			+e.logo
+				img.res-i(src="img/svg/headLogo-1.svg", alt="logo")
+				
+			+e.imgRow.row
+				+e.imgCol.col-md-6
+					+e.imgWrap--sm
+						+pic('brand-1','','')
+				+e.imgCol.col-md-6
+					+e.imgWrap
+						+pic('brand-2')
+						span Ги Дегрен, основатель торговой марки Degrenne
+
+			+e.row.row
+				.col-md-6
+					+e.textWrap
+						h3 О бренде Degrenne
+						h5 Компания Guy Degrenne, созданная во&nbsp;Франции более 60&nbsp;лет назад, проектирует, разрабатывает и&nbsp;производит столовые приборы премиум класса, посуду и&nbsp;кухонные принадлежности по&nbsp;всему миру. Guy Degrenne тесно сотрудничает с&nbsp;известным и&nbsp;уважаемыми шеф-поварами для достижения уникального дизайна столовых приборов, которые используют клиенты по&nbsp;всему миру.
+				.col-md-6
+					+e.textWrap
+						h3.d-none.d-md-block &nbsp;
+						h5 Компания Guy Degrenne, созданная во&nbsp;Франции более 60&nbsp;лет назад, проектирует, разрабатывает и&nbsp;производит столовые приборы премиум класса, посуду и&nbsp;кухонные принадлежности по&nbsp;всему миру.
+	// end sBrand
+
+mixin sBrand-2(data)
+	// start sBrand
+	+b.SECTION.sBrand.section#sBrand&attributes(attributes)
+		.container
+			+e.logo
+				img.res-i(src="img/svg/headLogo-2.svg", alt="logo")
+				
+			+e.imgRow.row
+				+e.imgCol.col-md-6
+					+e.imgWrap--sm
+						+pic('brand-3','','')
+				+e.imgCol.col-md-6
+					+e.imgWrap
+						+pic('brand-4')
+						span Оксана Ермолаева, CEO YADOMA 
+
+			+e.row.row
+				.col-md-6
+					+e.textWrap
+						h3 О бренде YADOMA
+						h5 Yadoma&nbsp;&mdash; мультизадачный проект о&nbsp;готовых решениях для красивого и&nbsp;логичного дома. Здесь вы&nbsp;найдете лучшие бренды и&nbsp;эксклюзивные предметы собственного производства. При выборе товаров мы&nbsp;акцентируем внимание на&nbsp;его премиальном качестве. Мы&nbsp;дорожим сотрудничеством со&nbsp;всемирно известными производителями и&nbsp;стремимся открывать новые для российского клиента имена.
+				.col-md-6
+					+e.textWrap
+						h3.d-none.d-md-block &nbsp;
+						h5 Все представленные товары легко сочетаются друг с&nbsp;другом, организуя функциональные зоны. Ведь чем меньше времени вы&nbsp;тратите на&nbsp;поиски нужного предмета, тем больше времени остается на&nbsp;важное.
+
+
+mixin sBrand-list(data)
+	// start sBrand
+	+b.SECTION.sBrand.section#sBrand&attributes(attributes)
+		.container
+			+b.section-title.text-center
+					h1 Список брендов
+
+			+e.list
+				+e.letter D
+				a(href="#") Degrenne
+
+			+e.list
+				+e.letter Y
+				a(href="#") YADOMA

@@ -13,3 +13,9 @@
 1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/11-DEGRENNE.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/12-brand.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/12-brand-2.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/13-brands-list.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/14-about.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/15-cooperation.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/16-404.html>

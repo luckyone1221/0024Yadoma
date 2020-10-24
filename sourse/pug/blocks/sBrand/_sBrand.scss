@@ -1,0 +1,157 @@
+// start .sBrand
+.sBrand {
+	--sTPB: #{rem(50)};
+	--sPT: #{rem(48)};
+	--sPB: #{rem(17)};
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(70)};
+		--sPB: #{rem(60)};
+		--sPB: #{rem(70)};
+
+	}
+
+	&__logo {
+		text-align: center;
+		padding-bottom: rem(55);
+		@include media-breakpoint-up(xl) {
+			padding-bottom: rem(91);
+		}
+
+		img {
+			@include media-breakpoint-down(sm) {
+				width: 25vw;
+			}
+		}
+	}
+
+	&__textWrap {
+		@include media-breakpoint-up(xl) {
+			max-width: rem(517);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+	&__imgWrap {
+		max-width: rem(276px);
+		height: rem(324px);
+		@include media-breakpoint-up(md) {
+			max-width: rem(336px);
+			height: rem(409);
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: rem(433px);
+			height: rem(527);
+		}
+		background: #fff;
+
+		picture {
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+
+		&--sm {
+			@include media-breakpoint-down(md) {
+				width: 101vw;
+				margin-left: calc(((100vw - 100%) / 1.6) * -1);
+			}
+			max-width: none;
+			height: rem(382);
+			@include media-breakpoint-up(md) {
+				max-width: rem(325px);
+				height: rem(331);
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: rem(440px);
+				height: rem(448);
+			}
+		}
+
+		span {
+			margin-top: rem(8);
+			display: block;
+		}
+	}
+
+	&__imgRow {
+		@include media-breakpoint-down(md) {
+			padding-bottom: rem(75);
+		}
+	}
+
+	&__imgCol {
+		display: grid;
+		place-items: center;
+		padding-bottom: rem(45);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(75);
+		}
+
+	}
+
+	h5 {
+		font-weight: 300;
+		line-height: 1.5;
+		margin-bottom: rem(16);
+	}
+
+	h3 {
+		margin-bottom: 2.4rem;
+		font-size: rem(24);
+
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+	}
+
+	h1, .h1 {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -16px;
+			@include media-breakpoint-up(md) {
+				bottom: -28px;
+			}
+			@include a-cent(x);
+			width: rem(35);
+			height: 1px;
+			background-color: $primary;
+		}
+	}
+
+	&__list {
+		padding-bottom: rem(40);
+
+		a {
+			display: block;
+			margin-bottom: rem(8);
+		}
+	}
+
+	&__letter {
+		@extend .mono;
+		font-size: $h5-font-size;
+		margin-bottom: rem(16);
+	}
+
+
+
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrand
