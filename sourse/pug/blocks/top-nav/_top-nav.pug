@@ -49,8 +49,8 @@ mixin top-nav()
 			+e.A.mob-tell.d-lg-none(href='tel:+79213412020') +7 (921) 341 20 20
 			+e.pop-up-cont.container.pop-up-cont-js
 				ul
-					+popUpItem('Новинки')
-						| 1
+					li
+						a(href="#") Новинки
 					+popUpItem('Кухня')
 						+b.part-5
 							+e.container.container
@@ -163,6 +163,6 @@ mixin yadomaCTopItem()
 
 mixin popUpItem(titleTxt)
 	li
-		a(href="#")=titleTxt
+		a.pop-up-link-js(href="#")=titleTxt
 		+e.inner-pop.inner-popup-js
 			block

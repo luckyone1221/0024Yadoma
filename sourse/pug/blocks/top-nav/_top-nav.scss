@@ -384,11 +384,6 @@
 		@include media-breakpoint-down(sm){
 			padding-left: 0!important;
 			padding-right: 0!important;
-			//.container{
-			//	//background-color: red;
-			//	padding-left: 0!important;
-			//	padding-right: 0!important;
-			//}
 		}
 
 		@include media-breakpoint-down(lg){
@@ -429,7 +424,9 @@
 					}
 
 					position: relative;
-					@extend .before-chevron-frame;
+					&.pop-up-link-js{
+						@extend .before-chevron-frame;
+					}
 				}
 
 			}

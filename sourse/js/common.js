@@ -361,7 +361,7 @@ function eventHandler() {
 		document.body.removeEventListener('click', topMnuMissclickHandler);
 	}
 	function closeTopMnu(){
-		$('.pop-up-cont-js > ul > li > a, .inner-popup-js, .pop-up-cont-js > ul').removeClass('active');
+		$('.pop-up-link-js, .inner-popup-js, .pop-up-cont-js > ul').removeClass('active');
 		$('body').removeClass('blured');
 	}
 
@@ -376,7 +376,7 @@ function eventHandler() {
 		}
 	}, {passive: true});
 
-	$('.pop-up-cont-js > ul > li > a').click(function () {
+	$('.pop-up-link-js').click(function () {
 		if (window.matchMedia("(max-width: 1020px)").matches) {
 			$(this.parentElement).find('.inner-popup-js').slideToggle(function (){
 				$(this).toggleClass('opened');
@@ -390,7 +390,7 @@ function eventHandler() {
 		let self = this;
 
 		//remove from others
-		$('.pop-up-cont-js > ul > li > a').each(function (){
+		$('.pop-up-link-js').each(function (){
 			if (this !== self){
 				$(this).removeClass('active');
 			}
