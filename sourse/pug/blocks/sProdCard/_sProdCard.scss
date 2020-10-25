@@ -125,6 +125,10 @@
 			@include media-breakpoint-up(xxl){
 				height: 147px;
 			}
+
+			&.swiper-slide-thumb-active{
+				border: 1px solid $body-color;
+			}
 		}
 	}
 	&__thumb-img{

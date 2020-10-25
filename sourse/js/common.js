@@ -574,6 +574,15 @@ function eventHandler() {
 			loadPrevNextAmount: 6,
 		},
 
+		//thumb
+		// on: {
+		// 	click: () => {
+		// 		//photoGaleryThumb.slideTo(photoGaleryThumb.clickedIndex - 1, 700, false);
+		// 		prodCardThumb.updateSlidesClasses();
+		// 		prodCardSlider.updateSlidesClasses();
+		// 	},
+		// },
+
 	});
 	let prodCardSlider = new Swiper('.prod-slider-js', {
 		spaceBetween: 20,
@@ -585,6 +594,14 @@ function eventHandler() {
 			loadPrevNextAmount: 3,
 		},
 		loop: true,
+		// on: {
+		// 	click: () => {
+		// 		//photoGaleryThumb.slideTo(photoGaleryThumb.clickedIndex - 1, 700, false);
+		// 		prodCardThumb.updateSlidesClasses();
+		// 		prodCardSlider.updateSlidesClasses();
+		// 	},
+		// },
+
 	});
 	//prod card dd
 	$('.dd-title-js').click(function (){

@@ -470,10 +470,10 @@ iframe {
 
 		a{
 			@include mt();
-
 			color: $body-color;
 			&:hover{
 				color: $body-color2;
+				text-shadow: 0 0 1px rgba($body-color2, .5);
 			}
 
 			line-height: 1;
@@ -481,6 +481,12 @@ iframe {
 		span{
 			font-weight: 300;
 			font-size: rem(12.3);
+		}
+
+		&.active{
+			a{
+
+			}
 		}
 	}
 
