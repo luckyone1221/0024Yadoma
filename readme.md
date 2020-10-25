@@ -11,6 +11,15 @@
 1. <https://luckyone1221.github.io/0024Yadoma/public/07-return.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/08-contacts.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/09-vacancies.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/10-lookbook.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/11-DEGRENNE.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/12-brand.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/12-brand-2.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/13-brands-list.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/14-about.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/15-cooperation.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/16-404.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/020-cart.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/021-cart-empty.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/022-checkout.html>

@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBrand/_sBrand.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '15-cooperation'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent
+		+b.section-title.text-center
+			h1 Сотрудничество
+		.text-center
+			h6 По вопросам сотрудничества обращайтесь на почту #[a.d-inline.fw-400(href="hr@yadoma.com") hr@yadoma.com]
+	+sSafe()
+	+footer()
+
+
+	

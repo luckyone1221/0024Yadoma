@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSafe/_sSafe.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '10-lookbook'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sContent()
+		+b.section-title.text-center
+			h1 Lookbook
+			
+		+e.cardsRow.row
+			mixin lookbookItem(i,t)
+				+b.lookbookItem(href="#")
+					+e.imgWrap
+						+pic(i,'','')
+					+e.text= t
+			.col-6.col-lg-3
+				+lookbookItem('lookbook-1','DEGRENNE x Q de bouteilles')
+			.col-6.col-lg-3
+				+lookbookItem('lookbook-2','Ménagères')
+			.col-6.col-lg-3
+				+lookbookItem('lookbook-3','Nouveautés')
+			.col-6.col-lg-3
+				+lookbookItem('lookbook-4','Pâtisserie')
+
+	+sSafe()
+	+footer()
+
+
+	

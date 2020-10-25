@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBrand/_sBrand.pug
+include ../blocks/sSafe/_sSafe.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '12-brand'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sBrand()
+	+sCatalog-system1
+	+sSafe()
+	+footer()
+
+
+	
