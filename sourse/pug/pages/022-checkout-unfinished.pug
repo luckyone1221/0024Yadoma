@@ -12,23 +12,18 @@ include ../blocks/sInstagramm/_sInstagramm.pug
 include ../blocks/sSafe/_sSafe.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sItemsSlider/_sItemsSlider.pug
+include ../blocks/sCart/_sCart.pug
+include ../blocks/sCheckout/_sCheckout.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '03-item-03'
+	- let  title= '022-checkout-unfinished'
 	title= title
 block pagecontent
 	+header()
 		+top-nav()
-	+sProdCard()
-		+e.btns-cont
-			+e.minus-btn(href="#")
-			+e.A.cart-btn--preorder.link-modal(href="#preorder-modal")
-				+icon('preorder-bell')
-				span Предзаказ
-			+e.plus-btn(href="#")
-	+sItemsSlider('Сочетается')
+	+sCheckoutUnfinished()
 	+sSafe()
 	+footer()
 

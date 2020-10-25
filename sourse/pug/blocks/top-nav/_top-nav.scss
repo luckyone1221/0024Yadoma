@@ -378,6 +378,16 @@
 	}
 	//
 	&__pop-up-cont{
+		@include media-breakpoint-down(sm){
+			padding-left: 0!important;
+			padding-right: 0!important;
+			//.container{
+			//	//background-color: red;
+			//	padding-left: 0!important;
+			//	padding-right: 0!important;
+			//}
+		}
+
 		@include media-breakpoint-down(lg){
 			padding: 0;
 			max-width: 100%!important;
@@ -668,17 +678,17 @@
 	}
 
 	&__container{
+
 		@include media-breakpoint-down(lg){
 			max-width: 100%!important;
-			//padding: 0!important;
 		}
 	}
 
 	&__row{
+		@include roww(48px);
 		flex-direction: column-reverse;
 		@include media-breakpoint-up(lg){
 			flex-direction: row;
-			@include roww(48px);
 		}
 	}
 	&__img-col{
@@ -747,7 +757,9 @@
 	}
 	//content-col
 	&__content-col{
+		@include media-breakpoint-down(sm){
 
+		}
 	}
 	&__content-row{
 		@include media-breakpoint-down(lg){
@@ -774,12 +786,21 @@
 		}
 
 		padding: 17px 30px;
-		border-bottom: 1px solid $border-gray;
+		//border-bottom: 1px solid $border-gray;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 140%;
+			left: -20%;
+			height: 1px;
+			background-color: $border-gray;
+		}
+		margin-bottom: 1px;
 		@include media-breakpoint-up(lg){
 			pointer-events: none;
-			border-bottom: none;
 			padding: 0;
-			&:before{
+			&:before, &:after{
 				content: none;
 			}
 			display: block;
@@ -804,10 +825,26 @@
 		li{
 			a{
 				padding: 18px 30px;
-				border-bottom: 1px solid $border-gray;
+
+				//border-bottom: 1px solid $border-gray;
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 140%;
+					left: -20%;
+					height: 1px;
+					background-color: $border-gray;
+				}
+				margin-bottom: 1px;
 				@include media-breakpoint-up(lg){
+					margin-bottom: 0px;
 					padding: 0;
 					border: none;
+					&:after {
+						content: none;
+					}
 				}
 
 				display: block;

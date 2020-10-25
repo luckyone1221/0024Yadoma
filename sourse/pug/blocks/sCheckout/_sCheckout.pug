@@ -1,0 +1,192 @@
+mixin sCheckout(data)
+	// start sCheckout
+	+b.SECTION.sCheckout.section#sCheckout&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h1 Оформление заказа
+			+e.row
+				+e.steps-col
+					+checkoutStep('Товары в заказе')(class="finished")
+						+b.goods
+							+checkoutStep1Item('1 шт', 2, 'YADOMA', 'Хлебница', 'Bread', '19 000 RUB')
+							+checkoutStep1Item('20 шт', 1, 'DEGRENNE', 'Круглая тарелка для презентации блюд, 30 см', 'BAHIA', '73 400 RUB')
+							+checkoutStep1Item('1 шт', 3, 'Gourmet', 'Мини-боул Gourmet', 'ROC', '2 200 RUB', '2 800 RUB')
+					+checkoutStep('Расчёт доставки')
+						+b.delivery-results
+							+e.txt
+								span
+									| Населённый пункт:
+									|
+								span Санкт-Петербург, Россия
+							+e.txt
+								span
+									| Индекс:
+									|
+								span 187015
+					+checkoutStep('Доставка')
+						+b.finished-step-cont
+							span Доставка курьером
+					+checkoutStep('Оплата')
+						+b.finished-step-cont
+							span Картой при получении
+					+checkoutStep('Покупатель')
+						//-5
+						+b.customer
+							+form-wrap
+								+e.inputs-box
+									+input('ФИО', 'text')
+									+input('Телефон', 'tel')
+									+input('Почта', 'email')
+									+input('Адрес доставки', 'textarea', undefined, 'address')
+									+input('Комментарий к заказу', 'textarea', undefined, 'comment')
+									+e.btn-cont
+										+e.BUTTON.back-btn(type="button") Назад
+								+e.LABEL.policy
+									input(type="checkbox" checked='checked')
+									.check-box-square
+										+icon('checkout-check')
+									.txt
+										span
+											| Я даю своё согласие на
+											|
+										a(href="#") обработку персональных данных
+								+e.BUTTON.send-btn(type='submit')
+									+icon('cart')
+									span Оформить заказ
+				+e.info-col
+					+e.i-price-box
+						+e.i-price-txt Товаров на
+						+e.i-price-digits
+							+e.i-price-cur 94 600 RUB
+							+e.i-price-old 95 200 RUB
+					+e.i-delivery
+						span Доставка
+						span бесплатно
+					+e.i-total
+						span Итого
+						span 94 600 RUB
+	// end sCheckout
+
+mixin sCheckoutUnfinished(data)
+	// start sCheckout
+	+b.SECTION.sCheckout.section#sCheckout&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h1 Оформление заказа
+			+e.row
+				+e.steps-col
+					+checkoutStep('Товары в заказе')(class="finished")
+						+b.goods
+							+checkoutStep1Item('1 шт', 2, 'YADOMA', 'Хлебница', 'Bread', '19 000 RUB')
+							+checkoutStep1Item('20 шт', 1, 'DEGRENNE', 'Круглая тарелка для презентации блюд, 30 см', 'BAHIA', '73 400 RUB')
+							+checkoutStep1Item('1 шт', 3, 'Gourmet', 'Мини-боул Gourmet', 'ROC', '2 200 RUB', '2 800 RUB')
+					+checkoutStep('Расчёт доставки')
+						//-2
+						+b.step-place
+							+form-wrap
+								+e.input-wrap
+									+e.input-title Населённый пункт
+									+e.inpt-box
+										+e.INPUT.input.form-control(type="text" placeholder="Введите название" name="cityName")
+										+e.A.cross-btn(href="#")
+											+icon('close')
+								+e.input-wrap
+									+e.input-title Индекс
+									+e.inpt-box
+										+e.INPUT.input.form-control(type="text" name='index')
+										+e.A.cross-btn(href="#")
+											+icon('close')
+								+e.lower-btns
+									+e.BUTTON.btn(type='button') Назад
+									+e.BUTTON.btn(type='submit') Далее
+					+checkoutStep('Доставка')
+						//-3
+						+stepContenCheckboxed()
+							+stepContenCheckboxedItem('delType', 'Доставка курьером')(checked='checked')
+							+stepContenCheckboxedItem('delType', 'Доставка СДЭК')
+							+stepContenCheckboxedItem('delType', 'Самовывоз (адрес)')
+					+checkoutStep('Оплата')
+						//-4
+						+stepContenCheckboxed()
+							+stepContenCheckboxedItem('payType', 'Картой при получении')(checked='checked')
+							+stepContenCheckboxedItem('payType', 'Наличными')
+					+checkoutStep('Покупатель')
+						//-5
+						+b.customer
+							+form-wrap
+								+e.inputs-box
+									+input('ФИО', 'text')
+									+input('Телефон', 'tel')
+									+input('Почта', 'email')
+									+input('Адрес доставки', 'textarea', undefined, 'address')
+									+input('Комментарий к заказу', 'textarea', undefined, 'comment')
+									+e.btn-cont
+										+e.BUTTON.back-btn(type="button") Назад
+								+e.LABEL.policy
+									input(type="checkbox" checked='checked')
+									.check-box-square
+										+icon('checkout-check')
+									.txt
+										span
+											| Я даю своё согласие на
+											|
+										a(href="#") обработку персональных данных
+								+e.BUTTON.send-btn(type='submit')
+									+icon('cart')
+									span Оформить заказ
+				+e.info-col
+					+e.i-price-box
+						+e.i-price-txt Товаров на
+						+e.i-price-digits
+							+e.i-price-cur 94 600 RUB
+							+e.i-price-old 95 200 RUB
+					+e.i-delivery
+						span Доставка
+						span бесплатно
+					+e.i-total
+						span Итого
+						span 94 600 RUB
+	// end sCheckout
+mixin stepContenCheckboxed()
+	+b.step-chb
+		+e.cont
+			block
+		+e.lower-btns
+			+e.A.btn(href='#') Назад
+			+e.A.btn(href='#') Далее
+
+mixin stepContenCheckboxedItem(name, txt)
+	+e.LABEL.item
+		input(type='radio' name=name)&attributes(attributes)
+		.radio-box
+			+icon('checkout-check')
+		.txt=txt
+
+mixin checkoutStep(stepName)
+	+e.step
+		+e.header&attributes(attributes)
+			+e.step-name
+				span=stepName
+			+e.A.change-link(href='#') изменить
+		+e.content.active
+			block
+
+mixin checkoutStep1Item(amount,imgNum, name, descr1, descr2, price, oldPrice=false)
+	+e.item
+		+e.img-box
+			+e.A.img(href="#")
+				img(loading="lazy" src=`img/@2x/new-slide-${imgNum}.jpg` alt="")
+		+e.data
+			+e.name-box
+				+e.name=name
+				+e.descr
+					span=descr1
+					span=descr2
+				+e.article
+					span Артикул:
+					span 167456
+			+e.amount-box=amount
+			+e.result-box
+				+e.result-pr=price
+				if oldPrice
+					+e.old-price=oldPrice

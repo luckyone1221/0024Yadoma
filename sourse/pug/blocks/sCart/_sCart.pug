@@ -1,0 +1,66 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Корзина
+			+e.top
+				+e.top-price
+					+e.top-old-price 540 000 RUB
+					+e.top-result-price
+						span
+							| Итого:
+							|
+						span 406 000 RUB
+				+e.A.btn(href='#')
+					+icon('cart')
+					span Оформить заказ
+			+e.nav
+				+form-wrap
+					+input('Искать в корзине', '')
+					+e.LABEL.close-btn
+						button(type="submit")
+						+icon('cross')
+				+e.amount В корзине 3 товара
+			+e.items
+				+cartItem(2, 'YADOMA', 'Хлебница', 'Bread', '19 000 RUB')
+				+cartItem(1, 'DEGRENNE', 'Круглая тарелка для презентации блюд, 30 см', 'BAHIA', '3 670 RUB')
+				+cartItem(3, 'Gourmet', 'Мини-боул Gourmet', 'ROC', '2 200 RUB', '2 800 RUB')
+	// end sCart
+
+mixin cartItem(imgNum, name, descr1, descr2, price, oldPrice=false)
+	+e.item
+		+e.img-box
+			+e.A.img(href="#")
+				img(loading="lazy" src=`img/@2x/new-slide-${imgNum}.jpg` alt="")
+			+e.A.cross-btn(href="#")
+				+icon('close')
+		+e.name-box
+			+e.name=name
+			+e.descr
+				span=descr1
+				span=descr2
+			+e.article
+				span Артикул:
+				span 167456
+		+e.price-per-box
+			+e.price-per=price
+			+e.pr-per-txt цена за 1 шт
+		+e.controll-box
+			+e.minus-btn
+			+e.INPUT.controll-inp.form-control(type="number" value='1' min='1' max="999")
+			+e.plus-btn
+		+e.result-box
+			+e.result-pr=price
+			if oldPrice
+				+e.old-price=oldPrice
+
+mixin sCart--Empty()
+	// start sCart
+	+b.SECTION.sCart--empty.section#sCart&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Корзина
+				+e.imty-img
+					img(loading="lazy" src='img/svg/emty-cart.svg' alt="")
+				+e.empty-txt Здесь пока пусто
