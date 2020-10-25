@@ -2,7 +2,8 @@
 1. <https://luckyone1221.github.io/0024Yadoma/public/>
 1. <https://luckyone1221.github.io/0024Yadoma/public/02-catalog.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/03-item.html>
-1. <https://luckyone1221.github.io/0024Yadoma/public/03-item-02.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/03-item-2.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/03-item-3.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/04-system.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/04-system-2.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/05-delivery.html>
@@ -19,3 +20,7 @@
 1. <https://luckyone1221.github.io/0024Yadoma/public/14-about.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/15-cooperation.html>
 1. <https://luckyone1221.github.io/0024Yadoma/public/16-404.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/020-cart.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/021-cart-empty.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/022-checkout.html>
+1. <https://luckyone1221.github.io/0024Yadoma/public/022-checkout-unfinished.html>

@@ -1,17 +1,43 @@
 .modal-win {
-	// display: block;
-	width: 100%;
+	border-radius: rem(4);
+	background-color: $body-bg;
 	position: relative;
-
-	.modal-content {
-		// max-width: 485px;
-		// padding-right: 40px 15px;
-	}
+	padding: 94px 24px;
 
 	.mfp-close {
-		color: $primary;
+		color: $black;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+	.form-wrap{
+		text-align: center;
+		width: 714px;
+		max-width: 100%;
+		form{
+			margin-left: auto;
+			margin-right: auto;
+			width: 384px;
+			max-width: 100%;
+		}
+		margin-left: auto;
+		margin-right: auto;
+
+		&__input-wrap{
+			margin-bottom: rem(16);
+		}
+		&__input{
+			height: auto;
+			min-height: 0;
+			padding: 20px 16px;
+			line-height: 1;
+			border-radius: rem(4);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+			padding: 12.5px 25px;
+		}
 	}
 }
 
@@ -21,12 +47,6 @@ a {
 
 .modal-form {
 	position: relative;
-}
-
-#foot-dialog {
-	h3 {
-		font-size: em(36);
-	}
 }
 
 .mfp-close {
@@ -65,16 +85,6 @@ a {
 	margin-top: -5px;
 	margin-right: -5px;
 	@include mt;
-
-	&:hover {
-		// background-color: #e3f3f6;
-	}
-}
-
-@include media-breakpoint-up(sm) {
-	.modal-text {
-		max-width: 1000px;
-	}
 }
 
 .polite {
@@ -88,40 +98,3 @@ a {
 		}
 	}
 }
-
-
-// 
-@include media-breakpoint-up(xl) {}
-
-@include media-breakpoint-up(lg) {}
-
-@include media-breakpoint-up(md) {}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(xs) {}
-
-// 
-@include media-breakpoint-between(md, xl) {}
-
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}

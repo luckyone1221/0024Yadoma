@@ -1,0 +1,478 @@
+// start .sCart
+.sCart {
+	--sTPB: #{rem(40)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(20)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(75)};
+		--sPB: #{rem(56)};
+		--sTPB: #{rem(85)};
+	}
+
+	//empty
+	&--empty{
+
+		.section-title{
+			h1{
+				margin-bottom: rem(30)!important;
+				@include media-breakpoint-up(md){
+					margin-bottom: rem(80)!important;
+				}
+			}
+			&__imty-img{
+				width: 50px;
+				height: 65px;
+				margin-left: auto;
+				margin-right: auto;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					width: auto;
+					height: auto;
+				}
+
+				margin-bottom: rem(40);
+			}
+			&__empty-txt{
+				font-size: rem(14);
+				line-height: 1;
+			}
+		}
+	}
+	//end empty
+
+	.section-title{
+		h1{
+			font-family: $mono;
+			font-weight: 400;
+			line-height: 1;
+			margin-bottom: 0;
+
+			padding-bottom: rem(20);
+			@include media-breakpoint-up(md){
+				padding-bottom: rem(30);
+			}
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 35px;
+				height: 1px;
+				background-color: $body-color;
+			}
+		}
+	}
+	//top
+	&__top{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(67);
+			justify-content: flex-end;
+		}
+	}
+	&__top-price{
+		margin-bottom: 30px;
+		@include media-breakpoint-up(sm){
+			flex-shrink: 0;
+			max-width: 50%;
+			text-align: right;
+			margin-right: rem(32);
+			margin-bottom: 0;
+		}
+	}
+	&__top-old-price{
+		color: rgba($body-color, .5);
+		font-size: rem(14);
+		line-height: 1;
+		text-decoration: line-through;
+		text-transform: uppercase;
+		margin-bottom: rem(8);
+	}
+	&__top-result-price{
+		span{
+			font-size: rem(18);
+			line-height: 1;
+		}
+		span:first-child{
+			margin-right: rem(3);
+		}
+		span:last-child{
+			text-transform: uppercase;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: rem(16);
+			margin-right: rem(10);
+		}
+		span{
+			color: $body-bg;
+			font-size: rem(16);
+			font-weight: 300;
+		}
+
+		padding: 19.2px;
+
+		min-width: 100%;
+		@include media-breakpoint-up(sm){
+			min-width: 300px;
+		}
+		@include media-breakpoint-up(md){
+			min-width: 324px;
+		}
+	}
+	//nav
+	&__nav{
+		border-radius: 4px;
+		border: 1px solid $border-gray;
+
+		padding: rem(20);
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(sm){
+			padding: rem(20) rem(30);
+		}
+		@include media-breakpoint-up(md){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: rem(48);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(30) rem(48);
+		}
+
+		.form-wrap{
+			width: 100%;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md){
+				max-width: 390px;
+				margin-bottom: 0;
+			}
+			form{
+				position: relative;
+			}
+			&__input-wrap{
+				margin-bottom: 0;
+			}
+			&__input{
+				margin-bottom: 0;
+				padding: 10px 50px 10px 22px;
+				font-size: rem(12px);
+				border-radius: rem(4);
+				height: auto;
+				min-height: 0;
+			}
+			&__close-btn{
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 45px;
+				//background-color: red;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				button{
+					display: none;
+				}
+				.icon{
+					font-size: rem(15);
+					color: transparent;
+					stroke: $body-color;
+				}
+			}
+		}
+
+	}
+	&__amount{
+		font-size: rem(16);
+		white-space: nowrap;
+	}
+	//items
+	&__items{
+		@include media-breakpoint-up(xl){
+			width: 1143px;
+			margin: 0 0 0 3.3%;
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+
+		flex-wrap: wrap;
+		@include media-breakpoint-up(lg){
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+		margin-bottom: rem(32);
+	}
+	//1
+	&__img-box{
+		position: relative;
+
+		margin-right: 16px;
+		margin-bottom: 16px;
+		width: 100px;
+		@include media-breakpoint-up(sm){
+			//margin-right: rem(32);
+			width: 150px;
+		}
+		@include media-breakpoint-up(lg){
+			width: 14.52%;
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(xxl){
+			margin-right: 89px;
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (243/166) * 100%;
+	}
+	&__cross-btn{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		z-index: 2;
+		left: 5px;
+		top: 5px;
+		//padding: 10px;
+		width: 35px;
+		height: 35px;
+		.icon{
+			font-size: rem(15);
+			color: transparent;
+			stroke: $body-color;
+		}
+	}
+	//2
+	&__name-box{
+		width: calc(100% - 100px - 16px);
+		@include media-breakpoint-up(sm){
+			width: calc(100% - 150px - 16px);
+		}
+		@include media-breakpoint-up(lg){
+			width: 22.3%;
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(94px);
+		}
+	}
+	&__name{
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: rem(8);
+	}
+	&__descr{
+		span{
+			font-size: rem(14);
+			line-height: (19.6/14);
+		}
+		span:first-child{
+			&:after{
+				display: inline-block;
+				content: '/';
+				margin: 0 3px;
+			}
+		}
+		span:last-child{
+			color: $border-gray;
+		}
+		margin-bottom: rem(16);
+	}
+	&__article{
+		span{
+			color: $border-gray;
+			font-size: rem(12);
+			line-height: (16.8/12);
+		}
+	}
+	//3
+	&__price-per-box{
+		width: 30%;
+		@include media-breakpoint-up(sm){
+			width: calc(100% / 3);
+		}
+		@include media-breakpoint-up(lg){
+			width: 12%;
+		}
+		@include media-breakpoint-up(xl){
+			width: 8%;
+		}
+		@include media-breakpoint-up(xxl){
+			margin-right: 114px;
+		}
+	}
+	&__price-per{
+		line-height: (22.4/16);
+		text-transform: uppercase;
+		margin-bottom: rem(6);
+
+		font-size: rem(14);
+		@include media-breakpoint-up(sm){
+			font-size: rem(16);
+		}
+	}
+	&__pr-per-txt{
+		color: $border-gray;
+		line-height: (19.6/14);
+		font-size: rem(12);
+		@include media-breakpoint-up(sm){
+			font-size: rem(14);
+		}
+	}
+	//4
+	&__controll-box{
+		width: 40%;
+		@include media-breakpoint-up(sm){
+			width: calc(100% / 3);
+		}
+		@include media-breakpoint-up(lg){
+			width: 15%;
+		}
+		@include media-breakpoint-up(xl){
+			width: 11.54%;
+		}
+		display: flex;
+		align-items: stretch;
+		//align-items: flex-start;
+		justify-content: space-between;
+
+	}
+	&__controll-inp{
+		width: 100%;
+		height: auto;
+		min-height: 0;
+		padding: 5.5px;
+		border: 1px solid transparent;
+		text-align: center;
+
+		font-size: rem(16);
+		line-height: 1;
+
+		&:hover, &:focus{
+			border-top: 1px solid transparent;
+			border-right: 1px solid transparent;
+			border-bottom: 1px solid $body-color2;
+			border-left: 1px solid transparent;
+			box-shadow: 0px 5px 5px -5px rgba($body-color, .5);
+		}
+	}
+	//btns
+	&__minus-btn,
+	&__plus-btn{
+		@include mt();
+		background-color: transparent;
+		&:hover{
+			background-color: $body-color;
+			&:before, &:after{
+				background-color: $body-bg;
+			}
+		}
+
+		flex-shrink: 0;
+		width: 32px;
+		height: 32px;
+		position: relative;
+
+		&:before, &:after{
+			@include mt();
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: $body-color;
+		}
+		&:before{
+			content: '';
+			width: 12px;
+			height: 1.2px;
+		}
+		&:after{
+			width: 1.2px;
+			height: 12px;
+		}
+
+	}
+
+	&__minus-btn{
+		border-radius: rem(4) 0 0 rem(4);
+	}
+	&__plus-btn{
+		border-radius: 0 rem(4) rem(4) 0;
+		&:after{
+			content: '';
+		}
+	}
+	//5
+	&__result-box{
+		text-align: right;
+
+		width: 30%;
+		@include media-breakpoint-up(sm){
+			width: calc(100% / 3);
+		}
+		@include media-breakpoint-up(lg){
+			width: 12%;
+		}
+		@include media-breakpoint-up(xl){
+			width: 10%;
+		}
+		@include media-breakpoint-up(xxl){
+			margin-left: auto;
+		}
+	}
+	&__result-pr{
+		font-size: rem(14);
+		@include media-breakpoint-up(sm){
+			font-size: rem(16);
+		}
+
+		line-height: (22.4/16);
+		text-transform: uppercase;
+	}
+	&__old-price{
+		padding-top: 8px;
+		color: rgba($body-color, .5);
+		line-height: (18.2/14);
+
+		font-size: rem(12);
+		@include media-breakpoint-up(sm){
+			font-size: rem(14);
+		}
+
+		text-decoration: line-through;
+		text-transform: uppercase;
+	}
+} // end.sCart

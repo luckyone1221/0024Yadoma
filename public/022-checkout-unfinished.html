@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>03-item-02</title>
+		<title>022-checkout-unfinished</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -409,215 +409,281 @@
 			<!-- end top-nav-->
 		</header>
 		<!-- end header-->
-		<!-- start sProdCard-->
-		<section class="sProdCard section" id="sProdCard">
-			<div class="container container-03">
-				<div class="breadcrumb-cont d-none d-lg-block">
-					<nav class="breadcrumb-slider-js swiper-container" aria-label="breadcrumb">
-						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Кухня</span>
-									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хранение на кухне</span>
-									<meta itemprop="position" content="2"/></a></li>
-							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебницы</span>
-									<meta itemprop="position" content="3"/></a></li>
-						</ol>
-					</nav>
+		<!-- start sCheckout-->
+		<section class="sCheckout section" id="sCheckout">
+			<div class="sCheckout__container container">
+				<div class="section-title text-center">
+					<h1>Оформление заказа</h1>
 				</div>
-				<div class="sProdCard__main-row row">
-					<div class="sProdCard__slider-col col-lg-6">
-						<div class="sProdCard__slider">
-							<div class="swiper-container prod-slider-js">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-1.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-2.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-3.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-4.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-1.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-2.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-3.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/></a>
-									</div>
-									<div class="swiper-slide"><a class="sProdCard__slide-link" href="img/@2x/prod-item-4.jpg" data-fancybox="prodImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/></a>
-									</div>
-								</div>
+				<div class="sCheckout__row">
+					<div class="sCheckout__steps-col">
+						<div class="sCheckout__step">
+							<div class="sCheckout__header finished">
+								<div class="sCheckout__step-name"><span>Товары в заказе</span>
+								</div><a class="sCheckout__change-link" href="#">изменить</a>
 							</div>
-						</div>
-						<div class="sProdCard__thumb">
-							<div class="swiper-container prod-thumb-js">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/>
+							<div class="sCheckout__content active">
+								<div class="goods">
+									<div class="goods__item">
+										<div class="goods__img-box"><a class="goods__img" href="#"><img loading="lazy" src="img/@2x/new-slide-2.jpg" alt=""/></a>
+										</div>
+										<div class="goods__data">
+											<div class="goods__name-box">
+												<div class="goods__name">YADOMA
+												</div>
+												<div class="goods__descr"><span>Хлебница</span><span>Bread</span>
+												</div>
+												<div class="goods__article"><span>Артикул:</span><span>167456</span>
+												</div>
+											</div>
+											<div class="goods__amount-box">1 шт
+											</div>
+											<div class="goods__result-box">
+												<div class="goods__result-pr">19 000 RUB
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/>
+									<div class="goods__item">
+										<div class="goods__img-box"><a class="goods__img" href="#"><img loading="lazy" src="img/@2x/new-slide-1.jpg" alt=""/></a>
+										</div>
+										<div class="goods__data">
+											<div class="goods__name-box">
+												<div class="goods__name">DEGRENNE
+												</div>
+												<div class="goods__descr"><span>Круглая тарелка для презентации блюд, 30 см</span><span>BAHIA</span>
+												</div>
+												<div class="goods__article"><span>Артикул:</span><span>167456</span>
+												</div>
+											</div>
+											<div class="goods__amount-box">20 шт
+											</div>
+											<div class="goods__result-box">
+												<div class="goods__result-pr">73 400 RUB
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/>
+									<div class="goods__item">
+										<div class="goods__img-box"><a class="goods__img" href="#"><img loading="lazy" src="img/@2x/new-slide-3.jpg" alt=""/></a>
 										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-1.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-2.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-3.jpg"/>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-item-4.jpg"/>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="sProdCard__descr-col col-lg-6">
-						<h1 class="sProdCard__prod-name">Хлебница
-						</h1>
-						<div class="sProdCard__brend-links"><a href="#">YADOMA</a><a href="#">Bread Coolection</a>
-						</div>
-						<div class="sProdCard__article-txt"><span>Артикул:</span><span>04852</span>
-						</div>
-						<div class="sProdCard__short-desc">Фирменная хлебница от бренда YADOMA из натуральных и экологичных материалов
-						</div>
-						<div class="sProdCard__tags"><a href="#">Хлебная зона</a><a href="#">Welcome</a>
-						</div>
-						<div class="sProdCard__price">15 000 RUB
-						</div>
-						<div class="sProdCard__btns-cont active-controls"><a class="sProdCard__minus-btn" href="#"></a><a class="sProdCard__cart-btn" href="#">
-							<svg class="icon icon-cart ">
-								<use xlink:href="img/svg/sprite.svg#cart"></use>
-							</svg><span>Добавлено 1</span></a><a class="sProdCard__plus-btn" href="#"></a>
-						</div>
-						<div class="sProdCard__dd-container">
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title dd-title-js">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Доставка</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__dd-default">
-										Мы осуществляем бесплатную доставку по России. Доставляем заказы по всему миру (стоимость доставки уточняйте у менеджеров). Вы также можете забрать свой товар сами, если находитесь в Санкт-Петербурге.
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title dd-title-js">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Возврат</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__dd-default">
-										Если товар не подошёл вам, то вы можете вернуть его в течение 14 дней с момента покупки.
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="sProdCard__dd-item">
-								<div class="sProdCard__title dd-title-js">
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg><span>Характеристики</span>
-								</div>
-								<div class="sProdCard__dd-content dd-content-js">
-									<div class="sProdCard__chars-table">
-										<div class="sProdCard__char-item"><span>Артикул</span><span>189240</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Материал</span><span>белая глина, красный клён</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Размер</span><span>33*19*25 см</span>
-										</div>
-										<div class="sProdCard__char-item"><span>Цвет</span><span>молочный белый</span>
+										<div class="goods__data">
+											<div class="goods__name-box">
+												<div class="goods__name">Gourmet
+												</div>
+												<div class="goods__descr"><span>Мини-боул Gourmet</span><span>ROC</span>
+												</div>
+												<div class="goods__article"><span>Артикул:</span><span>167456</span>
+												</div>
+											</div>
+											<div class="goods__amount-box">1 шт
+											</div>
+											<div class="goods__result-box">
+												<div class="goods__result-pr">2 200 RUB
+												</div>
+												<div class="goods__old-price">2 800 RUB
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="sProdCard__descr-row row">
-					<div class="sProdCard__ld-col col-lg-6">
-						<div class="sProdCard__ld-content">Глиняная хлебница с крышкой из красного клёна от бренда YADOMA. Каждый наш продукт изготовлен по индивидуальной технологии, мы учитываем все особенности изделия и предлагаем вам лучшее
+						<div class="sCheckout__step">
+							<div class="sCheckout__header">
+								<div class="sCheckout__step-name"><span>Расчёт доставки</span>
+								</div><a class="sCheckout__change-link" href="#">изменить</a>
+							</div>
+							<div class="sCheckout__content active">
+								<div class="step-place">
+									<div class="form-wrap">
+										<form>
+											<input type="hidden" name="example-input-field"/>
+											<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+											<input class="utm_source" type="hidden" name="utm_source"/>
+											<input class="utm_term" type="hidden" name="utm_term"/>
+											<input class="utm_medium" type="hidden" name="utm_medium"/>
+											<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+											<div class="form-wrap__input-wrap">
+												<div class="form-wrap__input-title">Населённый пункт
+												</div>
+												<div class="form-wrap__inpt-box"><input class="form-wrap__input form-control" type="text" placeholder="Введите название" name="cityName"/><a class="form-wrap__cross-btn" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a>
+												</div>
+											</div>
+											<div class="form-wrap__input-wrap">
+												<div class="form-wrap__input-title">Индекс
+												</div>
+												<div class="form-wrap__inpt-box"><input class="form-wrap__input form-control" type="text" name="index"/><a class="form-wrap__cross-btn" href="#">
+													<svg class="icon icon-close ">
+														<use xlink:href="img/svg/sprite.svg#close"></use>
+													</svg></a>
+												</div>
+											</div>
+											<div class="form-wrap__lower-btns">
+												<button class="form-wrap__btn" type="button">Назад
+												</button>
+												<button class="form-wrap__btn" type="submit">Далее
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCheckout__step">
+							<div class="sCheckout__header">
+								<div class="sCheckout__step-name"><span>Доставка</span>
+								</div><a class="sCheckout__change-link" href="#">изменить</a>
+							</div>
+							<div class="sCheckout__content active">
+								<div class="step-chb">
+									<div class="step-chb__cont">
+										<label class="step-chb__item">
+											<input type="radio" name="delType" checked="checked"/>
+											<div class="radio-box">
+												<svg class="icon icon-checkout-check ">
+													<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+												</svg>
+											</div>
+											<div class="txt">Доставка курьером</div>
+										</label>
+										<label class="step-chb__item">
+											<input type="radio" name="delType"/>
+											<div class="radio-box">
+												<svg class="icon icon-checkout-check ">
+													<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+												</svg>
+											</div>
+											<div class="txt">Доставка СДЭК</div>
+										</label>
+										<label class="step-chb__item">
+											<input type="radio" name="delType"/>
+											<div class="radio-box">
+												<svg class="icon icon-checkout-check ">
+													<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+												</svg>
+											</div>
+											<div class="txt">Самовывоз (адрес)</div>
+										</label>
+									</div>
+									<div class="step-chb__lower-btns"><a class="step-chb__btn" href="#">Назад</a><a class="step-chb__btn" href="#">Далее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCheckout__step">
+							<div class="sCheckout__header">
+								<div class="sCheckout__step-name"><span>Оплата</span>
+								</div><a class="sCheckout__change-link" href="#">изменить</a>
+							</div>
+							<div class="sCheckout__content active">
+								<div class="step-chb">
+									<div class="step-chb__cont">
+										<label class="step-chb__item">
+											<input type="radio" name="payType" checked="checked"/>
+											<div class="radio-box">
+												<svg class="icon icon-checkout-check ">
+													<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+												</svg>
+											</div>
+											<div class="txt">Картой при получении</div>
+										</label>
+										<label class="step-chb__item">
+											<input type="radio" name="payType"/>
+											<div class="radio-box">
+												<svg class="icon icon-checkout-check ">
+													<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+												</svg>
+											</div>
+											<div class="txt">Наличными</div>
+										</label>
+									</div>
+									<div class="step-chb__lower-btns"><a class="step-chb__btn" href="#">Назад</a><a class="step-chb__btn" href="#">Далее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sCheckout__step">
+							<div class="sCheckout__header">
+								<div class="sCheckout__step-name"><span>Покупатель</span>
+								</div><a class="sCheckout__change-link" href="#">изменить</a>
+							</div>
+							<div class="sCheckout__content active">
+								<div class="customer">
+									<div class="form-wrap">
+										<form>
+											<input type="hidden" name="example-input-field"/>
+											<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+											<input class="utm_source" type="hidden" name="utm_source"/>
+											<input class="utm_term" type="hidden" name="utm_term"/>
+											<input class="utm_medium" type="hidden" name="utm_medium"/>
+											<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+											<div class="form-wrap__inputs-box">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="text"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон" name="tel"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Почта" name="email"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Адрес доставки" name="address"></textarea>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Комментарий к заказу" name="comment"></textarea>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__btn-cont">
+													<button class="form-wrap__back-btn" type="button">Назад
+													</button>
+												</div>
+											</div>
+											<label class="form-wrap__policy">
+												<input type="checkbox" checked="checked"/>
+												<div class="check-box-square">
+													<svg class="icon icon-checkout-check ">
+														<use xlink:href="img/svg/sprite.svg#checkout-check"></use>
+													</svg>
+												</div>
+												<div class="txt"><span>
+														Я даю своё согласие на
+														</span><a href="#">обработку персональных данных</a></div>
+											</label>
+											<button class="form-wrap__send-btn" type="submit">
+												<svg class="icon icon-cart ">
+													<use xlink:href="img/svg/sprite.svg#cart"></use>
+												</svg><span>Оформить заказ</span>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="sProdCard__rd-col col-lg-6">
-						<div class="sProdCard__rd-content">Фирменная хлебница YADOMA поможет оставаться хлебу свежим и полезным как можно дольше. Мы используем натуральные материалы, которые помогают хлебным изделиям «дышать». Глина регулирует уровень влажности и сохраняет нужные условия для хранения мучных изделий. Эргономичной крышкой удобно пользоваться как маленьким детям, так и взрослым мужчинам. Мы продумываем миллиард деталей, прежде чем предложить вам готовый продукт
+					<div class="sCheckout__info-col">
+						<div class="sCheckout__i-price-box">
+							<div class="sCheckout__i-price-txt">Товаров на
+							</div>
+							<div class="sCheckout__i-price-digits">
+								<div class="sCheckout__i-price-cur">94 600 RUB
+								</div>
+								<div class="sCheckout__i-price-old">95 200 RUB
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="sProdCard__video-row row">
-					<div class="sProdCard__v-col col-md-6"><a class="sProdCard__v-img" href="#"><img loading="lazy" src="img/@2x/prod-v-img.jpg" alt=""/></a>
-					</div>
-					<div class="sProdCard__v-col col-md-6"><a class="sProdCard__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
-						<!-- picture-->
-						<picture class="sProdCard__video-link-img"> 
-							<source srcset="img/@2x/webp/prod-v-img2.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="img/@1x/webp/prod-v-img2.webp" type="image/webp"/>
-							<source srcset="img/@2x/prod-v-img2.jpg" type="image/jpg" media="(min-width:576px)"/>
-							<source srcset="img/@1x/prod-v-img2.jpg" type="image/jpg"/>
-							<noscript class="loading-lazy"><img src="img/@2x/prod-v-img2.jpg" alt=""/></noscript>
-						</picture>
-						<!-- /picture--></a>
+						<div class="sCheckout__i-delivery"><span>Доставка</span><span>бесплатно</span>
+						</div>
+						<div class="sCheckout__i-total"><span>Итого</span><span>94 600 RUB</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- end sProdCard-->
-		<!-- start sItemsSlider-->
-		<section class="sItemsSlider section" id="sItemsSlider">
-			<div class="container container-03">
-				<div class="section-title">
-					<h2>Сочетается</h2>
-				</div>
-				<div class="sNew">
-					<div class="sNew__slider five-slided">
-						<div class="swiper-container new-slider-js">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-1.jpg" alt=""/></span><span class="sNew__name">DEGRENNE</span><span class="sNew__descr"><span>Круглая тарелка для презентации<br/>блюд, 30 см</span><span>BAHIA</span></span><span class="sNew__price">3 670 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-2.jpg" alt=""/></span><span class="sNew__name">YADOMA</span><span class="sNew__descr"><span>Хлебница из красной глины</span><br/><span>Bread Collection</span></span><span class="sNew__price">19 000 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-3.jpg" alt=""/></span><span class="sNew__name">Gourmet</span><span class="sNew__descr"><span>Мини-боул Gourmet</span><span>ROC</span></span><span class="sNew__price">2 200 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-4.jpg" alt=""/></span><span class="sNew__name">WUSTHOF</span><span class="sNew__descr"><span>Хлебный нож из нержавеющей<br/>стали</span><span>Ikon Classic</span></span><span class="sNew__price">16 990 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-5.jpg" alt=""/></span><span class="sNew__name">YADOMA</span><span class="sNew__descr"><span>Доска для хлеба</span><span>Bread</span></span><span class="sNew__price">3 200 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-6.jpg" alt=""/></span><span class="sNew__name">DEGRENNE</span><span class="sNew__descr"><span>Круглая хлебная корзинка</span><span>ROC</span></span><span class="sNew__price">2 400 RUB</span></a>
-								</div>
-								<div class="swiper-slide"><a class="sNew__slide-content" href="#"><span class="sNew__slide-img"><img class="swiper-lazy" src="#" data-src="img/@2x/new-slide-7.jpg" alt=""/></span></a>
-								</div>
-							</div>
-							<div class="new-next new-next--js d-none d-xxl-flex">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end sItemsSlider-->
+		<!-- end sCheckout-->
 		<!-- start sSafe-->
 		<div class="sSafe section" id="sSafe">
 			<div class="sSafe__content">
