@@ -217,5 +217,12 @@
 		h1 {
 			@extend .h2;
 		}
+
+		span.h6 {
+			color: #3F4443;
+			&::after {
+				content: none;
+			}
+		}
 	}
 } // end.sNew
