@@ -114,7 +114,7 @@ const JSCCommon = {
 		if (btnToggleFilter) {
 			btnToggleFilter.forEach(el => {
 				el.addEventListener('click', () => {
-					console.log(this);
+					// console.log(this);
 					btnToggleFilter.forEach(el => el.classList.toggle("on"));
 					filterMobile.classList.toggle("active");
 					document.body.classList.toggle("fixed");

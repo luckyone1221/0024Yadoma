@@ -123,15 +123,13 @@ var JSCCommon = {
 	},
 	// /mobileMenu
 	toggleFilter: function toggleFilter() {
-		var _this3 = this;
-
 		var btnToggleFilter = document.querySelectorAll(".toggle-filter--js");
 		var filterMobile = document.querySelector(".filter-wrap-js");
 
 		if (btnToggleFilter) {
 			btnToggleFilter.forEach(function (el) {
 				el.addEventListener('click', function () {
-					console.log(_this3);
+					// console.log(this);
 					btnToggleFilter.forEach(function (el) {
 						return el.classList.toggle("on");
 					});

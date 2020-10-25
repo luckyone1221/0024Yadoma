@@ -162,6 +162,7 @@
 		overflow: hidden;
 		background: transparent;
 		// max-width: rem(274);
+		@include mt;
 
 		&--sm {
 			// max-width: 179px;
@@ -216,6 +217,7 @@
 			height: rem(50px);
 		}
 		background: transparent;
+		@include mt;
 
 		&::before, &::after{
 			content: '';
@@ -223,6 +225,25 @@
 			width: 11px;
 			height: 1px;
 			background-color: $primary;
+			@include mt;
+		}
+		
+		&:hover {
+			background-color: $primary;
+			&::before, &::after {
+				background-color: $body-bg;
+			}
+		}
+	}
+
+	button.catalogItem__btnWrap {
+		&:hover {
+			background-color: $primary;
+			color: $body-bg;
+
+			.icon {
+				color: $body-bg;
+			}
 		}
 	}
 
