@@ -1,6 +1,6 @@
 mixin sProdCard(data)
 	// start sProdCard
-	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+	+b.sProdCard.section#sProdCard&attributes(attributes)
 		.container.container-03
 			+breadcrumb('Кухня', 'Хранение на кухне', 'Хлебницы')(class='d-none d-lg-block')
 			+e.main-row.row
@@ -85,12 +85,12 @@ mixin sProdCard(data)
 mixin prodCardSlide(imgNum)
 	.swiper-slide
 		+e.slide-link(href=`img/@2x/prod-item-${imgNum}.jpg` data-fancybox="prodImgs")
-			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg`)
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg` alt="")
 
 mixin prodCardThumb(imgNum)
 	.swiper-slide
 		+e.thumb-img
-			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg`)
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-item-${imgNum}.jpg` alt="")
 
 mixin prodCardDDItem(titleTxt)
 	+e.dd-item

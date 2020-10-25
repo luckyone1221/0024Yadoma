@@ -27,7 +27,7 @@ const JSCCommon = {
 					// ZOOM: "Zoom"
 				},
 			},
-			eforeLoad: function () {
+			beforeLoad: function () {
 				document.querySelector("html").classList.add("fixed")
 			},
 			afterClose: function () {
@@ -356,10 +356,9 @@ function eventHandler() {
 
 	//lower header menu js
 	function topMnuMissclickHandler() {
-		if (!event.target.closest('.inner-popup-js')){
-			closeTopMnu();
-			document.body.removeEventListener('click', topMnuMissclickHandler);
-		}
+		if (event.target.closest('.inner-popup-js')) return
+		closeTopMnu();
+		document.body.removeEventListener('click', topMnuMissclickHandler);
 	}
 	function closeTopMnu(){
 		$('.pop-up-cont-js > ul > li > a, .inner-popup-js, .pop-up-cont-js > ul').removeClass('active');

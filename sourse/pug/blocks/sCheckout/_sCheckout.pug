@@ -43,9 +43,9 @@ mixin sCheckout(data)
 										+e.BUTTON.back-btn(type="button") Назад
 								+e.LABEL.policy
 									input(type="checkbox" checked='checked')
-									.check-box-square
+									span.check-box-square
 										+icon('checkout-check')
-									.txt
+									span.txt
 										span
 											| Я даю своё согласие на
 											|
@@ -124,9 +124,9 @@ mixin sCheckoutUnfinished(data)
 										+e.BUTTON.back-btn(type="button") Назад
 								+e.LABEL.policy
 									input(type="checkbox" checked='checked')
-									.check-box-square
+									span.check-box-square
 										+icon('checkout-check')
-									.txt
+									span.txt
 										span
 											| Я даю своё согласие на
 											|
@@ -158,9 +158,9 @@ mixin stepContenCheckboxed()
 mixin stepContenCheckboxedItem(name, txt)
 	+e.LABEL.item
 		input(type='radio' name=name)&attributes(attributes)
-		.radio-box
+		span.radio-box
 			+icon('checkout-check')
-		.txt=txt
+		span.txt=txt
 
 mixin checkoutStep(stepName)
 	+e.step

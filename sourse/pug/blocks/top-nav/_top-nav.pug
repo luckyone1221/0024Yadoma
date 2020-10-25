@@ -46,7 +46,7 @@ mixin top-nav()
 						+icon('cart')
 						span (0)
 		+e.pop-up-menu.pop-up-menu-js
-			+e.A.mob-tell.d-lg-none(href='tel+79213412020') +7 (921) 341 20 20
+			+e.A.mob-tell.d-lg-none(href='tel:+79213412020') +7 (921) 341 20 20
 			+e.pop-up-cont.container.pop-up-cont-js
 				ul
 					+popUpItem('Новинки')
@@ -134,14 +134,15 @@ mixin contentRowItem(title,...items)
 					a(href="#")=item
 
 mixin botItem(imgNum, title, txt)
-	+e.bot-col.col-sm-6.col-md-4.col-xl-3
+	+e.bot-col.col-md-4.col-xl-3
 		+e.bot-item
 			+e.A.bot-img(href="#")
 				+e.img-inner
 					img(loading="lazy" src=`img/@2x/bot-item-${imgNum}.jpg` alt="")
-			+e.A.i-title(href="#")=title
-			+e.A.bot-txt(href="#")
-				block
+			+e.bot-txt-cont
+				+e.A.i-title(href="#")=title
+				+e.A.bot-txt(href="#")
+					block
 
 mixin yadomaCTopItem()
 	+e.item

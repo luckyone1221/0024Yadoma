@@ -338,7 +338,10 @@
 			flex-direction: column;
 		}
 
-		position: absolute;
+		position: fixed;
+		//position: sticky;
+		//position: relative;
+		z-index: 99;
 		top: 53px;
 		left: 0;
 		height: calc(100vh - 53px);
@@ -517,7 +520,10 @@
 }
 
 .yadoma-c{
-	padding: rem(80px) 15px;
+	padding: rem(15) rem(30);
+	@include media-breakpoint-up(lg){
+		padding: rem(80px) 15px;
+	}
 	&__container{
 		max-width: rem(980px);
 		margin: 0 auto;
@@ -530,6 +536,7 @@
 
 	&__top-items-cont{
 		margin-bottom: rem(48);
+
 		position: relative;
 		&:after{
 			content: '';
@@ -542,22 +549,42 @@
 		}
 	}
 	&__top-items{
+		@extend .customs-scroll;
+
 		display: flex;
 		align-items: stretch;
-		justify-content: flex-start;
+
+		justify-content: space-between;
+		@include media-breakpoint-up(sm){
+			justify-content: flex-start;
+		}
+
 		flex-wrap: wrap;
-		height: 325px;
-		overflow-y: auto;
-		@extend .customs-scroll;
+		@include media-breakpoint-up(lg){
+			height: 325px;
+			overflow-y: auto;
+		}
 	}
 	&__item{
-		width: rem(160px);
 		padding-bottom: rem(48);
 
-		margin-right: rem(40);
-		&:nth-child(5n){
-			margin-right: 0;
+		width: calc(50% - 8px);
+		@include media-breakpoint-between(sm, lg){
+			width: calc((100% / 3) - (16px * 2 / 3));
+			margin-right: 16px;
+			&:nth-child(3n){
+				margin-right: 0;
+			}
 		}
+		@include media-breakpoint-up(lg){
+			width: rem(160px);
+			margin-right: rem(40);
+			&:nth-child(5n){
+				margin-right: 0;
+			}
+		}
+
+
 	}
 	&__img-inner{
 		display: block;
@@ -622,6 +649,11 @@
 		margin-bottom: rem(30);
 	}
 	&__bot-item{
+		display: flex;
+		@include media-breakpoint-up(md){
+			display: block;
+		}
+
 		a{
 			display: block;
 
@@ -632,7 +664,16 @@
 		}
 	}
 	&__bot-img{
-		width: 160px;
+		flex-shrink: 0;
+		margin-right: rem(16);
+		@include media-breakpoint-up(md){
+			margin-right: rem(0);
+		}
+
+		width: 110px;
+		@include media-breakpoint-up(sm){
+			width: 160px;
+		}
 		display: block;
 		span{
 			display: block;
@@ -676,9 +717,26 @@
 	@include media-breakpoint-up(lg){
 		padding: rem(48px) 0 rem(94px) 0;
 	}
+	@include media-breakpoint-down(lg){
+		.container{
+			padding-left: 0!important;
+			padding-right: 0!important;
+		}
+		.row{
+			margin-left: 0;
+			margin-right: 0;
+			& > *{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+
+
+
 
 	&__container{
-
 		@include media-breakpoint-down(lg){
 			max-width: 100%!important;
 		}
@@ -694,7 +752,7 @@
 	&__img-col{
 		@include media-breakpoint-down(lg){
 			display: flex;
-			padding: 15px 30px;
+			padding: 15px 30px!important;
 			border-bottom: 1px solid $border-gray;
 		}
 		@include media-breakpoint-up(lg){
@@ -786,23 +844,24 @@
 		}
 
 		padding: 17px 30px;
-		//border-bottom: 1px solid $border-gray;
-		&:after{
-			content: '';
-			position: absolute;
-			bottom: 0;
-			width: 140%;
-			left: -20%;
-			height: 1px;
-			background-color: $border-gray;
-		}
-		margin-bottom: 1px;
+		border-bottom: 1px solid $border-gray;
+		//&:after{
+		//	content: '';
+		//	position: absolute;
+		//	bottom: 0;
+		//	width: 140%;
+		//	left: -20%;
+		//	height: 1px;
+		//	background-color: $border-gray;
+		//}
+		//margin-bottom: 1px;
 		@include media-breakpoint-up(lg){
 			pointer-events: none;
 			padding: 0;
 			&:before, &:after{
 				content: none;
 			}
+			border-bottom: none;
 			display: block;
 			color: $body-color2;
 			font-family: $mono;
@@ -826,25 +885,25 @@
 			a{
 				padding: 18px 30px;
 
-				//border-bottom: 1px solid $border-gray;
+				border-bottom: 1px solid $border-gray;
 				position: relative;
-				&:after{
-					content: '';
-					position: absolute;
-					bottom: 0;
-					width: 140%;
-					left: -20%;
-					height: 1px;
-					background-color: $border-gray;
-				}
-				margin-bottom: 1px;
+				//&:after{
+				//	content: '';
+				//	position: absolute;
+				//	bottom: 0;
+				//	width: 140%;
+				//	left: -20%;
+				//	height: 1px;
+				//	background-color: $border-gray;
+				//}
+				//margin-bottom: 1px;
 				@include media-breakpoint-up(lg){
 					margin-bottom: 0px;
 					padding: 0;
 					border: none;
-					&:after {
-						content: none;
-					}
+					//&:after {
+					//	content: none;
+					//}
 				}
 
 				display: block;
