@@ -148,9 +148,14 @@
 
 	&__btnWrap {
 		// margin-top: auto;
-		display: inline-flex;
+		display: flex;
+		@include media-breakpoint-up(sm) {
+			display: inline-flex;
+		}
 		justify-content: space-between;
-
+		@include media-breakpoint-down(sm){
+			width: 100%;
+		}
 		align-items: center;
 		border: 1px solid $primary;
 		border-radius: $border-radius;
@@ -162,12 +167,22 @@
 			// max-width: 179px;
 		}
 	}
+
+	div.catalogItem__btn .icon{
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
 	
 	//кнопка, если есть +- это не кнопка
 	&__btn {
 		margin-left: auto;
 		margin-right: auto;
-		display: inline-flex;
+		display: flex;
+		@include media-breakpoint-up(sm) {
+			display: inline-flex;
+		}
+
 		align-items: center;
 		min-height: rem(33);
 		@include media-breakpoint-up(lg) {
