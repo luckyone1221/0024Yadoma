@@ -113,7 +113,7 @@ var JSCCommon = {
 				passive: true
 			});
 			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
+				if (window.matchMedia("(min-width: 1020px)").matches) {
 					JSCCommon.closeMenu();
 				}
 			}, {
@@ -139,6 +139,18 @@ var JSCCommon = {
 					return false;
 				});
 			});
+			window.addEventListener('resize', function () {
+				if (window.matchMedia("(min-width: 1020px)").matches) {
+					btnToggleFilter.forEach(function (el) {
+						return el.classList.remove("on");
+					});
+					filterMobile.classList.remove("active");
+					document.body.classList.remove("fixed");
+					document.querySelector('html').classList.remove("fixed");
+				}
+			}, {
+				passive: true
+			});
 		}
 	},
 	// closeFilter() {
@@ -161,7 +173,7 @@ var JSCCommon = {
 	// 			}
 	// 		}, { passive: true });
 	// 		window.addEventListener('resize', () => {
-	// 			if (window.matchMedia("(min-width: 992px)").matches) {
+	// 			if (window.matchMedia("(min-width: 1020px)").matches) {
 	// 				JSCCommon.closeFilter();
 	// 			}
 	// 		}, { passive: true });

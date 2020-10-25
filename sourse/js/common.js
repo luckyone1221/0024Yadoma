@@ -100,7 +100,7 @@ const JSCCommon = {
 			}, { passive: true });
 
 			window.addEventListener('resize', () => {
-				if (window.matchMedia("(min-width: 992px)").matches) {
+				if (window.matchMedia("(min-width: 1020px)").matches) {
 					JSCCommon.closeMenu();
 				}
 			}, { passive: true });
@@ -122,6 +122,15 @@ const JSCCommon = {
 					return false;
 				});
 			});
+
+			window.addEventListener('resize', () => {
+				if (window.matchMedia("(min-width: 1020px)").matches) {
+					btnToggleFilter.forEach(el => el.classList.remove("on"));
+					filterMobile.classList.remove("active");
+					document.body.classList.remove("fixed");
+					document.querySelector('html').classList.remove("fixed");
+				}
+			}, { passive: true });
 		}
 	},
 
@@ -146,7 +155,7 @@ const JSCCommon = {
 	// 		}, { passive: true });
 
 	// 		window.addEventListener('resize', () => {
-	// 			if (window.matchMedia("(min-width: 992px)").matches) {
+	// 			if (window.matchMedia("(min-width: 1020px)").matches) {
 	// 				JSCCommon.closeFilter();
 	// 			}
 	// 		}, { passive: true });
