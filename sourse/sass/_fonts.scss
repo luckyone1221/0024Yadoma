@@ -5,8 +5,8 @@ $addr: '../fonts/';
 $file-format: woff2 woff;
 
 //default
-@include font-face ($default-font, $addr + "SofiaProLight/SofiaProLight", 300,$file-formats: $file-format);
-@include font-face ($default-font, $addr + "SofiaProRegular/SofiaProRegular", 400, $file-formats: $file-format);
+//@include font-face ($default-font, $addr + "SofiaProLight/SofiaProLight", 300,$file-formats: $file-format);
+@include font-face ($default-font, $addr + "SofiaProLight/SofiaProLight", 400, $file-formats: $file-format);
 //mono
 @include font-face ($mono, $addr + "ForumRegular/ForumRegular", 400, $file-formats: $file-format);
 

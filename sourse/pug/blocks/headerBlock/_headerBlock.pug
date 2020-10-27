@@ -4,8 +4,12 @@ mixin headerBlock()
 		.container.container-fluid
 			+e.row.row
 				.col-lg-6
-					//-+e.A.img-link(href="#")
-					+pic('header-block-baner-img.jpg')(class='headerBlock__img')
+					+e.left-slider
+						.swiper-container.l-header-slider-js
+							.swiper-wrapper
+								+headerBlLeftSlide()
+								+headerBlLeftSlide()
+								+headerBlLeftSlide()
 				+e.slider-col.col-lg-6
 					+e.slider
 						.swiper-container.header-slider-js
@@ -28,3 +32,8 @@ mixin headerBlockSlide(imgNum)
 			+e.slide-descr
 				+e.txt Коллекция BAHIA от Degrenne
 				+e.watch-txt Смотреть
+
+mixin headerBlLeftSlide(imgNum='')
+	.swiper-slide
+		+e.A.l-slide-link(href="#")
+			img.swiper-lazy(src="#" data-src=`img/@2x/header-block-baner-img${imgNum}.jpg` alt="")

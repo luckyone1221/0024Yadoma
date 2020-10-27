@@ -417,15 +417,18 @@
 			<div class="container container-fluid">
 				<div class="headerBlock__row row">
 					<div class="col-lg-6">
-						<!-- picture-->
-						<picture class="headerBlock__img"> 
-							<source srcset="img/@2x/webp/header-block-baner-img.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="img/@1x/webp/header-block-baner-img.webp" type="image/webp"/>
-							<source srcset="img/@2x/header-block-baner-img.jpg" type="image/jpg" media="(min-width:576px)"/>
-							<source srcset="img/@1x/header-block-baner-img.jpg" type="image/jpg"/>
-							<noscript class="loading-lazy"><img src="img/@2x/header-block-baner-img.jpg" alt=""/></noscript>
-						</picture>
-						<!-- /picture-->
+						<div class="headerBlock__left-slider">
+							<div class="swiper-container l-header-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a class="headerBlock__l-slide-link" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/header-block-baner-img.jpg" alt=""/></a>
+									</div>
+									<div class="swiper-slide"><a class="headerBlock__l-slide-link" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/header-block-baner-img.jpg" alt=""/></a>
+									</div>
+									<div class="swiper-slide"><a class="headerBlock__l-slide-link" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/header-block-baner-img.jpg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="headerBlock__slider-col col-lg-6">
 						<div class="headerBlock__slider">

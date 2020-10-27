@@ -12,7 +12,24 @@
 	&__row{
 		@include roww(0px);
 	}
+
+	//left slider
 	&__img{
+
+	}
+
+	&__left-slider{
+		.swiper-container{
+
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+
+		}
+	}
+	&__l-slide-link{
 		min-height: 100%;
 		@extend .accept-ratio-frame-nh;
 
@@ -21,6 +38,13 @@
 			padding-top: (60/72) * 100%;
 		}
 	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
+	//
+
 	&__slider-col{
 		background-color: $light-bg;
 	}

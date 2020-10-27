@@ -464,6 +464,15 @@ function eventHandler() {
 		document.body.addEventListener('click', searchPopUpMissClick);
 	}); //headerSlider
 
+	var headerSliderSolid = new Swiper('.l-header-slider-js', {
+		loop: true,
+		spaceBetween: 10,
+		//
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		}
+	});
 	var headerSlider = new Swiper('.header-slider-js', {
 		loop: true,
 		spaceBetween: 10,
@@ -481,7 +490,9 @@ function eventHandler() {
 			el: '.header-pugin--js',
 			clickable: true
 		}
-	}); //newSlider
+	});
+	headerSliderSolid.controller.control = headerSlider;
+	headerSlider.controller.control = headerSliderSolid; //newSlider
 
 	var newSlider = new Swiper('.new-slider-js', {
 		slidesPerView: 'auto',

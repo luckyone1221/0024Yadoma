@@ -471,6 +471,17 @@ function eventHandler() {
 	});
 
 	//headerSlider
+	let headerSliderSolid = new Swiper('.l-header-slider-js', {
+		loop: true,
+		spaceBetween: 10,
+
+		//
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+	});
+
 	let headerSlider = new Swiper('.header-slider-js', {
 		loop: true,
 		spaceBetween: 10,
@@ -490,6 +501,8 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	headerSliderSolid.controller.control = headerSlider;
+	headerSlider.controller.control = headerSliderSolid;
 
 	//newSlider
 
